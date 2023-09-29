@@ -1,0 +1,9 @@
+.logoWrapper {
+  display: flex;
+  margin-right: 1.5em;
+}
+
+.logo {
+  height: 2em;
+  color: var(--svgo-pri-fg-color);
+}

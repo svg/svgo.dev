@@ -1,0 +1,11 @@
+.footerLink {
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media (min-width: 997px) {
+  .footerLink {
+    height: 100%;
+  }
+}

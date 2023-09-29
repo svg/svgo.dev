@@ -1,0 +1,62 @@
+.heroBanner {
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+@media (min-width: 997px) {
+  .heroBanner {
+    padding: 4rem 0;
+  }
+}
+
+.heroTitle {
+  font-size: 5em;
+  font-weight: 800;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.installInstructions {
+  padding: 1em 2em;
+  margin-top: .5em;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  font-family: var(--svgo-font-mono);
+  cursor: copy;
+}
+
+/* Cursor animation */
+@keyframes cursor {
+  0% { opacity: .9; }
+  50% { opacity: .1; }
+  to { opacity: .9; }
+}
+.cursor {
+  padding-left: .5em;
+  animation: cursor 2s infinite;
+}
+@media (prefers-reduced-motion) {
+  .cursor {
+    display: none;
+  }
+}
+
+/* Copy icon */
+.icon {
+  position: absolute;
+  right: .5em;
+  opacity: 0;
+  display: flex;
+  transition: opacity .1s;
+}
+.installInstructions:hover:not(:active) .copyIcon,
+.installInstructions:active .successIcon {
+  opacity: .5;
+}

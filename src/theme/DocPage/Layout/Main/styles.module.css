@@ -1,0 +1,20 @@
+.docMainContainer {
+  display: flex;
+  width: 100%;
+}
+
+@media (min-width: 997px) {
+  .docMainContainer {
+    max-width: calc(var(--svgo-global-width) - var(--doc-sidebar-width));
+  }
+
+  .docMainContainerEnhanced {
+    max-width: calc(var(--svgo-global-width) - var(--doc-sidebar-hidden-width));
+  }
+
+  .docItemWrapperEnhanced {
+    max-width: calc(
+      var(--ifm-container-width) + var(--doc-sidebar-width)
+    ) !important;
+  }
+}

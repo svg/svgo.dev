@@ -1,0 +1,76 @@
+:root {
+  --svgo-font-mono: 'Liberation Mono', Monaco, Cousine, Consolas, monospace;
+  --svgo-font-sans: 'Nimbus Sans', Helvetica, Arial, Roboto, 'Liberation Sans', 'DejaVu Sans', Arimo, sans-serif;
+  --svgo-global-width: 1400px;
+  --svgo-pri-fg-color: #1d1d1b;
+  --svgo-pri-bg-color: #f9f9fa;
+  --svgo-sec-bg-color: #f6f5f4;
+  --svgo-tir-bg-color: #e8e8e8;
+  --svgo-pill-fg-color: #0b5cad;
+  --svgo-pill-bg-color: #cbe2f9;
+  --svgo-search-bg-color: var(--svgo-tir-bg-color);
+  --svgo-search-bg-hover: #dbdbdb;
+  --ifm-navbar-background-color: var(--svgo-sec-bg-color);
+  --ifm-background-color: var(--svgo-pri-bg-color) !important;
+  --ifm-footer-link-hover-color: #3578e5;
+  --ifm-color-primary: #216be2;
+  --ifm-card-background-color: var(--svgo-sec-bg-color);
+  --ifm-code-font-size: 95%;
+  --ifm-footer-padding-horizontal: 1em;
+  --ifm-container-width-xl: var(--svgo-global-width);
+  --search-local-hit-background: var(--svgo-sec-bg-color);
+
+  font-family: var(--svgo-font-sans);
+  color: var(--svgo-pri-fg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --svgo-pri-fg-color: #fff;
+    --svgo-pri-bg-color: #2c3b49;
+    --svgo-sec-bg-color: #1c262d;
+    --svgo-tir-bg-color: #5a6a74;
+    --svgo-pill-fg-color: #cbe2f9;
+    --svgo-pill-bg-color: #0b5cad;
+    --svgo-search-bg-color: #5a6a74;
+    --svgo-search-bg-hover: #647682;
+    --ifm-color-primary: #66b5ff;
+  }
+}
+
+/* Navbar overrides */
+.navbar__inner {
+  max-width: var(--svgo-global-width);
+  margin: 0 auto;
+}
+
+@media (min-width: 997px) {
+  .github-shield {
+    display: flex;
+  }
+}
+
+/* Search overrides */
+nav input {
+  background-color: var(--svgo-search-bg-color) !important;
+}
+nav input:hover {
+  background-color: var(--svgo-search-bg-hover) !important;
+}
+nav div kbd {
+  background-color: var(--svgo-pri-bg-color) !important;
+}
+@media (min-width: 577px) {
+  nav input {
+    width: 200px !important;
+  }
+}
+
+/* Footer overrides */
+footer {
+  --ifm-footer-color: var(--svgo-pri-fg-color);
+  --ifm-footer-title-color: var(--svgo-pri-fg-color);
+  --ifm-footer-link-color: var(--svgo-pri-fg-color);
+  --ifm-footer-link-hover-color: var(--ifm-color-primary);
+  --ifm-footer-background-color: var(--svgo-sec-bg-color);
+}

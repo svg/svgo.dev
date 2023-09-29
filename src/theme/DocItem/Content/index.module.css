@@ -1,0 +1,10 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  justify-self: end;
+}

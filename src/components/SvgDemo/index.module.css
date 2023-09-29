@@ -1,0 +1,14 @@
+.fixedHeight pre, .code-markup pre {
+  height: 274px;
+}
+
+.renderPreview {
+  height: 274px;
+  display: flex;
+  justify-content: center;
+}
+
+.malformedWarning {
+  font-weight: 600;
+  align-self: center;
+}
