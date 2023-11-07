@@ -1,0 +1,18 @@
+.rootToc {
+  padding-left: 0;
+}
+
+.onThisPage {
+  font-weight: 600;
+}
+
+.noSeperator {
+  border: none;
+  margin-left: -.6em;
+}
+
+.editPage {
+  font-size: .8em;
+  border-top: solid 1px var(--ifm-toc-border-color);
+  padding-top: 1em;
+}

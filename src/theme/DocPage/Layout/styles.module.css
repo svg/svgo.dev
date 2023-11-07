@@ -1,0 +1,14 @@
+.docPage {
+  display: flex;
+  flex: 1 0;
+  justify-content: center;
+}
+
+.docsWrapper {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+html:not([data-theme]) .themedComponent--light {
+  display: initial;
+}

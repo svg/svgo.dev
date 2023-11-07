@@ -1,0 +1,27 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+
+.wrapper {
+  display: flex;
+  margin: 0 calc(var(--ifm-spacing-horizontal) * -1);
+  max-width: calc(var(--svgo-global-width) - var(--doc-sidebar-width));
+}
+
+.docItemCol {
+  width: 0;
+  flex-grow: 1;
+}
+
+.toc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .toc {
+    margin-right: 1em;
+    display: block;
+    flex-shrink: 0;
+  }
+}
