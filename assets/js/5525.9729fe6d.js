@@ -1,0 +1,1 @@
+(self.webpackChunksvgo_dev=self.webpackChunksvgo_dev||[]).push([[5525],{5525:()=>{}}]);
