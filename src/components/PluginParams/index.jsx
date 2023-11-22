@@ -15,19 +15,17 @@ export default function PluginParams() {
     }));
 
   return (
-    <>
-      <dl>
-        {paramDefinitions.map(param => (
-          <Fragment key={param.name}>
-            <dt>
-              <code>{param.name}</code>
-            </dt>
-            <dd className={clsx(styles.leftMargin)}>
-              <p dangerouslySetInnerHTML={{__html: param.description}}></p>
-            </dd>
-          </Fragment>
-        ))}
-      </dl>
-    </>
+    <dl>
+      {paramDefinitions.map(param => (
+        <Fragment key={param.name}>
+          <dt>
+            <code>{param.name}</code>
+          </dt>
+          <dd className={clsx(styles.leftMargin)}>
+            <p dangerouslySetInnerHTML={{__html: param.description}}></p>
+          </dd>
+        </Fragment>
+      ))}
+    </dl>
   );
 }
