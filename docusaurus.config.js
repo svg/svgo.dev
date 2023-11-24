@@ -94,7 +94,12 @@ const config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "docsSidebar",
-          label: "Documentation",
+          label: "Documentation"
+        },
+        {
+          href: "https://jakearchibald.github.io/svgomg/",
+          position: "left",
+          label: "Playground"
         },
         {
           href: "https://github.com/svg/svgo",
