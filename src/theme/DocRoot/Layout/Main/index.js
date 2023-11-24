@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import { useDocsSidebar } from '@docusaurus/theme-common/internal';
 import styles from './styles.module.css';
 
-export default function DocPageLayoutMain({ hiddenSidebarContainer, children }) {
+export default function DocRootLayoutMain({ hiddenSidebarContainer, children }) {
   const sidebar = useDocsSidebar();
 
   return (

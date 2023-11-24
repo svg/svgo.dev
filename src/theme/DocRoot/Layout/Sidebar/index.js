@@ -4,7 +4,7 @@ import { prefersReducedMotion, ThemeClassNames } from '@docusaurus/theme-common'
 import { useDocsSidebar } from '@docusaurus/theme-common/internal';
 import { useLocation } from '@docusaurus/router';
 import DocSidebar from '@theme/DocSidebar';
-import ExpandButton from '@theme/DocPage/Layout/Sidebar/ExpandButton';
+import ExpandButton from '@theme/DocRoot/Layout/Sidebar/ExpandButton';
 import styles from './styles.module.css';
 
 function ResetOnSidebarChange({ children }) {
@@ -16,7 +16,7 @@ function ResetOnSidebarChange({ children }) {
   );
 }
 
-export default function DocPageLayoutSidebar({
+export default function DocRootLayoutSidebar({
   sidebar,
   hiddenSidebarContainer,
   setHiddenSidebarContainer,
@@ -32,7 +32,6 @@ export default function DocPageLayoutSidebar({
     }
     setHiddenSidebarContainer((value) => !value);
   }, [setHiddenSidebarContainer, hiddenSidebar]);
-  
   return (
     <aside
       className={clsx(

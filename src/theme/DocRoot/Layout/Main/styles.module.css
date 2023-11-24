@@ -5,6 +5,7 @@
 
 @media (min-width: 997px) {
   .docMainContainer {
+    flex-grow: 1;
     max-width: calc(var(--svgo-global-width) - var(--doc-sidebar-width));
   }
 
@@ -13,8 +14,6 @@
   }
 
   .docItemWrapperEnhanced {
-    max-width: calc(
-      var(--ifm-container-width) + var(--doc-sidebar-width)
-    ) !important;
+    max-width: calc(var(--ifm-container-width) + var(--doc-sidebar-width)) !important;
   }
 }
