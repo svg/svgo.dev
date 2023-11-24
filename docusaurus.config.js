@@ -1,5 +1,4 @@
-const lightCodeTheme = require("prism-react-renderer/themes/github");
-const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+const { themes } = require('prism-react-renderer');
 
 /**
  * @typedef {import("@docusaurus/types").Config} Config 
@@ -30,6 +29,13 @@ const config = {
     locales: [
       "en"
     ],
+  },
+  markdown: {
+    mdx1Compat: {
+      admonitions: false,
+      comments: false,
+      headingIds: false
+    }
   },
   plugins: [
     [
@@ -100,8 +106,8 @@ const config = {
       ],
     },
     prism: {
-      theme: lightCodeTheme,
-      darkTheme: darkCodeTheme
+      theme: themes.github,
+      darkTheme: themes.dracula
     },
     footer: {
       links: [
@@ -134,7 +140,7 @@ const config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0`
     },
-  }
+  },
 };
 
-module.exports = config;
+export default config;
