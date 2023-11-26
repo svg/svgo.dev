@@ -68,7 +68,8 @@ const config = {
           "/.well-known/**"
         ]
       }
-    ]
+    ],
+    "./src/plugins/prefers-color-scheme.js"
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
