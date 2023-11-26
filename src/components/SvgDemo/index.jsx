@@ -14,31 +14,29 @@ export default function SvgPreview(props) {
   };
 
   return (
-    <>
-      <Tabs groupId="preview-mode">
-        <TabItem value="svg" label="Markup">
-          <div className={clsx(styles.fixedHeight)}>
-            <CodeBlock language="svg">
-              {svg}
-            </CodeBlock>
-          </div>
-        </TabItem>
-        <TabItem value="preview" label="Render">
-          <div className={clsx(styles.renderPreview)}>
-            {!error ? (
-              <img
-                src={`data:image/svg+xml;utf8,${encodeURIComponent(svg)}`}
-                alt="Render of the optimized SVG."
-                onError={onError}
-              />
-            ) : (
-              <span className={clsx(styles.malformedWarning)}>
-                SVG can only be rendered inline, not standalone or in an <code>&lt;img&gt;</code> element.
-              </span>
-            )}
-          </div>
-        </TabItem>
-      </Tabs>
-    </>
+    <Tabs groupId="preview-mode">
+      <TabItem value="svg" label="Markup">
+        <div className={clsx(styles.fixedHeight)}>
+          <CodeBlock language="svg">
+            {svg}
+          </CodeBlock>
+        </div>
+      </TabItem>
+      <TabItem value="preview" label="Render">
+        <div className={clsx(styles.renderPreview)}>
+          {!error ? (
+            <img
+              src={`data:image/svg+xml;utf8,${encodeURIComponent(svg)}`}
+              alt="Render of the optimized SVG."
+              onError={onError}
+            />
+          ) : (
+            <span className={clsx(styles.malformedWarning)}>
+              SVG can only be rendered inline, not standalone or in an <code>&lt;img&gt;</code> element.
+            </span>
+          )}
+        </div>
+      </TabItem>
+    </Tabs>
   );
 }
