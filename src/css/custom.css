@@ -27,7 +27,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --svgo-pri-fg-color: #fff;
-    --svgo-pri-bg-color: #2c3b49;
+    --svgo-pri-bg-color: #283643;
     --svgo-sec-bg-color: #1c262d;
     --svgo-tir-bg-color: #5a6a74;
     --svgo-pill-fg-color: #cbe2f9;
