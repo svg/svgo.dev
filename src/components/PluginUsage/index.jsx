@@ -9,7 +9,7 @@ function BasicPluginUsage(props) {
     <CodeBlock
       language="js"
       title="svgo.config.js">
-      {`module.export = {\n  plugins: [\n    "${props.pluginId}"\n  ]\n}`}
+      {`module.exports = {\n  plugins: [\n    "${props.pluginId}"\n  ]\n}`}
     </CodeBlock>
   );
 };
@@ -37,7 +37,7 @@ export default function PluginUsage() {
           <CodeBlock
             language="js"
             title="svgo.config.js">
-            {`module.export = {\n  plugins: [\n    {\n      name: "${pluginId}",\n      params: {\n${paramsTemplate}\n      }\n    }\n  ]\n}`}
+            {`module.exports = {\n  plugins: [\n    {\n      name: "${pluginId}",\n      params: {\n${paramsTemplate}\n      }\n    }\n  ]\n}`}
           </CodeBlock>
         </TabItem>
       )}
