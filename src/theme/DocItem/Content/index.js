@@ -6,6 +6,9 @@ import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import DefaultBadge from '../../../components/DefaulBadge';
 import styles from './index.module.css';
+import PluginUsage from '../../../components/PluginUsage';
+import PluginParams from '../../../components/PluginParams';
+import PluginDemo from '../../../components/PluginDemo';
 
 function useSyntheticTitle(metadata, frontMatter, contentTitle) {
   const shouldRender =
@@ -35,6 +38,23 @@ export default function DocItemContent({ children }) {
         </header>
       )}
       <MDXContent>{children}</MDXContent>
+
+      {frontMatter.svgo?.pluginId && (
+        <>
+          <h2 id="usage">Usage</h2>
+          <PluginUsage />
+
+          {frontMatter.svgo?.parameters && (
+            <>
+              <h3 id="parameters">Parameters</h3>
+              <PluginParams />
+            </>
+          )}
+
+          <h2 id="demo">Demo</h2>
+          <PluginDemo/>
+        </>
+      )}
     </div>
   );
 }

@@ -11,8 +11,11 @@
   margin-left: -.6em;
 }
 
-.editPage {
-  font-size: .8em;
+.topBorder {
   border-top: solid 1px var(--ifm-toc-border-color);
+}
+
+.extraTocEntries {
+  font-size: .8em;
   padding-top: 1em;
 }

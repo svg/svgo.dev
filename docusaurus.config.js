@@ -1,15 +1,15 @@
 const { themes } = require('prism-react-renderer');
 
 /**
- * @typedef {import("@docusaurus/types").Config} Config 
+ * @typedef {import("@docusaurus/types").Config} Config
  */
 
 /**
  * Config for Docusaurus.
- * 
- * $.themeConfig.navbar.logo is underfined as this is configured with a custom component.
+ *
+ * $.themeConfig.navbar.logo is undefined as this is configured with a custom component.
  * $.themeConfig.footer.style is ignored as this is overriden with custom CSS.
- * 
+ *
  * @type {Config}
  */
 const config = {

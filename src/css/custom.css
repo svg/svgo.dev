@@ -50,6 +50,11 @@
   }
 }
 
+/* TOC overrides */
+.table-of-contents__link--active {
+  color: var(--svgo-pri-fg-color);
+}
+
 /* Search overrides */
 nav input {
   background-color: var(--svgo-search-bg-color) !important;
