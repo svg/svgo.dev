@@ -4,8 +4,40 @@ import { useDoc } from '@docusaurus/theme-common/internal';
 import Translate from '@docusaurus/Translate';
 import styles from './index.module.css';
 
+/**
+ * This is a hack to dynamically insert TOC items into the plugin pages table
+ * of contents. Normally, only headings inserted in the Markdown or MDX file
+ * will appear in the TOC, which excludes headings specified in React
+ * components.
+ *
+ * By doing this, we can insert the TOC headings despite them being declared in
+ * React components.
+ *
+ * @param {array} toc
+ * @param {object} svgoFrontMatter
+ */
+function insertPluginTocItems(toc, svgoFrontMatter) {
+  const usageChildren = []
+
+  if (svgoFrontMatter.parameters) {
+    usageChildren.push({
+      children: [],
+      id: "parameters",
+      level: 3,
+      value: "Parameters",
+    });
+  }
+
+  toc.push({ children: usageChildren, toc, id: "usage", level: 2, value: "Usage" });
+  toc.push({ children: [], toc, id: "demo", level: 2, value: "Demo" });
+}
+
 function TOCItemTree({ toc, className, linkClassName, isChild }) {
-  const { metadata } = useDoc();
+  const { metadata, frontMatter } = useDoc();
+
+  if (toc && !isChild && frontMatter.svgo?.pluginId) {
+    insertPluginTocItems(toc, frontMatter.svgo);
+  }
 
   if (!toc.length) {
     return null;
@@ -38,14 +70,27 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
         ))}
       </ul>
       {!isChild && (
-        <div className={clsx(styles.editPage)}>
-          <a
-            href={editUrl}
-            target="_blank"
-            className={linkClassName ?? undefined}
-          >
-            <Translate>Edit this page on GitHub</Translate>
-          </a>
+        <div className={clsx(styles.topBorder)}>
+          {frontMatter.svgo?.pluginId && (
+            <div className={clsx(styles.extraTocEntries)}>
+              <a
+                href={`https://github.com/svg/svgo/blob/main/plugins/${frontMatter.svgo.pluginId}.js`}
+                target="_blank"
+                className={linkClassName ?? undefined}
+              >
+                <Translate>Read the implementation</Translate>
+              </a>
+            </div>
+          )}
+          <div className={clsx(styles.extraTocEntries)}>
+            <a
+              href={editUrl}
+              target="_blank"
+              className={linkClassName ?? undefined}
+            >
+              <Translate>Edit this page on GitHub</Translate>
+            </a>
+          </div>
         </div>
       )}
     </>
