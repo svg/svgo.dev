@@ -1,3 +1,8 @@
+import { unified } from 'unified'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype';
+import rehypeStringify from 'rehype-stringify';
+
 const { themes } = require('prism-react-renderer');
 
 /**
@@ -31,6 +36,34 @@ const config = {
     ],
   },
   markdown: {
+    parseFrontMatter: async (params) => {
+      const result = await params.defaultParseFrontMatter(params);
+
+      if (!result.frontMatter.svgo?.parameters) {
+        return result;
+      }
+
+      for (const key in result.frontMatter.svgo.parameters) {
+        const param = result.frontMatter.svgo.parameters[key];
+
+        if (!param || !param.description) {
+          continue;
+        }
+
+        let processed = await unified()
+          .use(remarkParse, { allowDangerousHtml: true })
+          .use(remarkRehype, { allowDangerousHtml: true })
+          .use(rehypeStringify, {
+            allowDangerousCharacters: true,
+            allowDangerousHtml: true,
+          })
+          .process(param.description);
+
+        param.description = processed.value;
+      }
+
+      return result;
+    },
     mdx1Compat: {
       admonitions: false,
       comments: false,
@@ -69,7 +102,8 @@ const config = {
         ]
       }
     ],
-    "./src/plugins/prefers-color-scheme.js"
+    "./src/plugins/prefers-color-scheme.js",
+    "./src/plugins/configure-svgo.js"
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
