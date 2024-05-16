@@ -3,10 +3,10 @@ const postcss = require('postcss');
 /**
  * Docusaurus theming depends on JavaScript by default. This drops that in
  * favor of `prefers-color-scheme`.
- * 
- * Doesn't work for components styled with Prism like code blocks. 
- * 
- * @param {Object} context 
+ *
+ * Doesn't work for components styled with Prism like code blocks.
+ *
+ * @param {Object} context
  * @returns {Object}
  */
 function prefersColorScheme(context) {
