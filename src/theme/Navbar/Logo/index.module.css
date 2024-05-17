@@ -1,9 +1,9 @@
 .logoWrapper {
   display: flex;
-  margin-right: 1.5em;
+  margin-right: 1.5rem;
 }
 
 .logo {
-  height: 2em;
-  color: var(--svgo-pri-fg-color);
+  height: 2rem;
+  color: var(--svgo-logo-fg-color);
 }

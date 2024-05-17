@@ -20,7 +20,7 @@
 
 @media (min-width: 1024px) {
   .toc {
-    margin-right: 1em;
+    margin-right: 1rem;
     display: block;
     flex-shrink: 0;
   }

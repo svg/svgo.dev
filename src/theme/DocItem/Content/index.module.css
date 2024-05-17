@@ -3,8 +3,14 @@
   align-items: center;
 }
 
+.pageTitle {
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .badge {
-  margin-left: 1em;
-  margin-bottom: 1em;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
   justify-self: end;
 }

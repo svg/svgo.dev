@@ -1,6 +1,6 @@
 .badge {
-  padding: .3em .6em;
-  border-radius: 1em;
+  padding: .3rem .6rem;
+  border-radius: 1rem;
   color: var(--svgo-pill-fg-color);
   background-color: var(--svgo-pill-bg-color);
 }
