@@ -1,29 +1,81 @@
-.heroBanner {
-  padding: 2rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.hero {
+  margin: 1rem;
 }
 @media (min-width: 997px) {
-  .heroBanner {
+  .hero {
     padding: 4rem 0;
   }
 }
 
-.heroTitle {
-  font-size: 5em;
-  font-weight: 800;
+.heroSplit {
+  display: flex;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.infoSection {
+  margin: auto 0;
+}
+
+.mascotSection {
+  display: none;
+  position: relative;
+}
+.mascotSection::after {
+  content: "";
+  top: 15%;
+  right: 0;
+  position: absolute;
+  aspect-ratio: 1;
+  width: 80%;
+  border-radius: 100%;
+  z-index: -1;
+  background: linear-gradient(to bottom, #e0ebf6, #39aee410);
+}
+@media (prefers-color-scheme: dark) {
+  .mascotSection::after {
+    background: linear-gradient(to bottom, #39aee440, #39aee410);
+  }
+}
+
+.mascot {
+  width: 100%;
+  margin: 0 2rem 2rem 0;
+}
+@media (min-width: 577px) {
+  .infoSection {
+    width: 60%;
+  }
+
+  .mascotSection {
+    width: 40%;
+    padding-left: 1rem;
+    display: flex;
+  }
+}
+@media (min-width: 997px) {
+  .mascotSection {
+    padding-left: 4rem;
+  }
+
+  .mascot {
+    margin-bottom: 0;
+  }
+}
+
+.tagline {
+  line-height: 2.4rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 .installInstructions {
-  padding: 1em 2em;
-  margin-top: .5em;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  margin-top: .5rem;
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -51,7 +103,7 @@
 /* Copy icon */
 .icon {
   position: absolute;
-  right: .5em;
+  right: -1.5em;
   opacity: 0;
   display: flex;
   transition: opacity .1s;

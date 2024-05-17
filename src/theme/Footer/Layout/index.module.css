@@ -1,7 +1,11 @@
 .wrapper {
-  padding: 2em 1em;
+  padding: 6rem 1rem 2rem 1rem;
+  background: linear-gradient(to right, #0771d5, #27489f);
+  clip-path: url(#footerMobilePath);
 }
-
-.footer {
-  max-width: var(--svgo-global-width);
+@media (min-width: 997px) {
+  .wrapper {
+    background: linear-gradient(to right, #0771d5, #27489f);
+    clip-path: url(#footerDesktopPath);
+  }
 }

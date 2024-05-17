@@ -8,7 +8,7 @@
 
 .noSeperator {
   border: none;
-  margin-left: -.6em;
+  margin-left: -.5rem;
 }
 
 .topBorder {
@@ -16,6 +16,6 @@
 }
 
 .extraTocEntries {
-  font-size: .8em;
-  padding-top: 1em;
+  font-size: .8rem;
+  padding-top: 1rem;
 }
