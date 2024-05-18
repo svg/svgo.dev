@@ -12,14 +12,14 @@ const { themes } = require('prism-react-renderer');
 /**
  * Config for Docusaurus.
  *
+ * $.tagline is undefined, as our copy is specified in the code instead.
  * $.themeConfig.navbar.logo is undefined as this is configured with a custom component.
- * $.themeConfig.footer.style is ignored as this is overriden with custom CSS.
+ * $.themeConfig.footer.style is ignored as this is overridden with custom CSS.
  *
  * @type {Config}
  */
 const config = {
   title: "SVGO",
-  tagline: "A Node.js library and command-line application to optimize vectors.",
   favicon: "img/favicon.ico",
   url: "https://svgo.dev",
   baseUrl: "/",
@@ -32,7 +32,7 @@ const config = {
   i18n: {
     defaultLocale: "en",
     locales: [
-      "en" 
+      "en"
     ],
   },
   markdown: {
