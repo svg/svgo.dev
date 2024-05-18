@@ -44,7 +44,7 @@ function Feature({ Svg, title, description }) {
       <div className={clsx(styles.featureBackground)}></div>
       <div className={clsx(styles.feature)}>
         <div className="text--center">
-          <Svg className={clsx(styles.featureSvg)} role="img" aria-hidden="true" />
+          <Svg className={clsx(styles.featureSvg)} role="img"/>
         </div>
         <div className={clsx(styles.featureText, "padding-horiz--md")}>
           <h2 className={clsx(styles.featureTitle)}>{title}</h2>
