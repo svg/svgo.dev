@@ -23,13 +23,33 @@ function configureSvgo() {
       });
 
       const svgoConfig = rule.oneOf[0].use[0].options.svgoConfig;
-      svgoConfig.plugins.push({
-        name: "prefixIds",
-        params: {
-          delim: "",
-          prefix: (_, info) => path.parse(info.path).name
-        }
-      });
+      svgoConfig.plugins = [
+        {
+          ...svgoConfig.plugins[0],
+          params: {
+            overrides: {
+              ...svgoConfig.plugins[0].params.overrides,
+              mergePaths: {
+                noSpaceAfterFlags: true
+              }
+            }
+          }
+        },
+        {
+          name: "prefixIds",
+          params: {
+            delim: "",
+            prefix: (_, info) => path.parse(info.path).name
+          }
+        },
+        {
+          name: "removeXlink",
+          params: {
+            includeLegacy: true
+          }
+        },
+        "removeXMLNS"
+      ];
 
       return {
         mergeStrategy: {
