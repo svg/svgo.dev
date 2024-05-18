@@ -1,4 +1,4 @@
-let prefixCounter = 0;
+import path from "path";
 
 /**
  * Docusaurus uses SVGR internally, which in turn uses SVGO. We need to
@@ -11,7 +11,7 @@ let prefixCounter = 0;
  */
 function configureSvgo() {
   return {
-    name: 'configure-svgo',
+    name: "configure-svgo",
     configureWebpack(config) {
       /** @type {object[]} */
       const rules = config.module.rules;
@@ -27,7 +27,7 @@ function configureSvgo() {
         name: "prefixIds",
         params: {
           delim: "",
-          prefix: () => `a${prefixCounter++}`
+          prefix: (_, info) => path.parse(info.path).name
         }
       });
 
