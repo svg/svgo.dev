@@ -57,7 +57,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <meta name="description" content="SVGO is a Node.js library and command-line application for optimizing vectors."/>
+        <meta name="description" content="SVGO is a Node.js library and command-line application for optimizing vector images."/>
       </Head>
       <HomepageHeader />
       <main>
