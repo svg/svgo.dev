@@ -1,6 +1,4 @@
 :root {
-  --svgo-font-mono: 'Liberation Mono', Monaco, Cousine, Consolas, monospace;
-  --svgo-font-sans: 'Nimbus Sans', Helvetica, Arial, Roboto, 'Liberation Sans', 'DejaVu Sans', Arimo, sans-serif;
   --svgo-global-width: 1200px;
   --svgo-pill-bg-color: #cbe2f9;
   --svgo-pill-fg-color: #0b5cad;
@@ -23,7 +21,6 @@
   --ifm-spacing-horizontal: 1rem;
   --search-local-hit-background: var(--svgo-sec-bg-color);
 
-  font-family: var(--svgo-font-sans);
   color: var(--svgo-pri-fg-color);
 }
 
@@ -48,9 +45,8 @@
 .button {
   --ifm-button-color: var(--svgo-pri-bg-color);
   --ifm-button-background-color: var(--svgo-pri-fg-color);
-  --ifm-button-border-color: var(--svgo-pri-fg-color);
 }
-.button:hover {
+.button:hover, .button:focus {
   --ifm-button-background-color: var(--svgo-button-hover-background-color);
 }
 
@@ -75,7 +71,7 @@
 nav input {
   background-color: var(--svgo-search-bg-color) !important;
 }
-nav input:hover {
+nav input:hover, nav input:focus {
   background-color: var(--svgo-search-bg-hover) !important;
 }
 nav div kbd {
