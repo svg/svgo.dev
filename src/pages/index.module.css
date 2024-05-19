@@ -80,7 +80,7 @@
   display: inline-flex;
   align-items: center;
   user-select: none;
-  font-family: var(--svgo-font-mono);
+  font-family: var(--ifm-font-family-monospace);
   cursor: copy;
 }
 

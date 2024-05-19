@@ -27,7 +27,7 @@ function HomepageHeader() {
             SVGO and its various integrations will enable you to optimize
             SVGs and serve your web applications faster.
           </p>
-          <div className={styles.buttons}>
+          <div>
             <Link
               className="button button--lg"
               to="/docs/introduction">
