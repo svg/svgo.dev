@@ -99,7 +99,27 @@ const config = {
         filename: "sitemap.xml",
         ignorePatterns: [
           "/.well-known/**"
-        ]
+        ],
+        createSitemapItems: async (params) => {
+          const { defaultCreateSitemapItems, ...rest } = params;
+
+          /** @type {object[]} */
+          let items = await defaultCreateSitemapItems(rest);
+          items = items.map((item) => {
+            const pathname = new URL(item.url).pathname;
+
+            if (pathname === "/") {
+              item.priority = 1;
+            } else if (pathname === "/search/") {
+              item.priority = 0.1;
+              item.changefreq = "monthly";
+            }
+
+            return item;
+          });
+
+          return items;
+        },
       }
     ],
     "./src/plugins/prefers-color-scheme.js",
