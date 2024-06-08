@@ -11,13 +11,12 @@
   --svgo-logo-fg-color: #1d1d1b;
   --svgo-button-hover-background-color: #1b4055;
   --ifm-background-color: var(--svgo-pri-bg-color) !important;
-  --ifm-card-background-color: var(--svgo-sec-bg-color);
   --ifm-code-font-size: 95%;
   --ifm-color-primary: #216be2;
   --ifm-container-width-xl: var(--svgo-global-width);
   --ifm-footer-padding-horizontal: 1rem;
   --ifm-navbar-background-color: var(--svgo-pri-bg-color);
-  --ifm-navbar-shadow: 0 1rem 1rem 0 #0a1e291a;
+  --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e291a;
   --ifm-spacing-horizontal: 1rem;
   --search-local-hit-background: var(--svgo-sec-bg-color);
 
@@ -32,12 +31,12 @@
     --svgo-pri-fg-color: #fff;
     --svgo-search-bg-color: #5a6a74;
     --svgo-search-bg-hover: #647682;
-    --svgo-sec-bg-color: #1c262d;
+    --svgo-sec-bg-color: #1b3241;
     --svgo-tir-bg-color: #5a6a74;
     --svgo-logo-fg-color: #fff;
     --svgo-button-hover-background-color: #e6e6e6;
-    --ifm-color-primary: #66b5ff;
-    --ifm-navbar-shadow: 0 1rem 1rem 0 #0a1e29;
+    --ifm-color-primary: #389fff;
+    --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e29;
   }
 }
 
