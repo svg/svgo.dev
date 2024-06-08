@@ -5,6 +5,11 @@ on:
     types:
       - 'published'
   workflow_dispatch:
+    input:
+      svgoVersion:
+        description: The svg/svgo branch or tag to pull docs from.
+        default: 'main'
+        type: string
 
 permissions:
   contents: write
@@ -19,9 +24,10 @@ jobs:
         with:
           repository: svg/svgo
           path: .svgo
+          ref: ${{ inputs.svgoVersion }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: 'yarn'
       - run: yarn install --immutable
       - run: yarn run build
