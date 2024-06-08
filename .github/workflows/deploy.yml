@@ -5,7 +5,7 @@ on:
     types:
       - 'published'
   workflow_dispatch:
-    input:
+    inputs:
       svgoVersion:
         description: The svg/svgo branch or tag to pull docs from.
         default: 'main'
