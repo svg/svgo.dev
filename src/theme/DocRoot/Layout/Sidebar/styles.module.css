@@ -11,7 +11,7 @@
   .docSidebarContainer {
     display: block;
     width: var(--doc-sidebar-width);
-    margin-top: calc(-1 * var(--ifm-navbar-height));
+    margin-top: calc(-1 * var(--ifm-navbar-height) + .5rem);
     clip-path: inset(0);
   }
 

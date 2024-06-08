@@ -31,7 +31,7 @@ function HomepageHeader() {
             <Link
               className="button button--lg"
               to="/docs/introduction">
-              Get Started
+              Read the docs
             </Link>
           </div>
           <div className={clsx(styles.installInstructions)} onClick={onClick}>
