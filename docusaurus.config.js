@@ -166,8 +166,8 @@ const config = {
       ],
     },
     prism: {
-      theme: themes.github,
-      darkTheme: themes.dracula
+      theme: themes.vsLight,
+      darkTheme: themes.oneDark
     },
     footer: {
       links: [
