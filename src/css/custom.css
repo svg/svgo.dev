@@ -67,18 +67,19 @@
 }
 
 /* Search overrides */
-nav input {
-  background-color: var(--svgo-search-bg-color) !important;
+nav .navbar__search-input {
+  border-radius: .5rem;
+  background-color: var(--svgo-search-bg-color);
 }
-nav input:hover, nav input:focus {
-  background-color: var(--svgo-search-bg-hover) !important;
+nav .navbar__search-input:hover, nav .navbar__search-input:focus {
+  background-color: var(--svgo-search-bg-hover);
 }
 nav div kbd {
   background-color: var(--svgo-pri-bg-color) !important;
 }
 @media (min-width: 577px) {
-  nav input {
-    width: 200px !important;
+  nav .navbar__search-input {
+    width: 200px;
   }
 }
 
