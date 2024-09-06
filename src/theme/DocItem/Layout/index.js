@@ -7,7 +7,7 @@ import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import styles from './styles.module.css';
 
-export default function DocItemLayout({children}) {
+export default function DocItemLayout({ children }) {
   return (
     <div className={styles.wrapper}>
       <div className={clsx('col', styles.docItemCol)}>

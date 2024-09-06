@@ -25,7 +25,7 @@ export default function PluginUsage() {
   let paramsTemplate = Object.keys(parameters)
     .filter((key) => parameters[key] && parameters[key].default !== undefined)
     .map((param) => `        ${param}: ${JSON.stringify(parameters[param].default)}`)
-    .join(",\n");
+    .join(',\n');
 
   return (
     <Tabs>

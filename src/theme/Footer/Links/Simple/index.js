@@ -5,18 +5,18 @@ function Separator() {
   return <span className="footer__link-separator">·</span>;
 }
 
-function SimpleLinkItem({item}) {
+function SimpleLinkItem({ item }) {
   return item.html ? (
     <span
       className="footer__link-item"
-      dangerouslySetInnerHTML={{__html: item.html}}
+      dangerouslySetInnerHTML={{ __html: item.html }}
     />
   ) : (
     <LinkItem item={item} />
   );
 }
 
-export default function FooterLinksSimple({links}) {
+export default function FooterLinksSimple({ links }) {
   return (
     <div className="footer__links text--center">
       <div className="footer__links">

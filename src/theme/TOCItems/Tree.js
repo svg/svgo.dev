@@ -22,14 +22,14 @@ function insertPluginTocItems(toc, svgoFrontMatter) {
   if (svgoFrontMatter.parameters) {
     usageChildren.push({
       children: [],
-      id: "parameters",
+      id: 'parameters',
       level: 3,
-      value: "Parameters",
+      value: 'Parameters',
     });
   }
 
-  toc.push({ children: usageChildren, toc, id: "usage", level: 2, value: "Usage" });
-  toc.push({ children: [], toc, id: "demo", level: 2, value: "Demo" });
+  toc.push({ children: usageChildren, toc, id: 'usage', level: 2, value: 'Usage' });
+  toc.push({ children: [], toc, id: 'demo', level: 2, value: 'Demo' });
 }
 
 function TOCItemTree({ toc, className, linkClassName, isChild }) {
@@ -77,6 +77,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
                 href={`https://github.com/svg/svgo/blob/main/plugins/${frontMatter.svgo.pluginId}.js`}
                 target="_blank"
                 className={linkClassName ?? undefined}
+                rel="noreferrer"
               >
                 <Translate>Read the implementation</Translate>
               </a>
@@ -87,6 +88,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
               href={editUrl}
               target="_blank"
               className={linkClassName ?? undefined}
+              rel="noreferrer"
             >
               <Translate>Edit this page on GitHub</Translate>
             </a>
