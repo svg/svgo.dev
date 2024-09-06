@@ -9,7 +9,7 @@ import HomepageFeatures from '../../src/components/HomepageFeatures';
 import styles from './index.module.css';
 import SvgoTrixie from '../vectors/svgo_trixie.svg';
 
-const INSTALL_COMMAND = "npm i -g svgo";
+const INSTALL_COMMAND = 'npm i -g svgo';
 
 const onClick = async () => {
   navigator.clipboard.writeText(INSTALL_COMMAND);
@@ -18,7 +18,7 @@ const onClick = async () => {
 function HomepageHeader() {
   return (
     <header className={styles.hero}>
-      <div className={clsx(styles.heroSplit, "container")}>
+      <div className={clsx(styles.heroSplit, 'container')}>
         <div className={styles.infoSection}>
           <p className={styles.tagline}>
             SVG Optimizer for Node.js and CLI

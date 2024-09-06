@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import CodeBlock from "@theme/CodeBlock";
+import React, { useState } from 'react';
+import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
-import styles from "./index.module.css";
+import styles from './index.module.css';
 
 export default function SvgPreview(props) {
   const [ error, setError ] = useState(false);

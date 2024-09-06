@@ -19,20 +19,20 @@ const { themes } = require('prism-react-renderer');
  * @type {Config}
  */
 const config = {
-  title: "SVGO",
-  favicon: "img/favicon.ico",
-  url: "https://svgo.dev",
-  baseUrl: "/",
+  title: 'SVGO',
+  favicon: 'img/favicon.ico',
+  url: 'https://svgo.dev',
+  baseUrl: '/',
   baseUrlIssueBanner: false,
-  organizationName: "svg",
-  projectName: "svgo.dev",
+  organizationName: 'svg',
+  projectName: 'svgo.dev',
   trailingSlash: true,
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'throw',
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: 'en',
     locales: [
-      "en"
+      'en'
     ],
   },
   markdown: {
@@ -72,33 +72,33 @@ const config = {
   },
   plugins: [
     [
-      "@docusaurus/theme-classic",
+      '@docusaurus/theme-classic',
       {
-        customCss: require.resolve("./src/css/custom.css"),
+        customCss: require.resolve('./src/css/custom.css'),
       },
     ],
     [
-      "@docusaurus/plugin-content-pages",
+      '@docusaurus/plugin-content-pages',
       {
-        path: "src/pages",
-        routeBasePath: "/"
+        path: 'src/pages',
+        routeBasePath: '/'
       }
     ],
     [
-      "@docusaurus/plugin-content-docs",
+      '@docusaurus/plugin-content-docs',
       {
-        path: ".svgo/docs",
+        path: '.svgo/docs',
         breadcrumbs: true,
-        sidebarPath: require.resolve("./sidebars.js"),
+        sidebarPath: require.resolve('./sidebars.js'),
         editUrl: ({ docPath }) => `https://github.com/svg/svgo/tree/main/docs/${docPath}`,
       }
     ],
     [
-      "@docusaurus/plugin-sitemap",
+      '@docusaurus/plugin-sitemap',
       {
-        filename: "sitemap.xml",
+        filename: 'sitemap.xml',
         ignorePatterns: [
-          "/.well-known/**"
+          '/.well-known/**'
         ],
         createSitemapItems: async (params) => {
           const { defaultCreateSitemapItems, ...rest } = params;
@@ -108,11 +108,11 @@ const config = {
           items = items.map((item) => {
             const pathname = new URL(item.url).pathname;
 
-            if (pathname === "/") {
+            if (pathname === '/') {
               item.priority = 1;
-            } else if (pathname === "/search/") {
+            } else if (pathname === '/search/') {
               item.priority = 0.1;
-              item.changefreq = "monthly";
+              item.changefreq = 'monthly';
             }
 
             return item;
@@ -122,19 +122,19 @@ const config = {
         },
       }
     ],
-    "./src/plugins/prefers-color-scheme.js",
-    "./src/plugins/configure-svgo.js"
+    './src/plugins/prefers-color-scheme.js',
+    './src/plugins/configure-svgo.js'
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         indexDocs: true,
         indexBlog: false,
-        language: "en",
+        language: 'en',
         hashed: true,
-        searchBarPosition: "right"
+        searchBarPosition: 'right'
       }
     ]
   ],
@@ -146,20 +146,20 @@ const config = {
     navbar: {
       items: [
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "docsSidebar",
-          label: "Documentation"
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'docsSidebar',
+          label: 'Documentation'
         },
         {
-          href: "https://jakearchibald.github.io/svgomg/",
-          position: "left",
-          label: "Playground"
+          href: 'https://jakearchibald.github.io/svgomg/',
+          position: 'left',
+          label: 'Playground'
         },
         {
-          href: "https://github.com/svg/svgo",
-          position: "right",
-          html: `<img src="https://img.shields.io/github/stars/svg/svgo?style=social" alt="" height="20" width="88"/>`,
+          href: 'https://github.com/svg/svgo',
+          position: 'right',
+          html: '<img src="https://img.shields.io/github/stars/svg/svgo?style=social" alt="" height="20" width="88"/>',
           className: 'github-shield',
           'aria-label': 'GitHub repository'
         }
@@ -172,28 +172,28 @@ const config = {
     footer: {
       links: [
         {
-          title: "Community",
+          title: 'Community',
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/svgo",
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/svgo',
             },
             {
-              label: "Discord",
-              href: "https://discord.com/invite/z8jX8NYxrE",
+              label: 'Discord',
+              href: 'https://discord.com/invite/z8jX8NYxrE',
             }
           ],
         },
         {
-          title: "More",
+          title: 'More',
           items: [
             {
-              label: "GitHub",
-              href: "https://github.com/svg/svgo",
+              label: 'GitHub',
+              href: 'https://github.com/svg/svgo',
             },
             {
-              label: "Open Collective",
-              href: "https://opencollective.com/svgo"
+              label: 'Open Collective',
+              href: 'https://opencollective.com/svgo'
             }
           ]
         }

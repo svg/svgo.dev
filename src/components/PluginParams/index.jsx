@@ -20,7 +20,7 @@ export default function PluginParams() {
           <dt>
             <code>{param.name}</code>
           </dt>
-          <dd className={styles.leftMargin} dangerouslySetInnerHTML={{__html: param.description}}>
+          <dd className={styles.leftMargin} dangerouslySetInnerHTML={{ __html: param.description }}>
           </dd>
         </Fragment>
       ))}
