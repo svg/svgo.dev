@@ -13,8 +13,8 @@ export default function FooterLayout({ links, copyright }) {
           <path d="M 0 0 Q .2 .3 .4 .1 T .8 .1 1 .3 V 1 H 0" />
         </clipPath>
       </svg>
-      <footer className={clsx('footer', styles.wrapper)}>
-        <div className={clsx('container', styles.footer)}>
+      <footer className={clsx(styles.wrapper, "footer")}>
+        <div className={clsx(styles.footer, "container")}>
           {links}
           {copyright && (
             <div className="text--center">

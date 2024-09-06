@@ -1,5 +1,4 @@
 import React from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
@@ -22,7 +21,7 @@ export default function FooterLinkItem({ item }) {
           to: toUrl,
         })}
       {...props}>
-      <div className={clsx(styles.footerLink)}>
+      <div className={styles.footerLink}>
         {label}
         {href && !isInternalUrl(href) && <IconExternalLink />}
       </div>

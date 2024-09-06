@@ -48,11 +48,11 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
   return (
     <>
       {!isChild && (
-        <div className={clsx(styles.onThisPage)}>
+        <div className={styles.onThisPage}>
           On this page
         </div>
       )}
-      <ul className={clsx(isChild ? undefined : className, isChild ? undefined : styles.rootToc, styles.noSeperator)}>
+      <ul className={clsx(styles.noSeperator, isChild ? undefined : className, isChild ? undefined : styles.rootToc)}>
         {toc.map((heading) => (
           <li key={heading.id}>
             <a
@@ -70,9 +70,9 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
         ))}
       </ul>
       {!isChild && (
-        <div className={clsx(styles.topBorder)}>
+        <div className={styles.topBorder}>
           {frontMatter.svgo?.pluginId && (
-            <div className={clsx(styles.extraTocEntries)}>
+            <div className={styles.extraTocEntries}>
               <a
                 href={`https://github.com/svg/svgo/blob/main/plugins/${frontMatter.svgo.pluginId}.js`}
                 target="_blank"
@@ -82,7 +82,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
               </a>
             </div>
           )}
-          <div className={clsx(styles.extraTocEntries)}>
+          <div className={styles.extraTocEntries}>
             <a
               href={editUrl}
               target="_blank"

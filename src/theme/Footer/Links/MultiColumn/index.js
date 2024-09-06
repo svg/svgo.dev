@@ -18,7 +18,7 @@ function ColumnLinkItem({item}) {
 
 function Column({column}) {
   return (
-    <div className={clsx('col footer__col', styles.footerList)}>
+    <div className={clsx(styles.footerList, "col footer__col")}>
       <div className="footer__title">{column.title}</div>
       <ul className="footer__items clean-list">
         {column.items.map((item, i) => (

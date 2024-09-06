@@ -1,5 +1,4 @@
 import React from "react";
-import clsx from "clsx";
 import { optimize } from "svgo/dist/svgo.browser.js";
 import SvgPreview from '../SvgDemo';
 import styles from "./index.module.css";
@@ -21,8 +20,8 @@ export default function SvgoPreview(props) {
   return (
     <>
       <SvgPreview svg={optimized}/>
-      <span className={clsx(styles.profit)}>
-        {initialUi} {directionUi} <span className={clsx(styles.highlight)}>{profitUi}</span> = {optimizedUi}
+      <span className={styles.profit}>
+        {initialUi} {directionUi} <span className={styles.highlight}>{profitUi}</span> = {optimizedUi}
       </span>
     </>
   );

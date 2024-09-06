@@ -28,10 +28,10 @@ export default function DocItemContent({ children }) {
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
       {syntheticTitle && (
-        <header className={clsx(styles.header)}>
-          <Heading as="h1" className={clsx(styles.pageTitle)}>{syntheticTitle}</Heading>
+        <header className={styles.header}>
+          <Heading as="h1" className={styles.pageTitle}>{syntheticTitle}</Heading>
           {frontMatter.svgo?.defaultPlugin && (
-            <div className={clsx(styles.badge)}>
+            <div className={styles.badge}>
               <DefaultBadge />
             </div>
           )}
