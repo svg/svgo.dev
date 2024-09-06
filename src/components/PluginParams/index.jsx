@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import clsx from 'clsx';
 import { useDoc } from '@docusaurus/theme-common/internal';
 import styles from './index.module.css';
 
@@ -21,7 +20,7 @@ export default function PluginParams() {
           <dt>
             <code>{param.name}</code>
           </dt>
-          <dd className={clsx(styles.leftMargin)} dangerouslySetInnerHTML={{__html: param.description}}>
+          <dd className={styles.leftMargin} dangerouslySetInnerHTML={{__html: param.description}}>
           </dd>
         </Fragment>
       ))}

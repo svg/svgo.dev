@@ -40,15 +40,15 @@ const FeatureList = [
 
 function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx(styles.featureWrapper)}>
-      <div className={clsx(styles.featureBackground)}></div>
-      <div className={clsx(styles.feature)}>
+    <div className={styles.featureWrapper}>
+      <div className={styles.featureBackground}></div>
+      <div className={styles.feature}>
         <div className="text--center">
-          <Svg className={clsx(styles.featureSvg)} role="img"/>
+          <Svg className={styles.featureSvg} role="img"/>
         </div>
         <div className={clsx(styles.featureText, "padding-horiz--md")}>
-          <h2 className={clsx(styles.featureTitle)}>{title}</h2>
-          <p className={clsx(styles.featureDescription)}>{description}</p>
+          <h2 className={styles.featureTitle}>{title}</h2>
+          <p className={styles.featureDescription}>{description}</p>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@ export default function HomepageFeatures() {
           <path d="M 0 .25 Q .2 -.1 .4 .1 T .8 .2 1 0 V 1 H 0" />
         </clipPath>
       </svg>
-      <section className={clsx(styles.features)}>
+      <section className={styles.features}>
         {FeatureList.map((props, idx) => (
           <Feature key={idx} {...props} />
         ))}

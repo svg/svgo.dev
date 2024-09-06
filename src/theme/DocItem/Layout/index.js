@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 
 export default function DocItemLayout({children}) {
   return (
-    <div className={clsx(styles.wrapper)}>
+    <div className={styles.wrapper}>
       <div className={clsx('col', styles.docItemCol)}>
         <div className={styles.docItemContainer}>
           <article>
@@ -20,7 +20,7 @@ export default function DocItemLayout({children}) {
           <DocItemPaginator />
         </div>
       </div>
-      <div className={clsx(styles.toc)}>
+      <div className={styles.toc}>
         <DocItemTOCDesktop/>
       </div>
     </div>

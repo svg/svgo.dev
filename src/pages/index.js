@@ -17,13 +17,13 @@ const onClick = async () => {
 
 function HomepageHeader() {
   return (
-    <header className={clsx(styles.hero)}>
-      <div className={clsx("container", styles.heroSplit)}>
-        <div className={clsx(styles.infoSection)}>
-          <p className={clsx(styles.tagline)}>
+    <header className={styles.hero}>
+      <div className={clsx(styles.heroSplit, "container")}>
+        <div className={styles.infoSection}>
+          <p className={styles.tagline}>
             SVG Optimizer for Node.js and CLI
           </p>
-          <p className={clsx(styles.subtitle)}>
+          <p className={styles.subtitle}>
             SVGO and its various integrations will enable you to optimize
             SVGs and serve your web applications faster.
           </p>
@@ -34,9 +34,9 @@ function HomepageHeader() {
               Read the docs
             </Link>
           </div>
-          <div className={clsx(styles.installInstructions)} onClick={onClick}>
+          <div className={styles.installInstructions} onClick={onClick}>
             $ {INSTALL_COMMAND}
-            <span className={clsx(styles.cursor)}>█</span>
+            <span className={styles.cursor}>█</span>
             <span className={clsx(styles.icon, styles.copyIcon)}>
               <CopyIcon height="1em"/>
             </span>
@@ -45,8 +45,8 @@ function HomepageHeader() {
             </span>
           </div>
         </div>
-        <div className={clsx(styles.mascotSection)}>
-          <SvgoTrixie className={clsx(styles.mascot)}/>
+        <div className={styles.mascotSection}>
+          <SvgoTrixie className={styles.mascot}/>
         </div>
       </div>
     </header>

@@ -14,8 +14,8 @@ export default function DocRootLayoutMain({ hiddenSidebarContainer, children }) 
       )}>
       <div
         className={clsx(
-          'container padding-top--md padding-bottom--lg',
           styles.docItemWrapper,
+          'container padding-top--md padding-bottom--lg',
           hiddenSidebarContainer && styles.docItemWrapperEnhanced,
         )}>
         {children}
