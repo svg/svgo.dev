@@ -87,9 +87,18 @@ nav div kbd {
 footer {
   --ifm-link-color: #fff;
   --ifm-link-hover-color: #cac4ce;
+  --ifm-link-hover-decoration: none;
   --ifm-footer-background-color: none;
   --ifm-footer-color: #fff;
   --ifm-footer-link-color: #fff;
   --ifm-footer-link-hover-color: #cac4ce;
   --ifm-footer-title-color: #fff;
+}
+.designer-attribution {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.designer-attribution svg {
+  margin-left: 0.25em;
 }

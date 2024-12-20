@@ -5,6 +5,8 @@ import rehypeStringify from 'rehype-stringify';
 
 const { themes } = require('prism-react-renderer');
 
+const VUKORY_SVG = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 378.627 333.846"><path fill="currentcolor" d="M86.059 0 67.28 69.362l27.025 28.86-70.296 40.574 20.506 7.41L0 175.596h70.96l-2.327 13.242 67.302.058-12.653 46.196 18.083-3.42 27.746 96.978 20.202 5.196 20.203-5.196 27.745-96.977 18.083 3.419-12.653-46.196 67.302-.058-2.326-13.241h70.96l-44.515-29.391 20.505-7.41-70.296-40.573 27.026-28.861L292.567 0l-56.345 57.422-46.909 21.009-46.909-21.01Z"/></svg>';
+
 /**
  * @typedef {import("@docusaurus/types").Config} Config
  */
@@ -198,7 +200,7 @@ const config = {
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0`
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class="designer-attribution" href="https://www.artstation.com/vukory" target="_blank">Vukory ${VUKORY_SVG}</a>`
     },
   },
 };
