@@ -58,6 +58,10 @@ export default function Home() {
     <Layout>
       <Head>
         <meta name="description" content="SVGO is a Node.js library and command-line application for optimizing vector images."/>
+        <meta name="og:image" content="https://svgo.dev/img/opengraph.jpg"/>
+        <meta name="og:image:type" content="image/jpeg"/>
+        <meta name="og:image:width" content="1920"/>
+        <meta name="og:image:height" content="480"/>
       </Head>
       <HomepageHeader />
       <main>
