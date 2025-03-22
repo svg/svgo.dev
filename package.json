@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@3.8.2",
+  "packageManager": "yarn@4.7.0",
   "name": "svgo-dev",
   "version": "0.0.0",
   "description": "Landing page and documentation for SVGO.",
