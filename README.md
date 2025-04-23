@@ -7,7 +7,7 @@ This repository contains source code for the landing page, custom components, an
 In order to run or deploy the site, you'll first need to fetch the documentation. You can do this by cloning [svg/svgo](https://github.com/svg/svgo) to the `.svgo` directory in the workspace.
 
 ```sh
-git clone https://github.com/svg/svgo.git .svgo --depth 1
+git clone https://github.com/svg/svgo.dev.git .svgo --depth 1
 ```
 
 Docusaurus is configured to read documents from the `.svgo/docs` directory instead of the root `docs/` directory.
