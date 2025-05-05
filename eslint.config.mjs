@@ -2,11 +2,7 @@ import globals from 'globals';
 import pluginJs from '@eslint/js';
 import pluginReact from 'eslint-plugin-react';
 
-/**
- * @typedef {import("eslint").Linter.Config} Config
- */
-
-/** @type {Config[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     ignores: [
