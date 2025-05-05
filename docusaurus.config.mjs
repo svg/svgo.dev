@@ -2,14 +2,26 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
-
-const { themes } = require('prism-react-renderer');
+import { themes } from 'prism-react-renderer';
 
 const VUKORY_SVG = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 378.627 333.846"><path fill="currentcolor" d="M86.059 0 67.28 69.362l27.025 28.86-70.296 40.574 20.506 7.41L0 175.596h70.96l-2.327 13.242 67.302.058-12.653 46.196 18.083-3.42 27.746 96.978 20.202 5.196 20.203-5.196 27.745-96.977 18.083 3.419-12.653-46.196 67.302-.058-2.326-13.241h70.96l-44.515-29.391 20.505-7.41-70.296-40.573 27.026-28.861L292.567 0l-56.345 57.422-46.909 21.009-46.909-21.01Z"/></svg>';
 
 /**
- * @typedef {import("@docusaurus/types").Config} Config
+ * Remove unwanted styles from a Prism themes. This is easier than configuring
+ * a theme from scratch, and more efficient than encumbering our CSS with
+ * style overrides.
+ *
+ * @param {import('prism-react-renderer').PrismTheme} theme
+ * @returns {import('prism-react-renderer').PrismTheme}
+ *   Reference to the same theme that was passed as a parameter.
  */
+function amendTheme(theme) {
+  theme.styles = theme.styles.filter((style) => {
+    return !(style.types[0] === 'deleted' || style.types[0] === 'inserted' && style.style.textDecorationLine);
+  });
+
+  return theme;
+}
 
 /**
  * Config for Docusaurus.
@@ -18,7 +30,7 @@ const VUKORY_SVG = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox
  * $.themeConfig.navbar.logo is undefined as this is configured with a custom component.
  * $.themeConfig.footer.style is ignored as this is overridden with custom CSS.
  *
- * @type {Config}
+ * @type {import('@docusaurus/types').Config}
  */
 const config = {
   title: 'SVGO',
@@ -73,6 +85,17 @@ const config = {
     }
   },
   plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/docs/plugins/removeScripts/',
+            from: '/docs/plugins/removeScriptElement/',
+          },
+        ],
+      }
+    ],
     [
       '@docusaurus/theme-classic',
       {
@@ -169,7 +192,8 @@ const config = {
     },
     prism: {
       theme: themes.vsLight,
-      darkTheme: themes.oneDark
+      darkTheme: amendTheme(themes.oneDark),
+      additionalLanguages: ['diff'],
     },
     footer: {
       links: [
