@@ -1,22 +1,27 @@
 # SVGO Website
 
-A site powered by Docusaurus, mostly featuring documentation for SVGO.
+A site powered by Docusaurus, featuring documentation for SVGO.
 
-This repository contains source code for the landing page, custom components, and pretty much everything except the documentation itself. The documentation is pulled from [svg/svgo](https://github.com/svg/svgo) during deployment.
+This repository contains source code for everything except the documentation itself, as the documentation is pulled from [svg/svgo](https://github.com/svg/svgo) during deployment.
 
-In order to run or deploy the site, you'll first need to fetch the documentation. You can do this by cloning [svg/svgo](https://github.com/svg/svgo) to the `.svgo` directory in the workspace.
+Docusaurus is configured to read documentation from the `.svgo/docs` directory instead of the root `docs/` directory. Before running locally, you must install dependencies and obtain a copy of the documentation:
 
 ```sh
-git clone https://github.com/svg/svgo.git .svgo --depth 1
-```
+yarn install
 
-Docusaurus is configured to read documents from the `.svgo/docs` directory instead of the root `docs/` directory.
+# You only need to do one of the following!
+
+# Requires git, clones svg/svgo to .svgo
+yarn run svgo:clone
+
+# Assumes svg/svgo was cloned next to svg/svgo.dev, copies svg/svgo to .svgo
+yarn run svgo:copy
+```
 
 ## Running Locally
 
 Once you have the project setup, you can run the development server:
 
 ```sh
-yarn install
 yarn run start
 ```
