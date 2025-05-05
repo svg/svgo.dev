@@ -1,5 +1,5 @@
 import React from 'react';
-import { optimize } from 'svgo/dist/svgo.browser.js';
+import { optimize } from 'svgo/browser';
 import SvgPreview from '../SvgDemo';
 import styles from './index.module.css';
 
