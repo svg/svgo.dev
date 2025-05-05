@@ -30,6 +30,8 @@
     "node": ">=18"
   },
   "scripts": {
+    "svgo:clone": "rimraf .svgo && git clone https://github.com/svg/svgo.git .svgo --depth 1",
+    "svgo:copy": "rimraf .svgo && cp -r ../svgo .svgo",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -43,6 +45,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.3.2",
+    "@docusaurus/plugin-client-redirects": "3.3.2",
     "@docusaurus/plugin-content-docs": "^3.3.2",
     "@docusaurus/plugin-content-pages": "^3.3.2",
     "@docusaurus/plugin-sitemap": "^3.3.2",
@@ -55,12 +58,13 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rehype-stringify": "^10.0.0",
-    "svgo": "^3.3.2"
+    "svgo": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "eslint": "^9.9.1",
     "eslint-plugin-react": "^7.35.2",
-    "globals": "^15.9.0"
+    "globals": "^15.9.0",
+    "rimraf": "^6.0.1"
   }
 }
