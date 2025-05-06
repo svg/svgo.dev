@@ -3,6 +3,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype';
 import rehypeStringify from 'rehype-stringify';
 import { themes } from 'prism-react-renderer';
+import path from 'path';
 
 const VUKORY_SVG = '<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 378.627 333.846"><path fill="currentcolor" d="M86.059 0 67.28 69.362l27.025 28.86-70.296 40.574 20.506 7.41L0 175.596h70.96l-2.327 13.242 67.302.058-12.653 46.196 18.083-3.42 27.746 96.978 20.202 5.196 20.203-5.196 27.745-96.977 18.083 3.419-12.653-46.196 67.302-.058-2.326-13.241h70.96l-44.515-29.391 20.505-7.41-70.296-40.573 27.026-28.861L292.567 0l-56.345 57.422-46.909 21.009-46.909-21.01Z"/></svg>';
 
@@ -147,8 +148,44 @@ const config = {
         },
       }
     ],
+    [
+      '@docusaurus/plugin-svgr',
+      {
+        svgrConfig: {
+          svgoConfig: {
+            plugins: [
+              {
+                name: 'preset-default',
+                params: {
+                  overrides: {
+                    removeTitle: false,
+                    removeViewBox: false,
+                    mergePaths: {
+                      noSpaceAfterFlags: true
+                    }
+                  },
+                },
+              },
+              {
+                name: 'prefixIds',
+                params: {
+                  delim: '',
+                  prefix: (_, info) => path.parse(info.path).name
+                }
+              },
+              {
+                name: 'removeXlink',
+                params: {
+                  includeLegacy: true
+                }
+              },
+              'removeXMLNS'
+            ]
+          }
+        }
+      }
+    ],
     './src/plugins/prefers-color-scheme.js',
-    './src/plugins/configure-svgo.js'
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
