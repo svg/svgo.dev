@@ -1,7 +1,7 @@
 name: CI
 
 env:
-  NODE: 20
+  NODE: 22
 
 on:
   - 'pull_request'
@@ -19,6 +19,7 @@ jobs:
         with:
           repository: svg/svgo
           path: .svgo
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
@@ -30,6 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - run: corepack enable
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE }}
