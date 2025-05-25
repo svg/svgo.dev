@@ -3,6 +3,7 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import CodeBlock from '@theme/CodeBlock';
 
 export default function PluginDemo() {
+  /** @type {any} */
   const { frontMatter } = useDoc();
   const { pluginId } = frontMatter.svgo;
 
@@ -31,6 +32,7 @@ render(<SvgoPreview svg={svg} svgoConfig={svgoConfig}/>);
 `;
 
   return (
+    /** @ts-expect-error live property is introduced by another package */
     <CodeBlock language="js" live noInline>
       {code}
     </CodeBlock>

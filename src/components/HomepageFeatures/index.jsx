@@ -21,8 +21,8 @@ const FeatureList = [
     Svg: SvgoIntegrations,
     description: (
       <>
-        Many libraries, frameworks, or tools bundle or have integrations available
-        for SVGO already, like Docusaurus, PostCSS, and webpack.
+        Many libraries, frameworks, or tools bundle or have integrations
+        available for SVGO already, like Docusaurus, PostCSS, and webpack.
       </>
     ),
   },
@@ -34,17 +34,25 @@ const FeatureList = [
         We welcome contributions! Feel free to to file a bug report, feature
         request, or open pull requests on GitHub.
       </>
-    )
+    ),
   },
 ];
 
+/**
+ * @param {{
+ *   Svg: React.ComponentType<React.SVGProps<SVGSVGElement>>,
+ *   title: string,
+ *   description: import('react').JSX.Element
+ * }} param0
+ * @returns {import('react').JSX.Element}
+ */
 function Feature({ Svg, title, description }) {
   return (
     <div className={styles.featureWrapper}>
       <div className={styles.featureBackground}></div>
       <div className={styles.feature}>
         <div className="text--center">
-          <Svg className={styles.featureSvg} role="img"/>
+          <Svg className={styles.featureSvg} role="img" />
         </div>
         <div className={clsx(styles.featureText, 'padding-horiz--md')}>
           <h2 className={styles.featureTitle}>{title}</h2>

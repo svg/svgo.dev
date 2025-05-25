@@ -3,6 +3,16 @@ import { optimize } from 'svgo/browser';
 import SvgPreview from '../SvgDemo';
 import styles from './index.module.css';
 
+/**
+ * @typedef SvgoPreviewProps
+ * @property {string} svg
+ * @property {import('svgo').Config} svgoConfig
+ */
+
+/**
+ * @param {SvgoPreviewProps} props
+ * @returns {JSX.Element}
+ */
 export default function SvgoPreview(props) {
   const { svg, svgoConfig } = props;
 

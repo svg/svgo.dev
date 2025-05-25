@@ -24,6 +24,104 @@ function amendTheme(theme) {
   return theme;
 }
 
+/** @type {import('@docusaurus/theme-classic').Options} */
+const themeClassicOptions = {
+  customCss: require.resolve('./src/css/custom.css'),
+};
+
+/** @type {import('@docusaurus/plugin-content-docs').Options} */
+const pluginContentDocsOptions = {
+  path: '.svgo/docs',
+  breadcrumbs: true,
+  sidebarPath: require.resolve('./sidebars.js'),
+  editUrl: ({ docPath }) => `https://github.com/svg/svgo/tree/main/docs/${docPath}`,
+};
+
+/** @type {import('@docusaurus/plugin-content-pages').Options} */
+const pluginContentPagesOptions = {
+  path: 'src/pages',
+  routeBasePath: '/',
+};
+
+/** @type {import('@docusaurus/plugin-client-redirects').Options} */
+const pluginClientRedirectsOptions = {
+  redirects: [
+    {
+      to: '/docs/plugins/removeScripts/',
+      from: '/docs/plugins/removeScriptElement/',
+    },
+  ],
+};
+
+/** @type {import('@docusaurus/plugin-sitemap').Options} */
+const pluginSitemapOptions = {
+  filename: 'sitemap.xml',
+  ignorePatterns: [
+    '/.well-known/**'
+  ],
+  createSitemapItems: async (params) => {
+    const { defaultCreateSitemapItems, ...rest } = params;
+
+    let items = await defaultCreateSitemapItems(rest);
+    items = items.map((item) => {
+      const pathname = new URL(item.url).pathname;
+
+      if (pathname === '/') {
+        item.priority = 1;
+      } else if (pathname === '/search/') {
+        item.priority = 0.1;
+        item.changefreq = 'monthly';
+      }
+
+      return item;
+    });
+
+    return items;
+  },
+};
+
+/** @type {import('@docusaurus/plugin-svgr').Options} */
+const pluginSvgrOptions = {
+  svgrConfig: {
+    svgoConfig: {
+      plugins: [
+        {
+          name: 'preset-default',
+          params: {
+            overrides: {
+              removeTitle: false,
+              removeViewBox: false,
+              mergePaths: {
+                noSpaceAfterFlags: true
+              }
+            },
+          },
+        },
+        {
+          name: 'prefixIds',
+          params: {
+            delim: '',
+            /**
+             * @param {import('svgo').XastElement} _
+             * @param {import('svgo').PluginInfo & { path: string }} info
+             * @returns {string}
+             */
+            prefix: (_, info) => path.parse(info.path).name
+          }
+        },
+        {
+          name: 'removeXlink',
+          params: {
+            includeLegacy: true
+          }
+        },
+        'removeXMLNS'
+      ]
+    }
+  }
+};
+
+
 /**
  * Config for Docusaurus.
  *
@@ -52,6 +150,7 @@ const config = {
   },
   markdown: {
     parseFrontMatter: async (params) => {
+      /** @type {any} */
       const result = await params.defaultParseFrontMatter(params);
 
       if (!result.frontMatter.svgo?.parameters) {
@@ -86,105 +185,12 @@ const config = {
     }
   },
   plugins: [
-    [
-      '@docusaurus/plugin-client-redirects',
-      {
-        redirects: [
-          {
-            to: '/docs/plugins/removeScripts/',
-            from: '/docs/plugins/removeScriptElement/',
-          },
-        ],
-      }
-    ],
-    [
-      '@docusaurus/theme-classic',
-      {
-        customCss: require.resolve('./src/css/custom.css'),
-      },
-    ],
-    [
-      '@docusaurus/plugin-content-pages',
-      {
-        path: 'src/pages',
-        routeBasePath: '/'
-      }
-    ],
-    [
-      '@docusaurus/plugin-content-docs',
-      {
-        path: '.svgo/docs',
-        breadcrumbs: true,
-        sidebarPath: require.resolve('./sidebars.js'),
-        editUrl: ({ docPath }) => `https://github.com/svg/svgo/tree/main/docs/${docPath}`,
-      }
-    ],
-    [
-      '@docusaurus/plugin-sitemap',
-      {
-        filename: 'sitemap.xml',
-        ignorePatterns: [
-          '/.well-known/**'
-        ],
-        createSitemapItems: async (params) => {
-          const { defaultCreateSitemapItems, ...rest } = params;
-
-          /** @type {object[]} */
-          let items = await defaultCreateSitemapItems(rest);
-          items = items.map((item) => {
-            const pathname = new URL(item.url).pathname;
-
-            if (pathname === '/') {
-              item.priority = 1;
-            } else if (pathname === '/search/') {
-              item.priority = 0.1;
-              item.changefreq = 'monthly';
-            }
-
-            return item;
-          });
-
-          return items;
-        },
-      }
-    ],
-    [
-      '@docusaurus/plugin-svgr',
-      {
-        svgrConfig: {
-          svgoConfig: {
-            plugins: [
-              {
-                name: 'preset-default',
-                params: {
-                  overrides: {
-                    removeTitle: false,
-                    removeViewBox: false,
-                    mergePaths: {
-                      noSpaceAfterFlags: true
-                    }
-                  },
-                },
-              },
-              {
-                name: 'prefixIds',
-                params: {
-                  delim: '',
-                  prefix: (_, info) => path.parse(info.path).name
-                }
-              },
-              {
-                name: 'removeXlink',
-                params: {
-                  includeLegacy: true
-                }
-              },
-              'removeXMLNS'
-            ]
-          }
-        }
-      }
-    ],
+    ['@docusaurus/plugin-client-redirects', pluginClientRedirectsOptions],
+    ['@docusaurus/theme-classic', themeClassicOptions],
+    ['@docusaurus/plugin-content-pages', pluginContentPagesOptions],
+    ['@docusaurus/plugin-content-docs', pluginContentDocsOptions],
+    ['@docusaurus/plugin-sitemap', pluginSitemapOptions],
+    ['@docusaurus/plugin-svgr', pluginSvgrOptions],
     './src/plugins/prefers-color-scheme.js',
   ],
   themes: [

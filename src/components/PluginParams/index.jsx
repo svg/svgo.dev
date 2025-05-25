@@ -3,6 +3,7 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import styles from './index.module.css';
 
 export default function PluginParams() {
+  /** @type {any} */
   const { frontMatter } = useDoc();
   const { parameters } = frontMatter.svgo;
 
