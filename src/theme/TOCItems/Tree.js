@@ -52,7 +52,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
           On this page
         </div>
       )}
-      <ul className={clsx(styles.noSeperator, isChild ? undefined : className, isChild ? undefined : styles.rootToc)}>
+      <ul className={clsx(styles.noSeparator, isChild ? undefined : className, isChild ? undefined : styles.rootToc)}>
         {toc.map((heading) => (
           <li key={heading.id}>
             <a
