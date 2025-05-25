@@ -4,7 +4,7 @@ import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
-import DefaultBadge from '../../../components/DefaulBadge';
+import DefaultBadge from '../../../components/DefaultBadge';
 import styles from './index.module.css';
 import PluginUsage from '../../../components/PluginUsage';
 import PluginParams from '../../../components/PluginParams';
@@ -22,7 +22,12 @@ function useSyntheticTitle(metadata, frontMatter, contentTitle) {
 }
 
 export default function DocItemContent({ children }) {
-  const { metadata, frontMatter, contentTitle } = useDoc();
+  const doc = useDoc();
+
+  /** @type {any} */
+  const frontMatter = doc.frontMatter;
+  const { metadata, contentTitle } = doc;
+
   const syntheticTitle = useSyntheticTitle(metadata, frontMatter, contentTitle);
 
   return (

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "jsx": "preserve",
+    "skipLibCheck": true,
+  },
+  "exclude": [
+    ".docusaurus/",
+    ".svgo/",
+    ".yarn/",
+    "build/",
+    "node_modules/",
+  ]
+}

@@ -15,6 +15,7 @@ function BasicPluginUsage(props) {
 };
 
 export default function PluginUsage() {
+  /** @type {any} */
   const { frontMatter } = useDoc();
   const { pluginId, parameters } = frontMatter.svgo;
 

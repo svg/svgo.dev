@@ -13,8 +13,8 @@ import styles from './index.module.css';
  * By doing this, we can insert the TOC headings despite them being declared in
  * React components.
  *
- * @param {array} toc
- * @param {object} svgoFrontMatter
+ * @param {any[]} toc
+ * @param {any} svgoFrontMatter
  */
 function insertPluginTocItems(toc, svgoFrontMatter) {
   const usageChildren = []
@@ -33,7 +33,12 @@ function insertPluginTocItems(toc, svgoFrontMatter) {
 }
 
 function TOCItemTree({ toc, className, linkClassName, isChild }) {
-  const { metadata, frontMatter } = useDoc();
+
+  const doc = useDoc();
+
+  /** @type {any} */
+  const frontMatter = doc.frontMatter;
+  const metadata = doc.metadata;
 
   if (toc && !isChild && frontMatter.svgo?.pluginId) {
     insertPluginTocItems(toc, frontMatter.svgo);
@@ -85,6 +90,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
           )}
           <div className={styles.extraTocEntries}>
             <a
+              // @ts-expect-error Will never be null.
               href={editUrl}
               target="_blank"
               className={linkClassName ?? undefined}

@@ -14,6 +14,7 @@ export default function DocRootLayout({ children }) {
       <BackToTopButton />
       <div className={styles.docRoot}>
         <DocRootLayoutSidebar
+          // @ts-expect-error Will never be null.
           sidebar={sidebar.items}
           hiddenSidebarContainer={hiddenSidebarContainer}
           setHiddenSidebarContainer={setHiddenSidebarContainer}
