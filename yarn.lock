@@ -13035,7 +13035,7 @@ __metadata:
     react-dom: "npm:^18.3.1"
     rehype-stringify: "npm:^10.0.0"
     rimraf: "npm:^6.0.1"
-    svgo: "npm:^4.0.0-rc.4"
+    svgo: "npm:^4.0.0-rc.5"
     typescript: "npm:^5.8.3"
   languageName: unknown
   linkType: soft
@@ -13057,9 +13057,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgo@npm:^4.0.0-rc.4":
-  version: 4.0.0-rc.4
-  resolution: "svgo@npm:4.0.0-rc.4"
+"svgo@npm:^4.0.0-rc.5":
+  version: 4.0.0-rc.5
+  resolution: "svgo@npm:4.0.0-rc.5"
   dependencies:
     commander: "npm:^11.1.0"
     css-select: "npm:^5.1.0"
@@ -13070,7 +13070,7 @@ __metadata:
     sax: "npm:^1.4.1"
   bin:
     svgo: ./bin/svgo.js
-  checksum: 10/e7d62fbf81a47a513d7c1550a740293bb55a1e94625cb6f6772a3a77603cb80494c5533433fbec6eabe2ff8021a7b5cdd8af253739d9ab6568babb44fc6a2ff4
+  checksum: 10/8067b1ffdfb233d1103d83d9fcf025649b82ccf36ddf6571ee4ebee72db7aab4efa44deece8f320586d13e5a50a3c7391f86fd9727a326ee214395193b4df7b8
   languageName: node
   linkType: hard
 
