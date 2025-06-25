@@ -21,7 +21,7 @@
   }
 
   .sidebarViewport {
-    top: 0;
+    top: .5rem;
     position: sticky;
     height: 100%;
     max-height: 100vh;
