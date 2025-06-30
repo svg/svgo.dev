@@ -27,7 +27,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Open-Source',
+    title: 'Open Source',
     Svg: SvgoOss,
     description: (
       <>
