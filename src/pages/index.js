@@ -9,7 +9,7 @@ import HomepageFeatures from '../../src/components/HomepageFeatures';
 import styles from './index.module.css';
 import SvgoTrixie from '../vectors/svgo_trixie.svg';
 
-const INSTALL_COMMAND = 'npm i -g svgo';
+const INSTALL_COMMAND = 'npx svgo';
 
 const onClick = async () => {
   navigator.clipboard.writeText(INSTALL_COMMAND);
