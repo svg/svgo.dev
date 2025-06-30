@@ -32,6 +32,7 @@
   "scripts": {
     "svgo:clone": "rimraf .svgo && git clone https://github.com/svg/svgo.git .svgo --depth 1",
     "svgo:copy": "rimraf .svgo && cp -r ../svgo .svgo",
+    "optimize-svgs": "npx svgo --pretty --indent 2 ./src/vectors/*",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "lint:types": "tsc",
