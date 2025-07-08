@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';

@@ -1,0 +1,56 @@
+diff --git a/dist/autocomplete.js b/dist/autocomplete.js
+index 7d0bc04b429024372bf36dbd1560440d06f5d859..3d185d39765633ee20ddb4801a2f592d9be2c69e 100644
+--- a/dist/autocomplete.js
++++ b/dist/autocomplete.js
+@@ -1165,7 +1165,6 @@ return /******/ (function(modules) { // webpackBootstrap
+ 	      var callback  = delegator || fn
+ 	      handler.proxy = function(e){
+ 	        e = compatible(e)
+-	        if (e.isImmediatePropagationStopped()) return
+ 	        try {
+ 	          var dataPropDescriptor = Object.getOwnPropertyDescriptor(e, 'data')
+ 	          if (!dataPropDescriptor || dataPropDescriptor.writable)
+@@ -1227,7 +1226,6 @@ return /******/ (function(modules) { // webpackBootstrap
+ 	      ignoreProperties = /^([A-Z]|returnValue$|layer[XY]$|webkitMovement[XY]$)/,
+ 	      eventMethods = {
+ 	        preventDefault: 'isDefaultPrevented',
+-	        stopImmediatePropagation: 'isImmediatePropagationStopped',
+ 	        stopPropagation: 'isPropagationStopped'
+ 	      }
+ 
+@@ -1354,7 +1352,6 @@ return /******/ (function(modules) { // webpackBootstrap
+ 	      e.target = element
+ 	      $.each(findHandlers(element, event.type || event), function(i, handler){
+ 	        result = handler.proxy(e)
+-	        if (e.isImmediatePropagationStopped()) return false
+ 	      })
+ 	    })
+ 	    return result
+diff --git a/zepto.js b/zepto.js
+index 390e5ca0ef4b36a8d3955965432c5c06be8ae9c9..dcb73d39266342646b8a04b37b4033bb5ae0e53e 100644
+--- a/zepto.js
++++ b/zepto.js
+@@ -998,7 +998,6 @@
+       var callback  = delegator || fn
+       handler.proxy = function(e){
+         e = compatible(e)
+-        if (e.isImmediatePropagationStopped()) return
+         try {
+           var dataPropDescriptor = Object.getOwnPropertyDescriptor(e, 'data')
+           if (!dataPropDescriptor || dataPropDescriptor.writable)
+@@ -1060,7 +1059,6 @@
+       ignoreProperties = /^([A-Z]|returnValue$|layer[XY]$|webkitMovement[XY]$)/,
+       eventMethods = {
+         preventDefault: 'isDefaultPrevented',
+-        stopImmediatePropagation: 'isImmediatePropagationStopped',
+         stopPropagation: 'isPropagationStopped'
+       }
+ 
+@@ -1187,7 +1185,6 @@
+       e.target = element
+       $.each(findHandlers(element, event.type || event), function(i, handler){
+         result = handler.proxy(e)
+-        if (e.isImmediatePropagationStopped()) return false
+       })
+     })
+     return result

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { optimize } from 'svgo/browser';
 import SvgPreview from '../SvgDemo';
 import styles from './index.module.css';
@@ -11,7 +11,7 @@ import styles from './index.module.css';
 
 /**
  * @param {SvgoPreviewProps} props
- * @returns {import('react').JSX.Element}
+ * @returns {import('preact/compat').JSX.Element}
  */
 export default function SvgoPreview(props) {
   const { svg, svgoConfig } = props;

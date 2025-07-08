@@ -59,10 +59,13 @@
     "@docusaurus/theme-live-codeblock": "3.8.1",
     "@easyops-cn/docusaurus-search-local": "^0.51.1",
     "@mdx-js/react": "^3.1.0",
+    "@preact/compat": "^18.3.1",
     "clsx": "^2.1.1",
+    "preact": "^10.26.9",
+    "preact-render-to-string": "^6.5.13",
     "prism-react-renderer": "^2.4.1",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0",
+    "react": "npm:@preact/compat@*",
+    "react-dom": "npm:@preact/compat@*",
     "rehype-stringify": "^10.0.1",
     "svgo": "^4.0.0"
   },
@@ -70,11 +73,14 @@
     "@docusaurus/module-type-aliases": "3.8.1",
     "@docusaurus/types": "3.8.1",
     "@eslint/js": "^9.30.0",
-    "@types/react": "^19.1.8",
     "eslint": "^9.30.0",
     "eslint-plugin-react": "^7.37.5",
     "globals": "^16.2.0",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
+  },
+  "resolutions": {
+    "@easyops-cn/autocomplete.js@npm:^0.38.1": "patch:@easyops-cn/autocomplete.js@npm%3A0.38.1#~/.yarn/patches/@easyops-cn-autocomplete.js-npm-0.38.1-2375cf670a.patch",
+    "react-loadable": "patch:@docusaurus/react-loadable@npm%3A6.0.0#~/.yarn/patches/@docusaurus-react-loadable-npm-6.0.0-75f0ebc146.patch"
   }
 }

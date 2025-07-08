@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'preact/compat';
 import CodeBlock from '@theme/CodeBlock';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';

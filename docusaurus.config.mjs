@@ -192,6 +192,7 @@ const config = {
     ['@docusaurus/plugin-sitemap', pluginSitemapOptions],
     ['@docusaurus/plugin-svgr', pluginSvgrOptions],
     './src/plugins/prefers-color-scheme.js',
+    './src/plugins/preact.js',
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',

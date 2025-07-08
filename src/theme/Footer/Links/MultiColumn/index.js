@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import LinkItem from '@theme/Footer/LinkItem';
 import clsx from 'clsx';
 import styles from './index.module.css';

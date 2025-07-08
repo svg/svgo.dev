@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import clsx from 'clsx';
 import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
 import styles from './styles.module.css';
