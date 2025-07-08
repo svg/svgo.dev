@@ -1,3 +1,7 @@
+/**
+ * @returns {any}
+ * @see https://preactjs.com/guide/v10/getting-started#aliasing-in-webpack
+ */
 function preact() {
   return {
     name: 'preact',

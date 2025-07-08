@@ -6,8 +6,8 @@ const postcss = require('postcss');
  *
  * Doesn't work for components styled with Prism like code blocks.
  *
- * @param {Object} context
- * @returns {Object}
+ * @param {any} context
+ * @returns {any}
  */
 function prefersColorScheme(context) {
   const themeConfig = context.siteConfig.themeConfig;
@@ -17,7 +17,7 @@ function prefersColorScheme(context) {
     name: 'prefers-color-scheme',
     configurePostCss(postCssOptions) {
       if (colorMode.disableSwitch && colorMode.respectPrefersColorScheme) {
-        /** @type {postcss.Plugin} */
+        /** @type {import('postcss').Plugin} */
         const plugin = {
           postcssPlugin: 'PrefersColorSchemePlugin',
           Rule(rule) {
