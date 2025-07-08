@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { isMultiColumnFooterLinks } from '@docusaurus/theme-common';
 import FooterLinksMultiColumn from '@theme/Footer/Links/MultiColumn';
 import FooterLinksSimple from '@theme/Footer/Links/Simple';

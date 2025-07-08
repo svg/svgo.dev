@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'preact/compat';
 import clsx from 'clsx';
 import { prefersReducedMotion, ThemeClassNames } from '@docusaurus/theme-common';
 import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';

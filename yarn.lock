@@ -2108,6 +2108,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@docusaurus/react-loadable@npm:6.0.0":
+  version: 6.0.0
+  resolution: "@docusaurus/react-loadable@npm:6.0.0"
+  dependencies:
+    "@types/react": "npm:*"
+  peerDependencies:
+    react: "*"
+  checksum: 10/f7cca3dbc16403c426a6ab843210937caab0ea9b3880b4dee7923ebb55ff5dbbac2110ffd7d241894deab07dd74a2e18df3ed2509111036f24ac8dedb5ec92c2
+  languageName: node
+  linkType: hard
+
 "@docusaurus/theme-classic@npm:3.8.1":
   version: 3.8.1
   resolution: "@docusaurus/theme-classic@npm:3.8.1"
@@ -2274,13 +2285,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@easyops-cn/autocomplete.js@npm:^0.38.1":
+"@easyops-cn/autocomplete.js@npm:0.38.1":
   version: 0.38.1
   resolution: "@easyops-cn/autocomplete.js@npm:0.38.1"
   dependencies:
     cssesc: "npm:^3.0.0"
     immediate: "npm:^3.2.3"
   checksum: 10/40a053d7fba2532c5ec2e6e070afe1f6d610d355db3c1ab0682a7d80eef1d95ca3b0ff6a42fc3de6c90537626a428a41b439207ea81490b78eb83a14fd514bec
+  languageName: node
+  linkType: hard
+
+"@easyops-cn/autocomplete.js@patch:@easyops-cn/autocomplete.js@npm%3A0.38.1#~/.yarn/patches/@easyops-cn-autocomplete.js-npm-0.38.1-2375cf670a.patch":
+  version: 0.38.1
+  resolution: "@easyops-cn/autocomplete.js@patch:@easyops-cn/autocomplete.js@npm%3A0.38.1#~/.yarn/patches/@easyops-cn-autocomplete.js-npm-0.38.1-2375cf670a.patch::version=0.38.1&hash=a6643f"
+  dependencies:
+    cssesc: "npm:^3.0.0"
+    immediate: "npm:^3.2.3"
+  checksum: 10/a50cc5cfe72de9a65b0a3f1324bcf937efc2745dff9478191cd33f759192fd34954c2deb4ef4ecfb42bfdcd519e11a747dcd284716ba025a8dea2d0926e16cb5
   languageName: node
   linkType: hard
 
@@ -2840,6 +2861,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@preact/compat@npm:^18.3.1, react-dom@npm:@preact/compat@*, react@npm:@preact/compat@*":
+  version: 18.3.1
+  resolution: "@preact/compat@npm:18.3.1"
+  peerDependencies:
+    preact: "*"
+  checksum: 10/c3a457a5496672207a276f89961ae725ca811c42a37865bac66fe636473805ac4bf6bcf333b2745fe4da874ccd8a5293020a5b353b027bc532ca74b3610dac37
+  languageName: node
+  linkType: hard
+
 "@sideway/address@npm:^4.1.3":
   version: 4.1.4
   resolution: "@sideway/address@npm:4.1.4"
@@ -3376,7 +3406,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:^19.1.8":
+"@types/react@npm:*":
   version: 19.1.8
   resolution: "@types/react@npm:19.1.8"
   dependencies:
@@ -11091,6 +11121,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"preact-render-to-string@npm:^6.5.13":
+  version: 6.5.13
+  resolution: "preact-render-to-string@npm:6.5.13"
+  peerDependencies:
+    preact: ">=10"
+  checksum: 10/1c8bc23ca618c383ee95e123828cbe31a83ff43dc9b815500a57dd3ff28054988fa94d3a465608cf26bc6b1d3bd9de44683099b8ca411a2e45244ed1901a158f
+  languageName: node
+  linkType: hard
+
+"preact@npm:^10.26.9":
+  version: 10.26.9
+  resolution: "preact@npm:10.26.9"
+  checksum: 10/277da0b5fea5dbf5445244b90cbf5cdca4e80cad85a681910754bb743e6a91db54dc4846d66db8877183a7c31ddf6f184ec53ba6841d2a57edbed32313c95770
+  languageName: node
+  linkType: hard
+
 "prelude-ls@npm:^1.2.1":
   version: 1.2.1
   resolution: "prelude-ls@npm:1.2.1"
@@ -11298,17 +11344,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.1.0":
-  version: 19.1.0
-  resolution: "react-dom@npm:19.1.0"
-  dependencies:
-    scheduler: "npm:^0.26.0"
-  peerDependencies:
-    react: ^19.1.0
-  checksum: 10/c5b58605862c7b0bb044416b01c73647bb8e89717fb5d7a2c279b11815fb7b49b619fe685c404e59f55eb52c66831236cc565c25ee1c2d042739f4a2cc538aa2
-  languageName: node
-  linkType: hard
-
 "react-fast-compare@npm:^3.2.0":
   version: 3.2.2
   resolution: "react-fast-compare@npm:3.2.2"
@@ -11365,14 +11400,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-loadable@npm:@docusaurus/react-loadable@6.0.0":
+"react-loadable@patch:@docusaurus/react-loadable@npm%3A6.0.0#~/.yarn/patches/@docusaurus-react-loadable-npm-6.0.0-75f0ebc146.patch":
   version: 6.0.0
-  resolution: "@docusaurus/react-loadable@npm:6.0.0"
+  resolution: "react-loadable@patch:@docusaurus/react-loadable@npm%3A6.0.0#~/.yarn/patches/@docusaurus-react-loadable-npm-6.0.0-75f0ebc146.patch::version=6.0.0&hash=4c1c52"
   dependencies:
     "@types/react": "npm:*"
   peerDependencies:
     react: "*"
-  checksum: 10/f7cca3dbc16403c426a6ab843210937caab0ea9b3880b4dee7923ebb55ff5dbbac2110ffd7d241894deab07dd74a2e18df3ed2509111036f24ac8dedb5ec92c2
+  checksum: 10/7376fd4a9edebcadb55304cb050c70045d86f09502a8d11d6a1f77e8636a6f23ad7554569a8c461db30d95542cce85f4cebbc8e1f659328aff2617702343605c
   languageName: node
   linkType: hard
 
@@ -11421,13 +11456,6 @@ __metadata:
   peerDependencies:
     react: ">=15"
   checksum: 10/99d54a99af6bc6d7cad2e5ea7eee9485b62a8b8e16a1182b18daa7fad7dafa5e526850eaeebff629848b297ae055a9cb5b4aba8760e81af8b903efc049d48f5c
-  languageName: node
-  linkType: hard
-
-"react@npm:^19.1.0":
-  version: 19.1.0
-  resolution: "react@npm:19.1.0"
-  checksum: 10/d0180689826fd9de87e839c365f6f361c561daea397d61d724687cae88f432a307d1c0f53a0ee95ddbe3352c10dac41d7ff1ad85530fb24951b27a39e5398db4
   languageName: node
   linkType: hard
 
@@ -11978,13 +12006,6 @@ __metadata:
   version: 1.4.1
   resolution: "sax@npm:1.4.1"
   checksum: 10/b1c784b545019187b53a0c28edb4f6314951c971e2963a69739c6ce222bfbc767e54d320e689352daba79b7d5e06d22b5d7113b99336219d6e93718e2f99d335
-  languageName: node
-  linkType: hard
-
-"scheduler@npm:^0.26.0":
-  version: 0.26.0
-  resolution: "scheduler@npm:0.26.0"
-  checksum: 10/1ecf2e5d7de1a7a132796834afe14a2d589ba7e437615bd8c06f3e0786a3ac3434655e67aac8755d9b14e05754c177e49c064261de2673aaa3c926bc98caa002
   languageName: node
   linkType: hard
 
@@ -12806,14 +12827,16 @@ __metadata:
     "@easyops-cn/docusaurus-search-local": "npm:^0.51.1"
     "@eslint/js": "npm:^9.30.0"
     "@mdx-js/react": "npm:^3.1.0"
-    "@types/react": "npm:^19.1.8"
+    "@preact/compat": "npm:^18.3.1"
     clsx: "npm:^2.1.1"
     eslint: "npm:^9.30.0"
     eslint-plugin-react: "npm:^7.37.5"
     globals: "npm:^16.2.0"
+    preact: "npm:^10.26.9"
+    preact-render-to-string: "npm:^6.5.13"
     prism-react-renderer: "npm:^2.4.1"
-    react: "npm:^19.1.0"
-    react-dom: "npm:^19.1.0"
+    react: "npm:@preact/compat@*"
+    react-dom: "npm:@preact/compat@*"
     rehype-stringify: "npm:^10.0.1"
     rimraf: "npm:^6.0.1"
     svgo: "npm:^4.0.0"

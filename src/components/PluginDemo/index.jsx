@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import CodeBlock from '@theme/CodeBlock';
 

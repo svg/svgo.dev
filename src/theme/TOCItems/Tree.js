@@ -1,5 +1,5 @@
+import React from 'preact/compat';
 import clsx from 'clsx';
-import React from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import Translate from '@docusaurus/Translate';
 import styles from './index.module.css';

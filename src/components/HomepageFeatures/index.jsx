@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import clsx from 'clsx';
 import styles from './index.module.css';
 import SvgoHackerman from '../../vectors/svgo_hackerman.svg';
@@ -40,11 +40,11 @@ const FeatureList = [
 
 /**
  * @param {{
- *   Svg: React.ComponentType<React.SVGProps<SVGSVGElement>>,
+ *   Svg: React.ComponentType<React.SVGProps<SVGSVGElement> & { title?: string }>,
  *   title: string,
- *   description: import('react').JSX.Element
+ *   description: import('preact/compat').JSX.Element
  * }} param0
- * @returns {import('react').JSX.Element}
+ * @returns {import('preact/compat').JSX.Element}
  */
 function Feature({ Svg, title, description }) {
   return (

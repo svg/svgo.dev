@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import clsx from 'clsx';
 import styles from './index.module.css';
 

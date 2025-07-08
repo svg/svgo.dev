@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'preact/compat';
 import clsx from 'clsx';
 import DocItemPaginator from '@theme/DocItem/Paginator';
 import DocItemFooter from '@theme/DocItem/Footer';
