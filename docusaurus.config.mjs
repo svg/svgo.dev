@@ -269,7 +269,7 @@ const config = {
           ]
         }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class="designer-attribution" href="https://www.artstation.com/vukory" target="_blank">Vukory ${VUKORY_SVG}</a>`
+      copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class="designer-attribution" href="https://vukory.art" target="_blank">Vukory ${VUKORY_SVG}</a>`
     },
   },
 };
