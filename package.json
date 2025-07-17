@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "Landing page and documentation for SVGO.",
   "license": "MIT",
-  "homepage": "https://svgo.dev/",
+  "homepage": "https://svgo.dev",
   "private": true,
   "author": {
     "name": "Seth Falco",
