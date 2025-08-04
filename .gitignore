@@ -31,3 +31,6 @@ yarn-error.log*
 # Docs should be pulled from the svg/svgo repository
 /docs/
 /.svgo/
+
+# Generated CSS variables from Design Tokens
+src/css/_variables.css
