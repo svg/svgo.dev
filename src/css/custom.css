@@ -1,34 +1,32 @@
+@import url('_variables.css');
+
 :root {
   --svgo-global-width: 1200px;
   --svgo-pill-bg-color: #cbe2f9;
   --svgo-pill-fg-color: #0b5cad;
-  --svgo-pri-bg-color: #fff;
-  --svgo-pri-fg-color: #153243;
   --svgo-search-bg-color: var(--svgo-tir-bg-color);
   --svgo-search-bg-hover: #dbdbdb;
   --svgo-sec-bg-color: #f6f5f4;
   --svgo-tir-bg-color: #e8e8e8;
   --svgo-logo-fg-color: #1d1d1b;
   --svgo-button-hover-background-color: #1b4055;
-  --ifm-background-color: var(--svgo-pri-bg-color) !important;
+  --ifm-background-color: var(--svgo-background) !important;
   --ifm-code-font-size: 95%;
   --ifm-color-primary: #216be2;
   --ifm-container-width-xl: var(--svgo-global-width);
   --ifm-footer-padding-horizontal: 1rem;
-  --ifm-navbar-background-color: var(--svgo-pri-bg-color);
+  --ifm-navbar-background-color: var(--svgo-background);
   --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e291a;
   --ifm-spacing-horizontal: 1rem;
   --search-local-hit-background: var(--svgo-sec-bg-color);
 
-  color: var(--svgo-pri-fg-color);
+  color: var(--svgo-foreground);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --svgo-pill-bg-color: #0b5cad;
     --svgo-pill-fg-color: #cbe2f9;
-    --svgo-pri-bg-color: #142631;
-    --svgo-pri-fg-color: #fff;
     --svgo-search-bg-color: #5a6a74;
     --svgo-search-bg-hover: #647682;
     --svgo-sec-bg-color: #1b3241;
@@ -42,8 +40,8 @@
 
 /* Button overrides */
 .button {
-  --ifm-button-color: var(--svgo-pri-bg-color);
-  --ifm-button-background-color: var(--svgo-pri-fg-color);
+  --ifm-button-color: var(--svgo-background);
+  --ifm-button-background-color: var(--svgo-foreground);
 }
 .button:hover, .button:focus {
   --ifm-button-background-color: var(--svgo-button-hover-background-color);
@@ -63,7 +61,7 @@
 
 /* TOC overrides */
 .table-of-contents__link--active {
-  color: var(--svgo-pri-fg-color);
+  color: var(--svgo-foreground);
 }
 
 /* Search overrides */
@@ -75,7 +73,7 @@ nav .navbar__search-input:hover, nav .navbar__search-input:focus {
   background-color: var(--svgo-search-bg-hover);
 }
 nav div kbd {
-  background-color: var(--svgo-pri-bg-color) !important;
+  background-color: var(--svgo-background) !important;
 }
 @media (min-width: 577px) {
   nav .navbar__search-input {
