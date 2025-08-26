@@ -46,9 +46,15 @@ const pluginContentPagesOptions = {
 /** @type {import('@docusaurus/plugin-client-redirects').Options} */
 const pluginClientRedirectsOptions = {
   redirects: [
+    // Plugin was renamed
     {
       to: '/docs/plugins/removeScripts/',
       from: '/docs/plugins/removeScriptElement/',
+    },
+    // Mistake in https://github.com/svg/svgo/pull/2038
+    {
+      to: '/docs/usage/usage/',
+      from: '/docs/usage/',
     },
   ],
 };
