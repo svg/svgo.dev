@@ -53,8 +53,8 @@ const pluginClientRedirectsOptions = {
     },
     // Mistake in https://github.com/svg/svgo/pull/2038
     {
-      to: '/docs/usage/usage/',
-      from: '/docs/usage/',
+      to: '/docs/usage/',
+      from: '/docs/usage/usage/',
     },
   ],
 };
