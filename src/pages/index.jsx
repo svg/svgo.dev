@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import CopyIcon from '@theme/Icon/Copy';
 import SuccessIcon from '@theme/Icon/Success';
 import Head from '@docusaurus/Head';
-import HomepageFeatures from '../../src/components/HomepageFeatures';
+import HomepageFeatures from '../components/HomepageFeatures';
 import styles from './index.module.css';
 import SvgoTrixie from '../vectors/svgo_trixie.svg';
 
