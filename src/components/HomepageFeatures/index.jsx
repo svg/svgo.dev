@@ -71,7 +71,7 @@ export default function HomepageFeatures() {
           <path d="M 0 .4 Q .4 .2 1 .1 V 1 H 0" />
         </clipPath>
         <clipPath id="featureDesktopPath" clipPathUnits="objectBoundingBox">
-          <path d="M 0 .25 Q .2 -.1 .4 .1 T .8 .2 1 0 V 1 H 0" />
+          <path d="M 0 .25 Q .2 -.1 .4 .1 T .8 .2 1.05 0 V 1 H 0" />
         </clipPath>
       </svg>
       <section className={styles.features}>
