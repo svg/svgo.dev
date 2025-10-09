@@ -284,7 +284,7 @@ const config = {
   },
   scripts: [
     {
-      src: 'https://plausible.falco.fun/js/script.js',
+      src: 'https://plausible.falco.fun/js/script.outbound-links.js',
       defer: true,
       'data-domain': 'svgo.dev'
     }
