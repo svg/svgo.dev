@@ -42,9 +42,9 @@ const FeatureList = [
  * @param {{
  *   Svg: React.ComponentType<React.SVGProps<SVGSVGElement> & { title?: string }>,
  *   title: string,
- *   description: import('preact/compat').JSX.Element
+ *   description: React.JSX.Element
  * }} param0
- * @returns {import('preact/compat').JSX.Element}
+ * @returns {React.JSX.Element}
  */
 function Feature({ Svg, title, description }) {
   return (
