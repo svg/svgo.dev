@@ -1,3 +1,9 @@
+@keyframes cog {
+  to {
+    transform: rotate(450deg);
+  }
+}
+
 .wrapper {
   position: relative;
   padding: 6rem 1rem 2rem 1rem;
@@ -13,10 +19,18 @@
   top: -240px;
   opacity: 0.2;
   z-index: -1;
+  animation: cog linear;
+  animation-timeline: --page-timeline;
 
   svg {
     height: 700px;
     aspect-ratio: 1;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .logo {
+    animation: none;
   }
 }
 

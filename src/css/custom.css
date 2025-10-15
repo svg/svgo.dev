@@ -40,6 +40,10 @@
   }
 }
 
+#__docusaurus {
+  view-timeline: --page-timeline;
+}
+
 /* Button overrides */
 .button {
   --ifm-button-color: var(--svgo-pri-bg-color);
