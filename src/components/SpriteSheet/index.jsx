@@ -32,7 +32,7 @@ export default function SpriteSheet() {
 
 /**
  * @param {React.SVGProps<SVGSVGElement>} props
- * @returns {import('preact/compat').JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export const Logo = (props) => {
   return (

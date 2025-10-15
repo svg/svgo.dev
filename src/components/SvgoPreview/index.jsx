@@ -11,7 +11,7 @@ import styles from './index.module.css';
 
 /**
  * @param {SvgoPreviewProps} props
- * @returns {import('preact/compat').JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function SvgoPreview(props) {
   const { svg, svgoConfig } = props;
