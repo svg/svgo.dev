@@ -1,11 +1,32 @@
 .wrapper {
+  position: relative;
   padding: 6rem 1rem 2rem 1rem;
   background: linear-gradient(to right, #0771d5, #27489f);
   clip-path: url(#footerMobilePath);
+  overflow: hidden;
 }
+
+.logo {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: -240px;
+  opacity: 0.2;
+  z-index: -1;
+
+  svg {
+    height: 700px;
+    aspect-ratio: 1;
+  }
+}
+
 @media (min-width: 997px) {
   .wrapper {
     background: linear-gradient(to right, #0771d5, #27489f);
     clip-path: url(#footerDesktopPath);
+  }
+
+  .logo {
+    display: initial;
   }
 }
