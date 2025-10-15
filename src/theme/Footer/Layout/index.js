@@ -1,5 +1,6 @@
 import React from 'preact/compat';
 import clsx from 'clsx';
+import { Logo } from '../../../components/SpriteSheet';
 import styles from './index.module.css';
 
 export default function FooterLayout({ links, copyright }) {
@@ -14,6 +15,7 @@ export default function FooterLayout({ links, copyright }) {
         </clipPath>
       </svg>
       <footer className={clsx(styles.wrapper, 'footer')}>
+        <div className={styles.logo}><Logo /></div>
         <div className={clsx(styles.footer, 'container')}>
           {links}
           {copyright && (
