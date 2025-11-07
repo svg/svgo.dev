@@ -147,7 +147,6 @@ const config = {
   projectName: 'svgo.dev',
   trailingSlash: true,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
     locales: [
@@ -155,6 +154,9 @@ const config = {
     ],
   },
   markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
     parseFrontMatter: async (params) => {
       /** @type {any} */
       const result = await params.defaultParseFrontMatter(params);
