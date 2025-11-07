@@ -1,9 +1,9 @@
 import React from 'preact/compat';
 import clsx from 'clsx';
-import styles from './index.module.css';
 import SvgoHackerman from '../../vectors/svgo_hackerman.svg';
 import SvgoIntegrations from '../../vectors/svgo_integrations.svg';
 import SvgoOss from '../../vectors/svgo_oss.svg';
+import styles from './index.module.css';
 
 const FeatureList = [
   {
