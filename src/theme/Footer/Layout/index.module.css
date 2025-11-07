@@ -26,10 +26,8 @@
     height: 700px;
     aspect-ratio: 1;
   }
-}
 
-@media (prefers-reduced-motion) {
-  .logo {
+  @media (prefers-reduced-motion) {
     animation: none;
   }
 }

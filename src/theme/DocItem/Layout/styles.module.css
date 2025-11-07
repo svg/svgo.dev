@@ -1,5 +1,5 @@
-.docItemContainer header + *,
-.docItemContainer article > *:first-child {
+.docItemContainer header+*,
+.docItemContainer article>*:first-child {
   margin-top: 0;
 }
 
@@ -16,10 +16,8 @@
 
 .toc {
   display: none;
-}
 
-@media (min-width: 1024px) {
-  .toc {
+  @media (min-width: 1024px) {
     margin-right: 1rem;
     display: block;
     flex-shrink: 0;

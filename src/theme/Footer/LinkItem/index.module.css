@@ -2,10 +2,8 @@
   height: 48px;
   display: inline-flex;
   align-items: center;
-}
 
-@media (min-width: 997px) {
-  .footerLink {
+  @media (min-width: 997px) {
     height: 100%;
   }
 }
