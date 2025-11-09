@@ -32,6 +32,10 @@
   }
 }
 
+.copyright a {
+  text-decoration: underline;
+}
+
 @media (min-width: 997px) {
   .wrapper {
     background: linear-gradient(to right, #0771d5, #27489f);

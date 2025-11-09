@@ -19,7 +19,7 @@ export default function FooterLayout({ links, copyright }) {
         <div className={clsx(styles.footer, 'container')}>
           {links}
           {copyright && (
-            <div className="text--center">
+            <div className={clsx('text--center', styles.copyright)}>
               {copyright}
             </div>
           )}
