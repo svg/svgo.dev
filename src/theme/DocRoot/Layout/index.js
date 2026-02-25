@@ -1,8 +1,8 @@
 import React, { useState } from 'preact/compat';
 import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
 import BackToTopButton from '@theme/BackToTopButton';
-import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';
+import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import styles from './styles.module.css';
 
 export default function DocRootLayout({ children }) {

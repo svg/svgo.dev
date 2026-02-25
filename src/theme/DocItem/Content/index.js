@@ -1,14 +1,14 @@
 import React from 'preact/compat';
-import clsx from 'clsx';
-import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { ThemeClassNames } from '@docusaurus/theme-common';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
+import clsx from 'clsx';
 import DefaultBadge from '../../../components/DefaultBadge';
-import styles from './index.module.css';
-import PluginUsage from '../../../components/PluginUsage';
-import PluginParams from '../../../components/PluginParams';
 import PluginDemo from '../../../components/PluginDemo';
+import PluginParams from '../../../components/PluginParams';
+import PluginUsage from '../../../components/PluginUsage';
+import styles from './index.module.css';
 
 function useSyntheticTitle(metadata, frontMatter, contentTitle) {
   const shouldRender =

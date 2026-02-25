@@ -1,8 +1,8 @@
 import React from 'preact/compat';
-import clsx from 'clsx';
-import { ThemeClassNames } from '@docusaurus/theme-common';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { ThemeClassNames } from '@docusaurus/theme-common';
 import TagsListInline from '@theme/TagsListInline';
+import clsx from 'clsx';
 
 function TagsRow(props) {
   return (

@@ -1,8 +1,8 @@
 import React from 'preact/compat';
-import CodeBlock from '@theme/CodeBlock';
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import CodeBlock from '@theme/CodeBlock';
+import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
 
 function BasicPluginUsage(props) {
   return (

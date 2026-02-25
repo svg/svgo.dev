@@ -1,7 +1,7 @@
 import React, { useState } from 'preact/compat';
 import CodeBlock from '@theme/CodeBlock';
-import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import Tabs from '@theme/Tabs';
 import styles from './index.module.css';
 
 export default function SvgPreview(props) {

@@ -1,13 +1,13 @@
 import React from 'preact/compat';
-import clsx from 'clsx';
+import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
-import Layout from '@theme/Layout';
 import CopyIcon from '@theme/Icon/Copy';
 import SuccessIcon from '@theme/Icon/Success';
-import Head from '@docusaurus/Head';
+import Layout from '@theme/Layout';
+import clsx from 'clsx';
 import HomepageFeatures from '../components/HomepageFeatures';
-import styles from './index.module.css';
 import SvgoTrixie from '../vectors/svgo_trixie.svg';
+import styles from './index.module.css';
 
 const INSTALL_COMMAND = 'npx svgo';
 

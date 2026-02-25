@@ -1,7 +1,7 @@
 import React from 'preact/compat';
 import Link from '@docusaurus/Link';
-import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import styles from './index.module.css';
 

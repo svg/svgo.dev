@@ -1,7 +1,7 @@
 import React from 'preact/compat';
 import Link from '@docusaurus/Link';
-import styles from './index.module.css';
 import Logo from '../../../vectors/logo.svg';
+import styles from './index.module.css';
 
 export default function NavbarLogo() {
   return (

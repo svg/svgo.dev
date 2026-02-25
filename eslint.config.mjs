@@ -1,9 +1,16 @@
-import globals from 'globals';
-import pluginJs from '@eslint/js';
+import teapartyConfig from '@sethfalco/eslint-config';
 import pluginReact from 'eslint-plugin-react';
+import globals from 'globals';
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
+  ...teapartyConfig,
+  {
+    // Override Teaparty
+    rules: {
+      'import/extensions': ['off'],
+    }
+  },
   {
     ignores: [
       '.docusaurus/',
@@ -32,16 +39,25 @@ export default [
       }
     }
   },
-  pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
   {
     rules: {
-      'object-curly-spacing': ['error', 'always'],
-      'quotes': ['error', 'single'],
       'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
       'react/jsx-indent-props': ['error', 2],
       'react/jsx-max-props-per-line': ['error', { maximum: { 'single': 9, 'multi': 1 } }],
       'react/prop-types': 'off',
+      // eslint-plugin-import
+      'import/order': ['error', {
+        alphabetize: {
+          order: 'asc',
+        },
+        pathGroups: [
+          { group: 'builtin', pattern: 'preact/**', position: 'before' },
+        ],
+        pathGroupsExcludedImportTypes: [
+          'preact/**'
+        ]
+      }],
     }
   }
 ];

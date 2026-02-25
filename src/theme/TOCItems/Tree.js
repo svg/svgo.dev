@@ -1,7 +1,7 @@
 import React from 'preact/compat';
-import clsx from 'clsx';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import Translate from '@docusaurus/Translate';
+import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import clsx from 'clsx';
 import styles from './index.module.css';
 
 /**
