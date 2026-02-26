@@ -16,6 +16,7 @@
   --ifm-container-width-xl: var(--svgo-global-width);
   --ifm-footer-padding-horizontal: 1rem;
   --ifm-navbar-background-color: var(--svgo-pri-bg-color);
+  --ifm-navbar-search-input-placeholder-color: #4e555e;
   --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e291a;
   --ifm-spacing-horizontal: 1rem;
   --search-local-hit-background: var(--svgo-sec-bg-color);
@@ -34,6 +35,7 @@
     --svgo-logo-fg-color: #fff;
     --svgo-button-hover-background-color: #e6e6e6;
     --ifm-color-primary: #389fff;
+    --ifm-navbar-search-input-placeholder-color: #bec3c9;
     --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e29;
   }
 }

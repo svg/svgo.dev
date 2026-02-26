@@ -3,5 +3,9 @@
 }
 
 .highlight {
-  color: #53d592;
+  color: #165b37;
+
+  @media (prefers-color-scheme: dark) {
+    color: #00f174;
+  }
 }

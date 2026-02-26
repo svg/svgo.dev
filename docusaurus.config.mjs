@@ -237,9 +237,8 @@ const config = {
         {
           href: 'https://github.com/svg/svgo',
           position: 'right',
-          html: '<img src="https://img.shields.io/github/stars/svg/svgo?style=social" alt="" height="20" width="88"/>',
+          html: '<img src="https://img.shields.io/github/stars/svg/svgo?style=social" alt="Star SVGO on GitHub" height="20" width="88"/>',
           className: 'github-shield',
-          'aria-label': 'GitHub repository'
         }
       ],
     },
