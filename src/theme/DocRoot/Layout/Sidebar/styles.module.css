@@ -1,6 +1,6 @@
 :root {
-  --doc-sidebar-width: 300px;
-  --doc-sidebar-hidden-width: 30px;
+  --doc-sidebar-width: 300px !important;
+  --doc-sidebar-hidden-width: 30px !important;
 }
 
 .docSidebarContainer {

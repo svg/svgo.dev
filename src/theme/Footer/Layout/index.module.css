@@ -7,7 +7,9 @@
 .wrapper {
   position: relative;
   padding: 6rem 1rem 2rem 1rem;
-  background: linear-gradient(to right, #0771d5, #27489f);
+  background: linear-gradient(90deg,
+      hsl(209 94% 32%),
+      hsl(224 61% 39%));
   clip-path: url(#footerMobilePath);
   overflow: hidden;
 }
@@ -38,7 +40,6 @@
 
 @media (min-width: 997px) {
   .wrapper {
-    background: linear-gradient(to right, #0771d5, #27489f);
     clip-path: url(#footerDesktopPath);
   }
 

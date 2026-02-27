@@ -31,11 +31,15 @@
   height: 100%;
   width: calc(100vw - (100vw - 100%));
   position: absolute;
-  background: linear-gradient(to bottom, #367fc126, #39aee400);
+  background: linear-gradient(to bottom,
+      hsl(208 56% 48% / 0.15),
+      hsl(199 76% 56% / 0));
   clip-path: url(#featureMobilePath);
 
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(to bottom, #39aee440, #39aee400);
+    background: linear-gradient(to bottom,
+        hsl(199 76% 56% / 0.25),
+        hsl(199 76% 56% / 0));
   }
 }
 

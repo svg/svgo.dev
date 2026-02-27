@@ -3,9 +3,9 @@
 }
 
 .highlight {
-  color: #165b37;
+  color: hsl(149 61% 22%);
 
   @media (prefers-color-scheme: dark) {
-    color: #00f174;
+    color: hsl(149 100% 47%);
   }
 }

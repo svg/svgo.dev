@@ -12,15 +12,19 @@ import puppeteer from 'puppeteer';
 const SITEMAP_URL = 'http://localhost:3000/sitemap.xml';
 const PAGE_PATTERN = /(?<=https:\/\/svgo.dev).*?(?=<)/g;
 
-/**
- * Issues that we're ignoring from our accessibility testing for now. If the
- * context is a partial match for any pattern, it is ignored.
- */
-const IGNORED_ISSUES = [
+const IGNORED_SELECTORS = [
   // Prism code blocks.
-  /<span class="token /,
-  // Caused by an underlying bug in the Docusaurus theme.
-  /<p>Cannot read properties of undef/,
+  'pre span.token',
+  'div[class*=theme-code-block]',
+  // Doesn't expose custom CSS property to override.
+  'div[class*=playgroundHeader]',
+  // Caused by an underlying bug in the Docusaurus theme… I think!
+  'div[class^=errorBoundaryFallback]',
+];
+
+const IGNORED_MESSAGES = [
+  // Pa11y doesn't handle opacity/alpha well.
+  /contrast ratio of NaN:1/,
 ];
 
 /** @type {TestCase[]} */
@@ -50,13 +54,14 @@ const pa11yRunner = async (browser, testCase, urls) => {
 
   for (const url of urls) {
     const result = await pa11y(url, {
-      standard: 'WCAG2AA',
+      standard: 'WCAG2AAA',
       browser,
       page,
+      hideElements: IGNORED_SELECTORS.join(', '),
     });
 
     result.issues = result.issues.filter(i => {
-      return !IGNORED_ISSUES.some(re => re.test(i.context));
+      return !IGNORED_MESSAGES.some(re => re.test(i.message));
     });
 
     results.push(result);
@@ -93,7 +98,7 @@ for (const { name, result } of results) {
 
   for (const issue of issues) {
     console.error(
-      '%s > %s\n%s %s\n%s %s\n%s %s\n',
+      '%s > %s\n%s %s\n%s %s\n%s %s\n%s %s\n',
       styleText(['blue', 'bold'], name),
       styleText(['red', 'bold'], issue.code),
       styleText('yellow', 'Page URL:'),

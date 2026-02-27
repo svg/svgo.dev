@@ -28,10 +28,14 @@
   width: 80%;
   border-radius: 100%;
   z-index: -1;
-  background: linear-gradient(to bottom, #e0ebf6, #39aee410);
+  background: linear-gradient(to bottom,
+      hsl(210 55% 92%),
+      hsl(199 76% 56% / 0.06));
 
   @media (prefers-color-scheme: dark) {
-    background: linear-gradient(to bottom, #39aee440, #39aee410);
+    background: linear-gradient(to bottom,
+        hsl(199 76% 56% / 0.25),
+        hsl(199 76% 56% / 0.06));
   }
 }
 

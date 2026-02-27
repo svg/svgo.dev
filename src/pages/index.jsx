@@ -20,9 +20,9 @@ function HomepageHeader() {
     <header className={styles.hero}>
       <div className={clsx(styles.heroSplit, 'container')}>
         <div className={styles.infoSection}>
-          <p className={styles.tagline}>
+          <h1 className={styles.tagline}>
             SVG Optimizer for Node.js and CLI
-          </p>
+          </h1>
           <p className={styles.subtitle}>
             SVGO and its various integrations will enable you to optimize
             SVGs and serve your web applications faster.

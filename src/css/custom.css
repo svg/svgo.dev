@@ -1,42 +1,46 @@
 :root {
   --svgo-global-width: 1200px;
-  --svgo-pill-bg-color: #cbe2f9;
-  --svgo-pill-fg-color: #0b5cad;
-  --svgo-pri-bg-color: #fff;
-  --svgo-pri-fg-color: #153243;
+  --svgo-pill-bg-color: var(--ifm-color-primary);
+  --svgo-pill-fg-color: hsl(0 0% 100%);
+  --svgo-pri-bg-color: hsl(0 0% 100%);
+  --svgo-pri-fg-color: hsl(202 52% 17%);
   --svgo-search-bg-color: var(--svgo-tir-bg-color);
-  --svgo-search-bg-hover: #dbdbdb;
-  --svgo-sec-bg-color: #f6f5f4;
-  --svgo-tir-bg-color: #e8e8e8;
-  --svgo-logo-fg-color: #1d1d1b;
-  --svgo-button-hover-background-color: #1b4055;
+  --svgo-search-bg-hover: hsl(0 0% 86%);
+  --svgo-sec-bg-color: hsl(30 10% 96%);
+  --svgo-tir-bg-color: hsl(0 0% 91%);
+  --svgo-logo-fg-color: hsl(60 4% 11%);
+  --svgo-button-hover-background-color: hsl(202 52% 22%);
+
   --ifm-background-color: var(--svgo-pri-bg-color) !important;
-  --ifm-code-font-size: 95%;
-  --ifm-color-primary: #216be2;
-  --ifm-container-width-xl: var(--svgo-global-width);
-  --ifm-footer-padding-horizontal: 1rem;
-  --ifm-navbar-background-color: var(--svgo-pri-bg-color);
-  --ifm-navbar-search-input-placeholder-color: #4e555e;
-  --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e291a;
-  --ifm-spacing-horizontal: 1rem;
-  --search-local-hit-background: var(--svgo-sec-bg-color);
+  --ifm-code-font-size: 95% !important;
+  --ifm-color-primary: hsl(217 77% 38%) !important;
+  --ifm-container-width-xl: var(--svgo-global-width) !important;
+  --ifm-footer-padding-horizontal: 1rem !important;
+  --ifm-menu-color: hsl(214 8% 31%) !important;
+  --ifm-navbar-background-color: var(--svgo-pri-bg-color) !important;
+  --ifm-navbar-search-input-placeholder-color: var(--ifm-menu-color) !important;
+  --ifm-navbar-shadow: 0 .5rem .5rem 0 hsl(201 61% 10% / 0.1) !important;
+  --ifm-tabs-color: var(--ifm-menu-color) !important;
+  --ifm-spacing-horizontal: 1rem !important;
+  --search-local-hit-background: var(--svgo-sec-bg-color) !important;
 
   color: var(--svgo-pri-fg-color);
 
   @media (prefers-color-scheme: dark) {
-    --svgo-pill-bg-color: #0b5cad;
-    --svgo-pill-fg-color: #cbe2f9;
-    --svgo-pri-bg-color: #142631;
-    --svgo-pri-fg-color: #fff;
-    --svgo-search-bg-color: #5a6a74;
-    --svgo-search-bg-hover: #647682;
-    --svgo-sec-bg-color: #1b3241;
-    --svgo-tir-bg-color: #5a6a74;
-    --svgo-logo-fg-color: #fff;
-    --svgo-button-hover-background-color: #e6e6e6;
-    --ifm-color-primary: #389fff;
-    --ifm-navbar-search-input-placeholder-color: #bec3c9;
-    --ifm-navbar-shadow: 0 .5rem .5rem 0 #0a1e29;
+    --svgo-pill-bg-color: hsl(210 88% 29%);
+    --svgo-pill-fg-color: hsl(210 79% 95%);
+    --svgo-pri-bg-color: hsl(203 42% 12%);
+    --svgo-pri-fg-color: hsl(0 0% 100%);
+    --svgo-search-bg-hover: hsl(204 13% 45%);
+    --svgo-sec-bg-color: hsl(204 41% 18%);
+    --svgo-tir-bg-color: hsl(203 13% 40%);
+    --svgo-logo-fg-color: hsl(0 0% 100%);
+    --svgo-button-hover-background-color: hsl(0 0% 90%);
+
+    --ifm-color-primary: hsl(205 100% 67%) !important;
+    --ifm-menu-color: hsl(214 10% 87%) !important;
+    --ifm-navbar-shadow: 0 .5rem .5rem 0 hsl(201 61% 10%) !important;
+    --ifm-tabs-color: var(--svgo-pri-fg-color) !important;
   }
 }
 
@@ -46,13 +50,13 @@
 
 /* Button overrides */
 .button {
-  --ifm-button-color: var(--svgo-pri-bg-color);
-  --ifm-button-background-color: var(--svgo-pri-fg-color);
+  --ifm-button-color: var(--svgo-pri-bg-color) !important;
+  --ifm-button-background-color: var(--svgo-pri-fg-color) !important;
 }
 
 .button:hover,
 .button:focus {
-  --ifm-button-background-color: var(--svgo-button-hover-background-color);
+  --ifm-button-background-color: var(--svgo-button-hover-background-color) !important;
 }
 
 /* Navbar overrides */
@@ -93,14 +97,13 @@ nav div kbd {
 
 /* Footer overrides */
 footer {
-  --ifm-link-color: #fff;
-  --ifm-link-hover-color: #cac4ce;
-  --ifm-link-hover-decoration: none;
-  --ifm-footer-background-color: none;
-  --ifm-footer-color: #fff;
-  --ifm-footer-link-color: #fff;
-  --ifm-footer-link-hover-color: #cac4ce;
-  --ifm-footer-title-color: #fff;
+  --ifm-link-color: var(--ifm-footer-color) !important;
+  --ifm-link-hover-color: hsl(276 9% 79%) !important;
+  --ifm-link-hover-decoration: none !important;
+  --ifm-footer-color: hsl(0 0% 100%) !important;
+  --ifm-footer-link-color: var(--ifm-footer-color) !important;
+  --ifm-footer-link-hover-color: var(--ifm-link-hover-color) !important;
+  --ifm-footer-title-color: var(--ifm-footer-color) !important;
 }
 
 .designer-attribution {

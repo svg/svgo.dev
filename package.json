@@ -38,7 +38,7 @@
     "typecheck": "tsc",
     "a11y": "node ./pa11y.mjs",
     "a11y:ci": "start-server-and-test 'serve build -l 3000' 'http://localhost:3000' 'yarn run a11y'",
-    "qa": "yarn run lint && yarn run typecheck",
+    "qa": "yarn run lint && yarn run typecheck && yarn run a11y",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
