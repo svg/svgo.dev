@@ -74,7 +74,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.9.2",
     "@docusaurus/types": "3.9.2",
-    "@sethfalco/eslint-config": "^1.2.0",
+    "@sethfalco/eslint-config": "^1.2.1",
     "@types/node": "^25.3.0",
     "@types/pa11y": "^5.3.7",
     "eslint": "^9.39.1",

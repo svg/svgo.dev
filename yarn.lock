@@ -3061,9 +3061,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sethfalco/eslint-config@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@sethfalco/eslint-config@npm:1.2.0::__archiveUrl=https%3A%2F%2Fgitlab.com%2Fapi%2Fv4%2Fprojects%2F79700456%2Fpackages%2Fnpm%2F%40sethfalco%2Feslint-config%2F-%2F%40sethfalco%2Feslint-config-1.2.0.tgz"
+"@sethfalco/eslint-config@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@sethfalco/eslint-config@npm:1.2.1"
   dependencies:
     "@eslint/js": "npm:^9.39.3"
     "@stylistic/eslint-plugin": "npm:^5.9.0"
@@ -3072,7 +3072,7 @@ __metadata:
     globals: "npm:^14.0.0"
   peerDependencies:
     eslint: ^9
-  checksum: 10/661e6d0ab9bdb45c1ad1e4ed6b0cf6ab9e8cdf0410b702bc2f1fec19e99ee3dad45cd48577abf5254bd899c84397a16d90dcaa1d83d4eaaff3706d322323cb70
+  checksum: 10/2bb394ee1d5fb16bfe366f7c8a2d5f40d94cb3761c5f0c10be9a729987d3010be8745363fd4eef7dda816b422137fc5f289b92dc92f2950cb1e69df6050063bc
   languageName: node
   linkType: hard
 
@@ -14206,7 +14206,7 @@ __metadata:
     "@easyops-cn/docusaurus-search-local": "npm:^0.52.1"
     "@mdx-js/react": "npm:^3.1.1"
     "@preact/compat": "npm:^18.3.1"
-    "@sethfalco/eslint-config": "npm:^1.2.0"
+    "@sethfalco/eslint-config": "npm:^1.2.1"
     "@types/node": "npm:^25.3.0"
     "@types/pa11y": "npm:^5.3.7"
     clsx: "npm:^2.1.1"
