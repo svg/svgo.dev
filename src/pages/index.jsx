@@ -24,8 +24,8 @@ function HomepageHeader() {
             SVG Optimizer for Node.js and CLI
           </h1>
           <p className={styles.subtitle}>
-            SVGO and its various integrations will enable you to optimize
-            SVGs and serve your web applications faster.
+            SVGO and its integrations will enable you to optimize SVGs and serve
+            your web applications faster.
           </p>
           <div>
             <Link
