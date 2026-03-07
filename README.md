@@ -7,6 +7,7 @@ This repository contains source code for everything except the documentation its
 Docusaurus is configured to read documentation from the `.svgo/docs` directory instead of the root `docs/` directory. Before running locally, you must install dependencies and obtain a copy of the documentation:
 
 ```sh
+corepack enable
 yarn install
 
 # You only need to do one of the following!
