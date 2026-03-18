@@ -199,7 +199,6 @@ const config = {
     ['@docusaurus/plugin-content-docs', pluginContentDocsOptions],
     ['@docusaurus/plugin-sitemap', pluginSitemapOptions],
     ['@docusaurus/plugin-svgr', pluginSvgrOptions],
-    './src/plugins/preact.js',
     './src/plugins/prefers-color-scheme.js',
     './src/plugins/configure-postcss-preset-env.js',
   ],

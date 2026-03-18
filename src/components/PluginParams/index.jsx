@@ -1,4 +1,4 @@
-import React, { Fragment } from 'preact/compat';
+import React, { Fragment } from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import styles from './index.module.css';
 

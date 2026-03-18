@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import { translate } from '@docusaurus/Translate';
 import IconArrow from '@theme/Icon/Arrow';
 import styles from './styles.module.css';

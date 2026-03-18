@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import { useThemeConfig } from '@docusaurus/theme-common';
 import FooterCopyright from '@theme/Footer/Copyright';
 import FooterLayout from '@theme/Footer/Layout';

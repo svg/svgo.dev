@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import Translate from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import clsx from 'clsx';

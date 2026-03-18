@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import CodeBlock from '@theme/CodeBlock';
 import TabItem from '@theme/TabItem';

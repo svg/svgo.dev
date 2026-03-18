@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 
 export default function SpriteSheet() {
   return (

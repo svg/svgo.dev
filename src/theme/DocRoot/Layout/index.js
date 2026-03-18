@@ -1,4 +1,4 @@
-import React, { useState } from 'preact/compat';
+import React, { useState } from 'react';
 import { useDocsSidebar } from '@docusaurus/plugin-content-docs/client';
 import BackToTopButton from '@theme/BackToTopButton';
 import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';

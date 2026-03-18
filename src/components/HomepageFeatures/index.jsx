@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import clsx from 'clsx';
 import SvgoHackerman from '../../vectors/svgo_hackerman.svg';
 import SvgoIntegrations from '../../vectors/svgo_integrations.svg';

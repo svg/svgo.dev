@@ -52,10 +52,10 @@ export default [
           order: 'asc',
         },
         pathGroups: [
-          { group: 'builtin', pattern: 'preact/**', position: 'before' },
+          { group: 'builtin', pattern: 'react', position: 'before' },
         ],
         pathGroupsExcludedImportTypes: [
-          'preact/**'
+          'react'
         ]
       }],
     }

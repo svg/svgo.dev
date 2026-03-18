@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import Link from '@docusaurus/Link';
 import Logo from '../../../vectors/logo.svg';
 import styles from './index.module.css';

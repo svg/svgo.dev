@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import DocItemContent from '@theme/DocItem/Content';
 import DocItemFooter from '@theme/DocItem/Footer';

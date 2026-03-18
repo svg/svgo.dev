@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
 import CopyIcon from '@theme/Icon/Copy';

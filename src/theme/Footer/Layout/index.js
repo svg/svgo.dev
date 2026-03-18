@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import clsx from 'clsx';
 import { Logo } from '../../../components/SpriteSheet';
 import styles from './index.module.css';

@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import useBaseUrl from '@docusaurus/useBaseUrl';

@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import Heading from '@theme/Heading';

@@ -1,4 +1,4 @@
-import React from 'preact/compat';
+import React from 'react';
 import LinkItem from '@theme/Footer/LinkItem';
 
 function Separator() {
