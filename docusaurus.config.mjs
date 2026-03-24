@@ -282,14 +282,7 @@ const config = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class="designer-attribution" href="https://vukory.art" target="_blank">Vukory ${VUKORY_SVG}</a>`
     },
-  },
-  scripts: [
-    {
-      src: 'https://plausible.falco.fun/js/script.outbound-links.js',
-      defer: true,
-      'data-domain': 'svgo.dev'
-    }
-  ]
+  }
 };
 
 export default config;
