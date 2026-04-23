@@ -11,8 +11,8 @@ import styles from './index.module.css';
 
 const INSTALL_COMMAND = 'npx svgo';
 
-const onClick = async () => {
-  navigator.clipboard.writeText(INSTALL_COMMAND);
+function onClick() {
+  navigator.clipboard?.writeText(INSTALL_COMMAND);
 }
 
 function HomepageHeader() {
