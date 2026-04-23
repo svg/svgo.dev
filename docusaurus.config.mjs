@@ -87,6 +87,16 @@ const pluginSitemapOptions = {
   },
 };
 
+/**
+ * IDs that are defined in a sprite sheet that's shared with and may be
+ * referenced by SVGs. They must not be prefixed as that would break the
+ * references.
+ */
+const SPRITESHEET_IDS = [
+  'logo',
+  'halftone',
+];
+
 /** @type {import('@docusaurus/plugin-svgr').Options} */
 const pluginSvgrOptions = {
   svgrConfig: {
@@ -109,11 +119,17 @@ const pluginSvgrOptions = {
           params: {
             delim: '',
             /**
-             * @param {import('svgo').XastElement} _
+             * @param {import('svgo').XastElement} element
              * @param {import('svgo').PluginInfo & { path: string }} info
              * @returns {string}
              */
-            prefix: (_, info) => path.parse(info.path).name
+            prefix: (element, info) => {
+              if (element.name === 'use' && SPRITESHEET_IDS.includes(element.attributes.href.slice(1))) {
+                return '';
+              }
+
+              return path.parse(info.path).name;
+            },
           }
         },
         {

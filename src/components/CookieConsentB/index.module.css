@@ -1,0 +1,320 @@
+@font-face {
+  font-family: "Winky-Rough";
+  src: url("./assets/Winky-Rough.woff2") format("woff2");
+}
+
+.bannerContainer,
+.mascot {
+  --ifm-link-color: hsl(217 77% 38%) !important;
+  --ifm-link-hover-color: var(--ifm-link-color) !important;
+  --drop-shadow-color: hsl(204 100% 5%);
+  filter: drop-shadow(.1rem .2rem .3rem var(--drop-shadow-color));
+}
+
+.mascot {
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 8rem;
+  margin: .5rem;
+  aspect-ratio: 1.06;
+
+  @media (min-width: 997px) {
+    bottom: 5rem;
+    height: 12rem;
+  }
+}
+
+.speechBubble {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  z-index: -1;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.speechBubbleWide {
+    display: none;
+    max-width: 30rem;
+    line-height: 120%;
+  }
+
+  @media (min-width: 997px) {
+    display: none;
+
+    &.speechBubbleWide {
+      display: block;
+    }
+  }
+}
+
+.bannerContainer {
+
+  p,
+  button,
+  svg {
+    font-family:
+      Winky-Rough, ui-rounded, "Hiragino Maru Gothic ProN", Manjari, "Arial Rounded MT",
+      "Arial Rounded MT Bold", Calibri, source-sans-pro, sans-serif;
+    font-size: clamp(.9rem, 3.5cqw, 1rem);
+    font-weight: 700;
+    color: hsl(33 85% 11%);
+  }
+
+  z-index: 2;
+  position: fixed;
+  bottom: 5.6rem;
+  left: 5.6rem;
+  background-size: 100% 100%;
+  margin-right: .5rem;
+  max-width: 22.5rem;
+  aspect-ratio: 1.15;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  line-height: clamp(110%, 5cqw, 145%);
+
+  @media (min-width: 997px) {
+    left: 10rem;
+    bottom: 6rem;
+    max-width: 30rem;
+    aspect-ratio: 2.45;
+    line-height: 120%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: no-repeat url("./assets/cookie1.svg");
+    top: 14%;
+    left: -8%;
+    width: 26%;
+    aspect-ratio: 0.84;
+    clip-path: polygon(0 0, 100% 0, 94% 26%, 90% 47%, 73% 63%, 56% 72%, 54% 91%, 0 100%);
+
+    @media (min-width: 997px) {
+      rotate: 15deg;
+      left: 2%;
+      top: -12%;
+      width: 21%;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background: no-repeat url("./assets/cookie2.svg");
+    bottom: 1rem;
+    right: 0;
+    width: 25%;
+    aspect-ratio: 0.83;
+    clip-path: polygon(0 58%, 11% 36%, 52% 20%, 66% 0, 100% 0, 100% 100%, 0 100%);
+
+    @media (min-width: 997px) {
+      right: -2%;
+      bottom: -.8rem;
+      width: 20%;
+    }
+  }
+}
+
+.title {
+  position: absolute;
+  top: -4%;
+  left: 12%;
+  width: clamp(11rem, 44vw, 13rem);
+  aspect-ratio: 2.75;
+  filter: url("#die-cut");
+  /* Due to all the curves, the bounding box for the title and banner body text
+     can sometimes overlap. We use a clip-path to limit the user-selectable
+     area so they can freely interact with the text beneath any empty space. */
+  clip-path: polygon(0 100%, 17% 100%, 28% 75%, 46% 55%, 69% 51%, 91% 71%, 100% 63%, 100% 0, 0 5%);
+
+  text {
+    color: hsl(52 41% 93%);
+  }
+
+  [href="#curveWide"] {
+    display: none;
+  }
+
+  @media (min-width: 997px) {
+    [href="#curve"] {
+      display: none;
+    }
+
+    [href="#curveWide"] {
+      display: block;
+    }
+
+    top: -6%;
+    left: 21%;
+    width: 16rem;
+    clip-path: rect(0 100% 62% 0);
+  }
+}
+
+.copy {
+  --magic-number: 42rem;
+  --shape-margin: min(1rem, 16px);
+  height: max(100%, calc(var(--magic-number) - 100vw));
+  margin-bottom: 0;
+
+  &:before, .float {
+    content: "";
+    width: 50%;
+    height: 100%;
+    shape-margin: var(--shape-margin);
+  }
+
+  &::before {
+    float: left;
+    shape-outside: polygon(0 0,
+        100% 0,
+        100% 10%,
+        58% 10%,
+        33% 20%,
+        27% 30%,
+        10% 40%,
+        6% 50%,
+        6% 60%,
+        30% 70%,
+        48% 80%,
+        100% 80%,
+        100% 100%,
+        0 100%);
+
+    @media (min-width: 997px) {
+      shape-outside: polygon(0 0,
+          100% 0,
+          100% 23%,
+          29% 23%,
+          24% 30%,
+          20% 40%,
+          18% 50%,
+          20% 60%,
+          22% 70%,
+          27% 80%,
+          27% 83%,
+          100% 83%,
+          100% 100%,
+          0 100%);
+    }
+  }
+
+  .float {
+    float: right;
+    shape-outside: polygon(100% 0,
+        0 0,
+        0 10%,
+        42% 10%,
+        67% 20%,
+        73% 30%,
+        90% 40%,
+        94% 50%,
+        94% 60%,
+        70% 70%,
+        52% 80%,
+        0 80%,
+        0 100%,
+        100% 100%);
+
+    @media (min-width: 997px) {
+      shape-outside: polygon(100% 0,
+          0 0,
+          0 23%,
+          71% 23%,
+          76% 30%,
+          80% 40%,
+          82% 50%,
+          80% 60%,
+          78% 70%,
+          73% 80%,
+          73% 83%,
+          0 83%,
+          0 100%,
+          100% 100%);
+    }
+  }
+
+  @media (min-width: 381px) { --magic-number: 44rem; }
+  @media (min-width: 419px) { --magic-number: 46rem; }
+  @media (min-width: 443px) { --magic-number: 48rem; }
+
+  @media (min-width: 997px) {
+    --shape-margin: min(.6rem, 9.6px);
+  }
+}
+
+.buttonContainer {
+  width: 11.25rem;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: -5.4rem;
+  left: 18%;
+
+
+  @media (min-width: 997px) {
+    width: 25.625rem;
+    left: 28%;
+    bottom: -5rem;
+    flex-direction: row;
+
+    button {
+      width: 12.5rem;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  width: 85%;
+  border: none;
+  background: none;
+  position: relative;
+
+  &.acceptButton {
+    align-self: flex-end;
+  }
+
+  .bubble {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    aspect-ratio: 2.5;
+  }
+
+  .label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+
+    @media (min-width: 997px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  .hover {
+    display: none;
+  }
+
+  &:hover, &:focus {
+    .bubble {
+      display: none;
+    }
+
+    .hover {
+      display: flex;
+    }
+  }
+}

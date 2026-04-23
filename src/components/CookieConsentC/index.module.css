@@ -1,0 +1,24 @@
+.bannerContainer {
+  --svgo-background: hsl(0 0% 100%);
+  --svgo-foreground: hsl(202 52% 17%);
+  --svgo-button-hover-background-color: hsl(202 52% 22%);
+  --ifm-link-color: hsl(217 77% 38%) !important;
+  --ifm-link-hover-color: var(--ifm-link-color) !important;
+
+  z-index: 1;
+  background: hsl(0 0% 100%);
+  color: var(--svgo-foreground);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    padding: .5rem 1rem;
+  }
+}
