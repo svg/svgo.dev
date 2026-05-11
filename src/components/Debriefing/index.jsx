@@ -4,6 +4,7 @@ import styles from './index.module.css';
 
 /**
  * @typedef {object} Props
+ * @property {string} variant
  * @property {(temp: boolean, answer: import('../CookieConsentWrapper').DebriefingAnswer) => void} onAnswer
  * @property {() => void} onDone
  */
@@ -13,12 +14,13 @@ const FORM_URL = 'https://survey.vukory.art';
 /**
  * @param {Props} props
  */
-export default function Debriefing({ onAnswer, onDone }) {
+export default function Debriefing({ variant, onAnswer, onDone }) {
   const [closing, setClosing] = useState(false);
+  const formUrl = `${FORM_URL}/?utm_content=${variant}`;
 
   /** Opens form in a new tab. */
   function onYes() {
-    window.open(FORM_URL, '_blank', 'noopener');
+    window.open(formUrl, '_blank', 'noopener');
     setClosing(true);
     onAnswer(false, 'yes');
   }
@@ -36,7 +38,7 @@ export default function Debriefing({ onAnswer, onDone }) {
   function onLater() {
     // Optional chain as `clipboard#writeText` isn't available in insecure
     // contexts, i.e. HTTP development environments.
-    navigator.clipboard?.writeText(FORM_URL);
+    navigator.clipboard?.writeText(formUrl);
     setClosing(true);
     onAnswer(true, 'later');
   }

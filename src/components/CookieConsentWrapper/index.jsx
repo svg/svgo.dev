@@ -86,7 +86,7 @@ export default function CookieConsentWrapper() {
       setAnsweredDebriefing(true);
     }
 
-    return <Debriefing onAnswer={onDebriefingAnswered} onDone={onDebriefingDone} />;
+    return <Debriefing variant={variant} onAnswer={onDebriefingAnswered} onDone={onDebriefingDone} />;
   }
 
   const CookieConsent = COOKIE_CONSENT_MAP.get(variant);
