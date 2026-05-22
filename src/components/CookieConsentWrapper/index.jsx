@@ -21,6 +21,8 @@ export default function CookieConsentWrapper() {
     /** @type {boolean?} */ (null)
   );
 
+  const [startTime, setStartTime] = useState(/** @type {number?} */ (null));
+
   useEffect(() => {
     const answeredValue = window.localStorage.getItem('answeredCookieConsent');
 
@@ -43,6 +45,7 @@ export default function CookieConsentWrapper() {
     setVariant(variant);
 
     if (!answeredValue && COOKIE_CONSENT_MAP.has(variant)) {
+      setStartTime(Date.now());
       window.plausible?.('cookie-consent-viewed', {
         props: { variant },
         interactive: false,
@@ -102,13 +105,35 @@ export default function CookieConsentWrapper() {
       document.cookie = 'gasp=The_cookie_is_a_lie!+No_really_this_cookie_serves_no_purpose.; SameSite=Lax; Secure';
     }
 
+    const endTime = Date.now();
+    const duration = calculateDuration(startTime, endTime);
     window.plausible?.('cookie-consent-answered', {
       props: {
         variant: /** @type {string} */ (variant),
         'cookie-consent-answer': answer,
+        duration,
       },
     });
     window.localStorage.setItem('answeredCookieConsent', 'true');
+  }
+
+  /**
+   * @param {number|null} startTime
+   * @param {number} endTime
+   * @returns {string}
+   */
+  function calculateDuration(startTime, endTime) {
+    if (startTime === null) {
+      return 'unown';
+    }
+
+    const duration = endTime - startTime;
+
+    if (duration > 60000) {
+      return 'shuckle';
+    }
+
+    return Math.round(duration / 1000).toString();
   }
 
   function onCookieConsentDone() {
