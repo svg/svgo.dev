@@ -21,6 +21,8 @@ export default function CookieConsentWrapper() {
     /** @type {boolean?} */ (null)
   );
 
+  const [startTime, setStartTime] = useState(/** @type {number?} */ (null));
+  
   useEffect(() => {
     const answeredValue = window.localStorage.getItem('answeredCookieConsent');
 
@@ -43,6 +45,7 @@ export default function CookieConsentWrapper() {
     setVariant(variant);
 
     if (!answeredValue && COOKIE_CONSENT_MAP.has(variant)) {
+      setStartTime(Date.now());
       window.plausible?.('cookie-consent-viewed', {
         props: { variant },
         // Must be set to false, otherwise viewing the cookie consent banner
@@ -100,10 +103,13 @@ export default function CookieConsentWrapper() {
    * @param {CookieConsentAnswer} answer
    */
   function onCookieConsentAnswered(answer) {
+    const endTime = Date.now();
+    const duration = startTime ? Math.round((endTime-startTime) / 1000).toString() : "unknown";
     window.plausible?.('cookie-consent-answered', {
       props: {
         variant: /** @type {string} */ (variant),
         'cookie-consent-answer': answer,
+        duration,
       },
     });
     window.localStorage.setItem('answeredCookieConsent', 'true');
