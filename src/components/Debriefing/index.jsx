@@ -31,14 +31,7 @@ export default function Debriefing({ variant, onAnswer, onDone }) {
     onAnswer(false, 'no');
   }
 
-  /**
-   * Copies form URL to clipboard, and saves to session storage to not show this
-   * again. Conveys to the user that the link is in their clipboard.
-   */
   function onLater() {
-    // Optional chain as `clipboard#writeText` isn't available in insecure
-    // contexts, i.e. HTTP development environments.
-    navigator.clipboard?.writeText(formUrl);
     setClosing(true);
     onAnswer(true, 'later');
   }
