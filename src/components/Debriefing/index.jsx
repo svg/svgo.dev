@@ -53,10 +53,6 @@ export default function Debriefing({ variant, onAnswer, onDone }) {
         <p>
           Want to help me out by taking a short survey about your experience?
         </p>
-        <p className={styles.reward}>
-          Psst… I&apos;ll send you a free sticker pack as a thanks if you&apos;d
-          like 🎁
-        </p>
       </div>
       <div className={styles.buttonContainer}>
         <button className="button" onClick={onYes}>
