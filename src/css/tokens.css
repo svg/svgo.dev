@@ -1,0 +1,16 @@
+/**
+ * We don't have a formalized stack getting design tokens from design to
+ * components. We just document and consume design tokens from this file.
+ *
+ * See: https://www.w3.org/community/design-tokens/
+ */
+
+:root {
+  --svgo-background: hsl(0 0% 100%);
+  --svgo-foreground: hsl(202 52% 17%);
+
+  @media (prefers-color-scheme: dark) {
+    --svgo-background: hsl(203 42% 12%);
+    --svgo-foreground: hsl(0 0% 100%);
+  }
+}
