@@ -48,7 +48,6 @@
 
   @media (min-width: 997px) {
     max-width: 740px;
-    font-size: 20px;
   }
 }
 
@@ -93,7 +92,7 @@
   }
 
   @media (min-width: 997px) {
-    width: 66%;
+    width: 65%;
   }
 }
 
@@ -106,6 +105,7 @@
 
   button {
     padding: .5rem 1rem;
+    font-size: 16px;
   }
 
   @media (min-width: 997px) {

@@ -19,7 +19,7 @@
   --svgo-frame-color: #dae5f2;
 
   z-index: 1;
-  font-size: 14px;
+  font-size: 18px;
   background-color: var(--svgo-pri-bg-color);
   position: fixed;
   margin: 1rem;
@@ -64,6 +64,7 @@
   gap: 1rem;
 
   button {
+    font-size: 16px;
     padding: .5rem 1rem;
   }
 }

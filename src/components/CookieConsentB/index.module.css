@@ -168,6 +168,7 @@
      trial-and-error. */
   height: clamp(100%, calc((640px - 100vw)), 100vh);
   margin-bottom: 0;
+  letter-spacing: 0.03em;
   --shape-margin: 1%;
 
   &::before {
@@ -246,6 +247,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 15px;
+
+    @media (min-width: 997px) {
+      font-size: 18px;
+    }
   }
 
   .hover {
