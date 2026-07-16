@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svgo.dev/sitemap.xml
