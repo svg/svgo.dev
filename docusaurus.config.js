@@ -201,6 +201,7 @@ const config = {
     ['@docusaurus/plugin-svgr', pluginSvgrOptions],
     './src/plugins/prefers-color-scheme.js',
     './src/plugins/configure-postcss-preset-env.js',
+    './src/plugins/append-sitemap-to-robots.js',
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
