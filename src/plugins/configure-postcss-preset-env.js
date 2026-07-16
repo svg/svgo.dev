@@ -7,7 +7,7 @@
  * @see https://github.com/clean-css/clean-css/issues/1254
  * @returns {any}
  */
-function configurePostcssPresetEnv() {
+export default function configurePostcssPresetEnv() {
   return {
     name: 'configure-postcss-preset-env',
     configurePostCss(postCssOptions) {
@@ -22,5 +22,3 @@ function configurePostcssPresetEnv() {
     },
   };
 }
-
-module.exports = configurePostcssPresetEnv;

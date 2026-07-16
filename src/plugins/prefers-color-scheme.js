@@ -1,4 +1,4 @@
-const postcss = require('postcss');
+import postcss from 'postcss';
 
 /**
  * Docusaurus theming depends on JavaScript by default. This drops that in
@@ -9,7 +9,7 @@ const postcss = require('postcss');
  * @param {any} context
  * @returns {any}
  */
-function prefersColorScheme(context) {
+export default function prefersColorScheme(context) {
   const themeConfig = context.siteConfig.themeConfig;
   const { colorMode } = themeConfig;
 
@@ -74,5 +74,3 @@ function prefersColorScheme(context) {
     },
   };
 }
-
-module.exports = prefersColorScheme;
