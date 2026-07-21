@@ -27,7 +27,3 @@ yarn-error.log*
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
-
-# Docs should be pulled from the svg/svgo repository
-/docs/
-/.svgo/

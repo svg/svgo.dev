@@ -30,9 +30,6 @@
     "node": ">=18"
   },
   "scripts": {
-    "svgo:clone": "rimraf .svgo && git clone https://github.com/svg/svgo.git .svgo --depth 1",
-    "svgo:copy": "rimraf .svgo && cp -r ../svgo .svgo",
-    "optimize-svgs": "npx svgo --pretty --indent 2 ./src/vectors/*",
     "lint": "eslint .",
     "format": "eslint --fix .",
     "typecheck": "tsc",
@@ -79,7 +76,6 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^17.7.0",
     "pa11y": "^9.1.1",
-    "rimraf": "^6.1.3",
     "start-server-and-test": "^3.0.11",
     "typescript": "^6.0.3"
   }
