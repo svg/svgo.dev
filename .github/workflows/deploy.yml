@@ -1,13 +1,7 @@
 on:
-  release:
-    types:
-      - 'published'
-  workflow_dispatch:
-    inputs:
-      svgoVersion:
-        description: The svg/svgo branch or tag to pull docs from.
-        default: 'main'
-        type: string
+  push:
+    branches:
+      - main
 
 permissions:
   contents: write
@@ -17,11 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/checkout@v6
         with:
-          repository: svg/svgo
-          path: .svgo
-          ref: ${{ inputs.svgoVersion }}
+          submodules: 'recursive'
       - run: corepack enable
       - uses: actions/setup-node@v3
         with:

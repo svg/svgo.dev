@@ -14,7 +14,7 @@ export default [
   {
     ignores: [
       '.docusaurus/',
-      '.svgo/',
+      'svgo/',
       '.yarn/',
       'build/',
       'node_modules/',

@@ -1,5 +1,7 @@
 on:
-  - 'pull_request'
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -9,10 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - uses: actions/checkout@v6
         with:
-          repository: svg/svgo
-          path: .svgo
+          submodules: 'recursive'
       - run: corepack enable
       - uses: actions/setup-node@v4
         with: &setup-node-config
@@ -52,10 +52,6 @@ jobs:
       # https://github.com/pa11y/pa11y/blob/2055ee510163d871e874f6ea0bfe895f84bbac4a/.github/workflows/tests.yml#L37
       - run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
       - uses: actions/checkout@v6
-      - uses: actions/checkout@v6
-        with:
-          repository: svg/svgo
-          path: .svgo
       - run: corepack enable
       - uses: actions/setup-node@v4
         with: *setup-node-config

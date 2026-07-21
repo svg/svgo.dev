@@ -31,7 +31,7 @@ const themeClassicOptions = {
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const pluginContentDocsOptions = {
-  path: '.svgo/docs',
+  path: 'svgo/docs',
   breadcrumbs: true,
   sidebarPath: require.resolve('./sidebars.js'),
   editUrl: ({ docPath }) => `https://github.com/svg/svgo/tree/main/docs/${docPath}`,
