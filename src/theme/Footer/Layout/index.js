@@ -6,7 +6,7 @@ import styles from './index.module.css';
 export default function FooterLayout({ links, copyright }) {
   return (
     <>
-      <svg height="0" width="0">
+      <svg width={0} height={0} aria-hidden={true}>
         <clipPath id="footerMobilePath" clipPathUnits="objectBoundingBox">
           <path d="M 0 .05 Q .5 0 1 .11 V 1 H 0" />
         </clipPath>

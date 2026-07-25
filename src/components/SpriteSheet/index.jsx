@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SpriteSheet() {
   return (
-    <svg style={{ height: 0 }}>
+    <svg width={0} height={0} aria-hidden={true}>
       <defs>
         <linearGradient
           id="a"

@@ -42,6 +42,10 @@
   }
 }
 
+svg[height="0"][aria-hidden="true"] {
+  position: fixed;
+}
+
 #__docusaurus {
   view-timeline: --page-timeline;
 }
