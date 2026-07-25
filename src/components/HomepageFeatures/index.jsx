@@ -66,7 +66,7 @@ function Feature({ Svg, title, description }) {
 export default function HomepageFeatures() {
   return (
     <>
-      <svg height="0" width="0">
+      <svg width={0} height={0} aria-hidden={true}>
         <clipPath id="featureMobilePath" clipPathUnits="objectBoundingBox">
           <path d="M 0 .4 Q .4 .2 1 .1 V 1 H 0" />
         </clipPath>
