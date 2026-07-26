@@ -10,17 +10,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: &actions-checkout actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           submodules: 'recursive'
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: &actions-setup-node actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
         with: &setup-node-config
-          node-version: 24
+          node-version-file: 'package.json'
           cache: 'yarn'
       - run: yarn install --immutable
       - run: yarn run build
-      - uses: actions/upload-artifact@v7
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           path: build
           if-no-files-found: error
@@ -29,18 +29,18 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: *actions-checkout
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: *actions-setup-node
         with: *setup-node-config
       - run: yarn install --immutable
       - run: yarn run lint
   typecheck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: *actions-checkout
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: *actions-setup-node
         with: *setup-node-config
       - run: yarn install --immutable
       - run: yarn run typecheck
@@ -51,12 +51,12 @@ jobs:
     steps:
       # https://github.com/pa11y/pa11y/blob/2055ee510163d871e874f6ea0bfe895f84bbac4a/.github/workflows/tests.yml#L37
       - run: echo 0 | sudo tee /proc/sys/kernel/apparmor_restrict_unprivileged_userns
-      - uses: actions/checkout@v6
+      - uses: *actions-checkout
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: *actions-setup-node
         with: *setup-node-config
       - run: yarn install --immutable
-      - uses: actions/download-artifact@v8
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           path: build
       - run: yarn run a11y:ci
