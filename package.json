@@ -26,8 +26,11 @@
     "svgo",
     "docusaurus"
   ],
-  "engines": {
-    "node": ">=18"
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^24.11.0"
+    }
   },
   "scripts": {
     "lint": "eslint .",
