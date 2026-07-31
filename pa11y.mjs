@@ -1,6 +1,7 @@
 import { styleText } from 'node:util';
 import pa11y from 'pa11y';
 import puppeteer from 'puppeteer';
+import docusaurusConfig from './docusaurus.config.mjs';
 
 /**
  * @typedef {'light'|'dark'} ColorScheme
@@ -9,8 +10,9 @@ import puppeteer from 'puppeteer';
  * @property {ColorScheme} colorScheme
  */
 
-const SITEMAP_URL = 'http://localhost:3000/sitemap.xml';
-const PAGE_PATTERN = /(?<=https:\/\/svgo.dev).*?(?=<)/g;
+const TEST_HOST = 'http://localhost:3000';
+const SITEMAP_URL = new URL('sitemap.xml', `${TEST_HOST}${docusaurusConfig.baseUrl}`).href;
+const PAGE_PATTERN = new RegExp(`(?<=>${RegExp.escape(docusaurusConfig.url)}).+?(?=<)`, 'g');
 
 const IGNORED_SELECTORS = [
   // Prism code blocks.
@@ -40,11 +42,39 @@ const TEST_CASES = [
 ];
 
 /**
+ * @param {string} sitemapUrl
+ * @param {string} host
+ * @returns {Promise<string[]>}
+ */
+async function getUrls(sitemapUrl, host) {
+  const resp = await fetch(sitemapUrl);
+
+  if (!resp.ok) {
+    throw Error(`Bad response when fetching sitemap <${sitemapUrl}>.`);
+  }
+
+  const contentType = resp.headers.get('content-type');
+
+  if (!contentType?.includes('application/xml')) {
+    throw Error(`Sitemap <${sitemapUrl}> has wrong Content-Type, expected application/xml, received ${contentType}.`);
+  }
+
+  const sitemap = await resp.text();
+  const urls = sitemap.matchAll(PAGE_PATTERN).map((p) => `${host}${p}`).toArray();
+
+  if (!urls.length) {
+    throw Error(`No URLs found in sitemap <${sitemapUrl}>.`);
+  }
+
+  return urls;
+}
+
+/**
  * @param {import('puppeteer').Browser} browser
  * @param {TestCase} testCase
  * @param {string[]} urls
  */
-const pa11yRunner = async (browser, testCase, urls) => {
+async function pa11yRunner(browser, testCase, urls) {
   const page = await browser.newPage();
   await page.emulateMediaFeatures([
     { name: 'prefers-color-scheme', value: testCase.colorScheme }
@@ -71,10 +101,8 @@ const pa11yRunner = async (browser, testCase, urls) => {
   return results;
 };
 
-const sitemap = (await (await fetch(SITEMAP_URL)).text());
-const urls = sitemap.matchAll(PAGE_PATTERN).map((p) => `http://localhost:3000${p}`).toArray();
-
-const browser = await puppeteer.launch();
+const urls = await getUrls(SITEMAP_URL, TEST_HOST);
+const browser = await puppeteer.launch({ protocolTimeout: 2000 });
 const results = await Promise.all(TEST_CASES.map(async (testCase) => ({
   name: testCase.name,
   result: await pa11yRunner(browser, testCase, urls),
