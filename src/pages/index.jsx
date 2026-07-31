@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import CopyIcon from '@theme/Icon/Copy';
 import SuccessIcon from '@theme/Icon/Success';
 import Layout from '@theme/Layout';
@@ -54,11 +55,13 @@ function HomepageHeader() {
 }
 
 export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout>
       <Head>
         <meta name="description" content="SVGO is a Node.js library and command-line application for optimizing vector images."/>
-        <meta name="og:image" content="https://svgo.dev/img/opengraph.jpg"/>
+        <meta name="og:image" content={`${siteConfig.url}/img/opengraph.jpg`}/>
         <meta name="og:image:type" content="image/jpeg"/>
         <meta name="og:image:width" content="1920"/>
         <meta name="og:image:height" content="480"/>

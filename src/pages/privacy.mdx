@@ -1,4 +1,14 @@
+import PKG from '../../package.json';
+
 # Privacy Policy
+
+export function Author() {
+  return (
+    <a href={`mailto:${PKG.author.email}`} target="_blank" rel="noopener noreferrer">
+      {PKG.author.name}
+    </a>
+  );
+}
 
 We have **_temporarily_** enabled client-side analytics via [Plausible](https://plausible.io).
 
@@ -16,4 +26,4 @@ Data collected includes referral sources, top pages, visit duration, information
 
 ---
 
-For any questions, please email [Seth Falco](mailto:seth@falco.fun).
+For any questions, please email <Author/>.

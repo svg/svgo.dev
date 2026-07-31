@@ -26,14 +26,14 @@ function amendTheme(theme) {
 
 /** @type {import('@docusaurus/theme-classic').Options} */
 const themeClassicOptions = {
-  customCss: require.resolve('./src/css/custom.css'),
+  customCss: './src/css/custom.css',
 };
 
 /** @type {import('@docusaurus/plugin-content-docs').Options} */
 const pluginContentDocsOptions = {
   path: 'svgo/docs',
   breadcrumbs: true,
-  sidebarPath: require.resolve('./sidebars.js'),
+  sidebarPath: './sidebars.js',
   editUrl: ({ docPath }) => `https://github.com/svg/svgo/tree/main/docs/${docPath}`,
 };
 
@@ -144,7 +144,6 @@ const config = {
   baseUrl: '/',
   baseUrlIssueBanner: false,
   organizationName: 'svg',
-  projectName: 'svgo.dev',
   trailingSlash: true,
   onBrokenLinks: 'throw',
   i18n: {
@@ -202,11 +201,12 @@ const config = {
     './src/plugins/prefers-color-scheme.js',
     './src/plugins/configure-postcss-preset-env.js',
     './src/plugins/append-sitemap-to-robots.js',
+    './src/plugins/prepare-github-pages-deployment.js',
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
     [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
+      '@easyops-cn/docusaurus-search-local',
       {
         indexDocs: true,
         indexBlog: false,
