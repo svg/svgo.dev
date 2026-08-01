@@ -110,6 +110,11 @@ const results = await Promise.all(TEST_CASES.map(async (testCase) => ({
 
 await browser.close();
 
+/**
+ * We encode all reported issues into keys and store them as they're processed.
+ * If the key matches, we assume it's the same issue and skip it in the report.
+ */
+const processedKeys = new Set();
 let failed = false;
 
 for (const { name, result } of results) {
@@ -125,6 +130,12 @@ for (const { name, result } of results) {
   failed = true;
 
   for (const issue of issues) {
+    const key = `${issue.code}:${issue.message}:${issue.context}:${issue.selector}`;
+
+    if (processedKeys.has(key)) {
+      continue;
+    }
+
     console.error(
       '%s > %s\n%s %s\n%s %s\n%s %s\n%s %s\n',
       styleText(['blue', 'bold'], name),
@@ -138,6 +149,8 @@ for (const { name, result } of results) {
       styleText('yellow', 'Selector:'),
       styleText('gray', issue.selector),
     );
+
+    processedKeys.add(key);
   }
 }
 
