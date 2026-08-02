@@ -5,6 +5,12 @@ function Separator() {
   return <span className="footer__link-separator">·</span>;
 }
 
+/**
+ * @typedef {object} SimpleLinkItemProps
+ * @property {import('@docusaurus/theme-common').FooterLinkItem} item
+ * @param {SimpleLinkItemProps} props
+ * @returns {React.JSX.Element}
+ */
 function SimpleLinkItem({ item }) {
   return item.html ? (
     <span
@@ -16,6 +22,10 @@ function SimpleLinkItem({ item }) {
   );
 }
 
+/**
+ * @param {import('@theme/Footer/Links/Simple').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function FooterLinksSimple({ links }) {
   return (
     <div className="footer__links text--center">

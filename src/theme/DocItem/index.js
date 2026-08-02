@@ -4,8 +4,12 @@ import { HtmlClassNameProvider } from '@docusaurus/theme-common';
 import DocItemLayout from '@theme/DocItem/Layout';
 import DocItemMetadata from '@theme/DocItem/Metadata';
 
+/**
+ * @param {import('@theme/DocItem').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocItem(props) {
-  const docHtmlClassName = `docs-doc-id-${props.content.metadata.unversionedId}`;
+  const docHtmlClassName = `docs-doc-id-${props.content.metadata.id}`;
   const MDXComponent = props.content;
 
   return (

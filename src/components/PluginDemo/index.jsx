@@ -1,12 +1,13 @@
 import React from 'react';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import CodeBlock from '@theme/CodeBlock';
 
-export default function PluginDemo() {
-  /** @type {any} */
-  const { frontMatter } = useDoc();
-  const { pluginId } = frontMatter.svgo;
-
+/**
+ * @typedef {object} PluginDemoProps
+ * @property {string} pluginId
+ * @param {PluginDemoProps} props
+ * @returns {React.JSX.Element}
+ */
+export default function PluginDemo({ pluginId }) {
   const code = `const svg = \`
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox=" 0 0  150 100 " width="150">

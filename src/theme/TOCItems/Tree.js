@@ -14,7 +14,7 @@ import styles from './index.module.css';
  * React components.
  *
  * @param {any[]} toc
- * @param {any} svgoFrontMatter
+ * @param {import('../../docs').SvgoFrontMatter} svgoFrontMatter
  */
 function insertPluginTocItems(toc, svgoFrontMatter) {
   const usageChildren = []
@@ -32,16 +32,17 @@ function insertPluginTocItems(toc, svgoFrontMatter) {
   toc.push({ children: [], toc, id: 'demo', level: 2, value: 'Demo' });
 }
 
+/**
+ * @param {import('@theme/TOCItems/Tree').Props} props
+ * @returns {React.JSX.Element?}
+ */
 function TOCItemTree({ toc, className, linkClassName, isChild }) {
-
   const doc = useDoc();
-
-  /** @type {any} */
-  const frontMatter = doc.frontMatter;
+  const frontMatter = /** @type {import('../../docs').SvgoDocFrontMatter} */ (doc.frontMatter);
   const metadata = doc.metadata;
 
   if (toc && !isChild && frontMatter.svgo?.pluginId) {
-    insertPluginTocItems(toc, frontMatter.svgo);
+    insertPluginTocItems(/** @type {any} */ (toc), frontMatter.svgo);
   }
 
   if (!toc.length) {

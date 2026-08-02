@@ -1,9 +1,15 @@
 import React from 'react';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import CodeBlock from '@theme/CodeBlock';
 import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 
+/**
+ * @typedef {object} BasicPluginUsageProps
+ * @property {string} pluginId
+ *
+ * @param {BasicPluginUsageProps} props
+ * @returns {React.JSX.Element}
+ */
 function BasicPluginUsage(props) {
   return (
     <CodeBlock
@@ -14,11 +20,14 @@ function BasicPluginUsage(props) {
   );
 };
 
-export default function PluginUsage() {
-  /** @type {any} */
-  const { frontMatter } = useDoc();
-  const { pluginId, parameters } = frontMatter.svgo;
-
+/**
+ * @typedef {object} PluginUsageProps
+ * @property {string} pluginId
+ * @property {Record<string, import('../../docs').SvgoFrontMatterParameter>} [parameters]
+ * @param {PluginUsageProps} props
+ * @returns {React.JSX.Element}
+ */
+export default function PluginUsage({ pluginId, parameters }) {
   if (!parameters) {
     return <BasicPluginUsage pluginId={pluginId}/>;
   }

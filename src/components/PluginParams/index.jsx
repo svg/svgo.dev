@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
-import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import styles from './index.module.css';
 
-export default function PluginParams() {
-  /** @type {any} */
-  const { frontMatter } = useDoc();
-  const { parameters } = frontMatter.svgo;
-
+/**
+ * @typedef {object} PluginParamsProps
+ * @property {Record<string, import('../../docs').SvgoFrontMatterParameter>} parameters
+ * @param {PluginParamsProps} props
+ * @returns {React.JSX.Element}
+ */
+export default function PluginParams({ parameters }) {
   const paramDefinitions = Object.keys(parameters)
     .filter((key) => parameters[key]?.description)
     .map((key) => ({
@@ -21,7 +22,9 @@ export default function PluginParams() {
           <dt>
             <code>{param.name}</code>
           </dt>
-          <dd className={styles.leftMargin} dangerouslySetInnerHTML={{ __html: param.description }}>
+          <dd
+            className={styles.leftMargin}
+            dangerouslySetInnerHTML={{ __html: /** @type {string} */ (param.description) }}>
           </dd>
         </Fragment>
       ))}

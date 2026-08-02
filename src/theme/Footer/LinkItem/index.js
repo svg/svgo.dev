@@ -5,6 +5,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import styles from './index.module.css';
 
+/**
+ * @param {import('@theme/Footer/LinkItem').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function FooterLinkItem({ item }) {
   const { to, href, label, prependBaseUrlToHref, ...props } = item;
   const toUrl = useBaseUrl(to);

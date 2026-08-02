@@ -7,7 +7,7 @@ import path from 'node:path';
  * @see https://www.sitemaps.org/protocol.html#informing
  * @see https://developers.google.com/crawling/docs/robots-txt/create-robots-txt
  * @see https://developers.cloudflare.com/browser-run/reference/robots-txt/
- * @returns {any}
+ * @returns {import('@docusaurus/types').Plugin}
  */
 export default function appendSitemapToRobots() {
   return {

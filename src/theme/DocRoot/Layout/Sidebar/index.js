@@ -7,6 +7,10 @@ import DocSidebar from '@theme/DocSidebar';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+/**
+ * @param {import('react').PropsWithChildren} props
+ * @returns {React.JSX.Element}
+ */
 function ResetOnSidebarChange({ children }) {
   const sidebar = useDocsSidebar();
   return (
@@ -16,6 +20,10 @@ function ResetOnSidebarChange({ children }) {
   );
 }
 
+/**
+ * @param {import('@theme/DocRoot/Layout/Sidebar').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocRootLayoutSidebar({
   sidebar,
   hiddenSidebarContainer,

@@ -7,7 +7,6 @@
     "allowJs": true,
     "checkJs": true,
     "strict": true,
-    "noImplicitAny": false,
     "jsx": "preserve",
     "skipLibCheck": true
   },
