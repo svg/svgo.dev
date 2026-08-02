@@ -3,6 +3,10 @@ import { translate } from '@docusaurus/Translate';
 import IconArrow from '@theme/Icon/Arrow';
 import styles from './styles.module.css';
 
+/**
+ * @param {import('@theme/DocRoot/Layout/Sidebar/ExpandButton').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocRootLayoutSidebarExpandButton({ toggleSidebar }) {
   return (
     <div

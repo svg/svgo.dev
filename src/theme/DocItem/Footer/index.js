@@ -4,6 +4,12 @@ import { ThemeClassNames } from '@docusaurus/theme-common';
 import TagsListInline from '@theme/TagsListInline';
 import clsx from 'clsx';
 
+/**
+ * @typedef {object} TagsRowProps
+ * @property {import('@docusaurus/utils').TagMetadata[]} tags
+ * @param {TagsRowProps} props
+ * @returns {React.JSX.Element}
+ */
 function TagsRow(props) {
   return (
     <div

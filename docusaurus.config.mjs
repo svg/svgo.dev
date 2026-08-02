@@ -157,15 +157,15 @@ const config = {
       onBrokenMarkdownLinks: 'throw',
     },
     parseFrontMatter: async (params) => {
-      /** @type {any} */
       const result = await params.defaultParseFrontMatter(params);
+      const frontMatter = /** @type {import('./src/docs').SvgoDocFrontMatter} */ (result.frontMatter);
 
-      if (!result.frontMatter.svgo?.parameters) {
+      if (!frontMatter.svgo?.parameters) {
         return result;
       }
 
-      for (const key in result.frontMatter.svgo.parameters) {
-        const param = result.frontMatter.svgo.parameters[key];
+      for (const key in frontMatter.svgo.parameters) {
+        const param = frontMatter.svgo.parameters[key];
 
         if (!param || !param.description) {
           continue;
@@ -180,7 +180,7 @@ const config = {
           })
           .process(param.description);
 
-        param.description = processed.value;
+        param.description = processed.value.toString();
       }
 
       return result;

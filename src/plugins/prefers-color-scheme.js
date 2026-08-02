@@ -6,12 +6,12 @@ import postcss from 'postcss';
  *
  * Doesn't work for components styled with Prism like code blocks.
  *
- * @param {any} context
- * @returns {any}
+ * @param {import('@docusaurus/types').LoadContext} context
+ * @returns {import('@docusaurus/types').Plugin}
  */
 export default function prefersColorScheme(context) {
   const themeConfig = context.siteConfig.themeConfig;
-  const { colorMode } = themeConfig;
+  const { colorMode } = /** @type {import('@docusaurus/theme-common').ThemeConfig} */ (themeConfig);
 
   return {
     name: 'prefers-color-scheme',

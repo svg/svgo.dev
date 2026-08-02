@@ -7,6 +7,10 @@ import DocItemTOCDesktop from '@theme/DocItem/TOC/Desktop';
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
+/**
+ * @param {import('@theme/DocItem/Layout').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocItemLayout({ children }) {
   return (
     <div className={styles.wrapper}>

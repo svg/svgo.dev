@@ -5,6 +5,10 @@ import DocRootLayoutMain from '@theme/DocRoot/Layout/Main';
 import DocRootLayoutSidebar from '@theme/DocRoot/Layout/Sidebar';
 import styles from './styles.module.css';
 
+/**
+ * @param {import('@theme/DocRoot/Layout').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocRootLayout({ children }) {
   const sidebar = useDocsSidebar();
   const [hiddenSidebarContainer, setHiddenSidebarContainer] = useState(false);

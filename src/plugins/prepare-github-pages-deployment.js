@@ -5,7 +5,7 @@ import path from 'node:path';
  * If using a custom domain, write a CNAME file for GitHub Pages deployment.
  *
  * @see https://docusaurus.io/docs/deployment#github-pages-overview
- * @returns {any}
+ * @returns {import('@docusaurus/types').Plugin}
  */
 export default function prepareGitHubPagesDeployment() {
   return {

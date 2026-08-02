@@ -4,6 +4,13 @@ import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
 import styles from './index.module.css';
 
+/**
+ * @typedef {object} SvgPreviewProps
+ * @property {string} svg
+ *
+ * @param {SvgPreviewProps} props
+ * @returns {React.JSX.Element}
+ */
 export default function SvgPreview(props) {
   const [ error, setError ] = useState(false);
   const { svg } = props;

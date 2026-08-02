@@ -3,6 +3,10 @@ import clsx from 'clsx';
 import { Logo } from '../../../components/SpriteSheet';
 import styles from './index.module.css';
 
+/**
+ * @param {import('@theme/Footer/Layout').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function FooterLayout({ links, copyright }) {
   return (
     <>

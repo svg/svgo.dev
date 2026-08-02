@@ -10,6 +10,12 @@ import PluginParams from '../../../components/PluginParams';
 import PluginUsage from '../../../components/PluginUsage';
 import styles from './index.module.css';
 
+/**
+ * @param {import('@docusaurus/plugin-content-docs').DocMetadata} metadata
+ * @param {import('@docusaurus/plugin-content-docs').DocFrontMatter} frontMatter
+ * @param {string} [contentTitle]
+ * @returns {string?}
+ */
 function useSyntheticTitle(metadata, frontMatter, contentTitle) {
   const shouldRender =
     !frontMatter.hide_title && typeof contentTitle === 'undefined';
@@ -21,12 +27,14 @@ function useSyntheticTitle(metadata, frontMatter, contentTitle) {
   return metadata.title;
 }
 
+/**
+ * @param {import('@theme/DocItem/Content').Props} props
+ * @returns {React.JSX.Element}
+ */
 export default function DocItemContent({ children }) {
   const doc = useDoc();
-
-  /** @type {any} */
-  const frontMatter = doc.frontMatter;
   const { metadata, contentTitle } = doc;
+  const frontMatter = /** @type {import('../../../docs').SvgoDocFrontMatter} */ (doc.frontMatter);
 
   const syntheticTitle = useSyntheticTitle(metadata, frontMatter, contentTitle);
 
@@ -47,17 +55,17 @@ export default function DocItemContent({ children }) {
       {frontMatter.svgo?.pluginId && (
         <>
           <h2 id="usage">Usage</h2>
-          <PluginUsage />
+          <PluginUsage pluginId={frontMatter.svgo.pluginId} parameters={frontMatter.svgo.parameters} />
 
           {frontMatter.svgo?.parameters && (
             <>
               <h3 id="parameters">Parameters</h3>
-              <PluginParams />
+              <PluginParams parameters={frontMatter.svgo.parameters}/>
             </>
           )}
 
           <h2 id="demo">Demo</h2>
-          <PluginDemo />
+          <PluginDemo pluginId={frontMatter.svgo.pluginId} />
         </>
       )}
     </div>
