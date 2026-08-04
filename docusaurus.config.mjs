@@ -128,6 +128,20 @@ const pluginSvgrOptions = {
   }
 };
 
+/** @type {Partial<import('@easyops-cn/docusaurus-search-local').PluginOptions>} */
+const themeLocalSearchOptions = {
+  indexDocs: true,
+  indexBlog: false,
+  indexPages: false,
+  language: 'en',
+  hashed: true,
+  docsDir: DOCS_PATH,
+  ignoreCssSelectors: [
+    'h2#demo + div[class^="playgroundContainer"]',
+    'h2#demo'
+  ],
+  searchBarPosition: 'right',
+};
 
 /**
  * Config for Docusaurus.
@@ -206,17 +220,7 @@ const config = {
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',
-    [
-      '@easyops-cn/docusaurus-search-local',
-      {
-        indexDocs: true,
-        indexBlog: false,
-        language: 'en',
-        hashed: true,
-        docsDir: DOCS_PATH,
-        searchBarPosition: 'right'
-      }
-    ]
+    ['@easyops-cn/docusaurus-search-local', themeLocalSearchOptions]
   ],
   themeConfig: {
     colorMode: {
