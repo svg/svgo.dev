@@ -17,7 +17,7 @@ export default function prepareGitHubPagesDeployment() {
         return;
       }
 
-      await fs.writeFile(path.join(outDir, 'CNAME'), `${hostname}\n`)
+      await fs.writeFile(path.join(outDir, 'CNAME'), `${hostname}\n`);
     },
   };
 }

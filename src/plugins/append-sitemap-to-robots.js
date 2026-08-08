@@ -15,7 +15,7 @@ export default function appendSitemapToRobots() {
     async postBuild({ siteConfig, outDir }) {
       const { url, baseUrl } = siteConfig;
       const sitemapUrl = new URL('sitemap.xml', `${url}${baseUrl}`).href;
-      await fs.appendFile(path.join(outDir, 'robots.txt'), `\nSitemap: ${sitemapUrl}\n`)
+      await fs.appendFile(path.join(outDir, 'robots.txt'), `\nSitemap: ${sitemapUrl}\n`);
     },
   };
 }

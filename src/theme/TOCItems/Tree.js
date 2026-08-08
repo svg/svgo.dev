@@ -17,7 +17,7 @@ import styles from './index.module.css';
  * @param {import('../../docs').SvgoFrontMatter} svgoFrontMatter
  */
 function insertPluginTocItems(toc, svgoFrontMatter) {
-  const usageChildren = []
+  const usageChildren = [];
 
   if (svgoFrontMatter.parameters) {
     usageChildren.push({

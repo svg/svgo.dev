@@ -42,6 +42,7 @@ export default [
   pluginReact.configs.flat.recommended,
   {
     rules: {
+      'semi': ['error', 'always'],
       'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
       'react/jsx-indent-props': ['error', 2],
       'react/jsx-max-props-per-line': ['error', { maximum: { 'single': 9, 'multi': 1 } }],
