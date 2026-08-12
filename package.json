@@ -1,5 +1,5 @@
 {
-  "packageManager": "yarn@4.17.1",
+  "packageManager": "pnpm@11.21.0",
   "name": "svgo.dev",
   "version": "0.0.0",
   "description": "Landing page and documentation for SVGO.",
@@ -37,8 +37,8 @@
     "format": "eslint --fix .",
     "typecheck": "tsc",
     "a11y": "node ./pa11y.mjs",
-    "a11y:ci": "start-server-and-test 'yarn run serve --no-open' 'http://localhost:3000' 'yarn run a11y'",
-    "qa": "yarn run lint && yarn run typecheck && yarn run a11y:ci",
+    "a11y:ci": "start-server-and-test 'docusaurus serve --no-open' 'http://localhost:3000' 'pnpm run a11y'",
+    "qa": "pnpm run lint && pnpm run typecheck && pnpm run a11y:ci",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
@@ -70,6 +70,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "catalog:docusaurus",
     "@docusaurus/types": "catalog:docusaurus",
+    "@docusaurus/utils": "catalog:docusaurus",
     "@sethfalco/eslint-config": "^1.2.1",
     "@types/node": "^26.1.0",
     "@types/pa11y": "^5.3.7",
@@ -78,7 +79,12 @@
     "eslint-plugin-react": "^7.37.5",
     "globals": "^17.7.0",
     "pa11y": "^9.1.1",
+    "postcss": "^8.5.25",
+    "puppeteer": "^24.43.1",
+    "remark-parse": "^11.0.0",
+    "remark-rehype": "^11.1.2",
     "start-server-and-test": "^3.0.11",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "unified": "^11.0.5"
   }
 }

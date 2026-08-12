@@ -14,11 +14,9 @@ export default [
   {
     ignores: [
       '.docusaurus/',
-      'svgo/',
-      '.yarn/',
       'build/',
       'node_modules/',
-      'yarn.lock'
+      'svgo/'
     ]
   },
   {

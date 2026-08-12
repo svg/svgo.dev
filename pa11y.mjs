@@ -87,7 +87,9 @@ async function pa11yRunner(browser, testCase, urls) {
   for (const url of urls) {
     const result = await pa11y(url, {
       standard: 'WCAG2AAA',
+      // @ts-expect-error Puppeteer types are mismatched.
       browser,
+      // @ts-expect-error Puppeteer types are mismatched.
       page,
       hideElements: IGNORED_SELECTORS.join(', '),
     });

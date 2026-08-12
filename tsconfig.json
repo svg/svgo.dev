@@ -13,7 +13,6 @@
   "exclude": [
     ".docusaurus/",
     "svgo/",
-    ".yarn/",
     "build/",
     "node_modules/",
   ]

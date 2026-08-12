@@ -1,3 +1,5 @@
+minimumReleaseAge: 10080
+
 catalogs:
   docusaurus:
     "@docusaurus/core": 3.10.2
@@ -11,20 +13,11 @@ catalogs:
     "@docusaurus/theme-common": 3.10.2
     "@docusaurus/theme-live-codeblock": 3.10.2
     "@docusaurus/types": 3.10.2
+    "@docusaurus/utils": 3.10.2
   react:
     react: 19.2.7
     react-dom: 19.2.7
 
-compressionLevel: mixed
-
-enableGlobalCache: false
-
-enableScripts: true
-
-enableTelemetry: false
-
-nodeLinker: node-modules
-
-npmMinimalAgeGate: 3d
-
-npmRegistryServer: "https://registry.npmjs.org/"
+allowBuilds:
+  core-js: false
+  puppeteer: true
