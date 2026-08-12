@@ -1,3 +1,6 @@
 [submodule "svgo"]
 	path = svgo
 	url = https://github.com/svg/svgo.git
+	branch = main
+	ignore = dirty
+	shallow = true
