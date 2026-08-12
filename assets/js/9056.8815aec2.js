@@ -1,0 +1,1 @@
+(globalThis.webpackChunksvgo_dev=globalThis.webpackChunksvgo_dev||[]).push([[9056],{9056:()=>{}}]);
