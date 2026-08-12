@@ -22,11 +22,11 @@ Then install dependencies:
 
 ```sh
 corepack enable
-yarn install
+pnpm install
 ```
 
 Once you have the project setup, you can run the development server:
 
 ```sh
-yarn run start
+pnpm run start
 ```
