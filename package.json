@@ -69,7 +69,7 @@
     "react": "catalog:react",
     "react-dom": "catalog:react",
     "rehype-stringify": "^10.0.1",
-    "svgo": "^4.0.1"
+    "svgo": "^4.0.2"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "catalog:docusaurus",
