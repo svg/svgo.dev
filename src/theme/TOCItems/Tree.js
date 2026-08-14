@@ -1,6 +1,7 @@
 import React from 'react';
 import Translate from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import IconExternalLink from '@theme/Icon/ExternalLink';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -98,6 +99,7 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
               rel="noreferrer"
             >
               <Translate>Edit this page on GitHub</Translate>
+              <IconExternalLink height=".8em" />
             </a>
           </div>
         </div>
