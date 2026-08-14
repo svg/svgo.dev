@@ -8,7 +8,6 @@
 /**
  * @typedef {object} SvgoFrontMatter
  * @property {string} pluginId
- * @property {boolean} [defaultPlugin]
  * @property {Record<string, SvgoFrontMatterParameter>} [parameters]
  */
 
