@@ -1,10 +1,12 @@
 import React from 'react';
+import Translate from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { ThemeClassNames } from '@docusaurus/theme-common';
+import { usePluginData } from '@docusaurus/useGlobalData';
 import Heading from '@theme/Heading';
 import MDXContent from '@theme/MDXContent';
 import clsx from 'clsx';
-import DefaultBadge from '../../../components/DefaultBadge';
+import Badge from '../../../components/Badge';
 import PluginDemo from '../../../components/PluginDemo';
 import PluginParams from '../../../components/PluginParams';
 import PluginUsage from '../../../components/PluginUsage';
@@ -33,6 +35,7 @@ function useSyntheticTitle(metadata, frontMatter, contentTitle) {
  */
 export default function DocItemContent({ children }) {
   const doc = useDoc();
+  const { plugins } = /** @type {import('../../../plugins/svgo').SvgoPluginData} */ (usePluginData('svgo'));
   const { metadata, contentTitle } = doc;
   const frontMatter = /** @type {import('../../../docs').SvgoDocFrontMatter} */ (doc.frontMatter);
 
@@ -40,16 +43,37 @@ export default function DocItemContent({ children }) {
 
   return (
     <div className={clsx(ThemeClassNames.docs.docMarkdown, 'markdown')}>
-      {syntheticTitle && (
-        <header className={styles.header}>
-          <Heading as="h1" className={styles.pageTitle}>{syntheticTitle}</Heading>
-          {frontMatter.svgo?.defaultPlugin && (
-            <div className={styles.badge}>
-              <DefaultBadge />
-            </div>
-          )}
-        </header>
-      )}
+      <div className={styles.preContent}>
+        {syntheticTitle && (
+          <header className={styles.header}>
+            <Heading as="h1" className={styles.pageTitle}>{syntheticTitle}</Heading>
+            {frontMatter.svgo && plugins[frontMatter.svgo.pluginId].isDefault && (
+              <Badge title="This plugin is enabled by default.">
+                Default
+              </Badge>
+            )}
+          </header>
+        )}
+
+        {frontMatter.svgo && (
+          <p className={styles.source}>
+            {plugins[frontMatter.svgo.pluginId].since && (
+              <>
+                <span><Translate>Since</Translate> v{plugins[frontMatter.svgo.pluginId].since}</span>
+                <span aria-hidden={true}>·</span>
+              </>
+            )}
+            <a
+              href={`https://github.com/svg/svgo/blob/main/plugins/${frontMatter.svgo.pluginId}.js`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Translate>Source</Translate>
+            </a>
+          </p>
+        )}
+      </div>
+
       <MDXContent>{children}</MDXContent>
 
       {frontMatter.svgo?.pluginId && (

@@ -233,6 +233,7 @@ const config = {
     './src/plugins/configure-postcss-preset-env.js',
     './src/plugins/append-sitemap-to-robots.js',
     './src/plugins/prepare-github-pages-deployment.js',
+    './src/plugins/svgo.js',
   ],
   themes: [
     '@docusaurus/theme-live-codeblock',

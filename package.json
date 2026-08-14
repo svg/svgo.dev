@@ -81,6 +81,7 @@
     "@types/react": "^19.2.17",
     "eslint": "^9.39.4",
     "eslint-plugin-react": "^7.37.5",
+    "espree": "^11.2.0",
     "globals": "^17.7.0",
     "pa11y": "^9.1.1",
     "postcss": "^8.5.25",

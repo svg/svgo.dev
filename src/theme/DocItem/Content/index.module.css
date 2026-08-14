@@ -1,16 +1,27 @@
 .header {
   display: flex;
   align-items: center;
+  gap: 1rem;
+
+  span {
+    margin-top: .6rem;
+  }
+}
+
+.preContent {
+  margin-bottom: var(--ifm-leading);
 }
 
 .pageTitle {
+  --ifm-leading: 0 !important;
   text-wrap: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.badge {
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  justify-self: end;
+.source {
+  --ifm-leading: 0 !important;
+  display: flex;
+  gap: .5rem;
+  font-size: .9rem;
 }

@@ -78,18 +78,6 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
       </ul>
       {!isChild && (
         <div className={styles.topBorder}>
-          {frontMatter.svgo?.pluginId && (
-            <div className={styles.extraTocEntries}>
-              <a
-                href={`https://github.com/svg/svgo/blob/main/plugins/${frontMatter.svgo.pluginId}.js`}
-                target="_blank"
-                className={linkClassName ?? undefined}
-                rel="noreferrer"
-              >
-                <Translate>Read the implementation</Translate>
-              </a>
-            </div>
-          )}
           <div className={styles.extraTocEntries}>
             <a
               // @ts-expect-error Will never be null.
