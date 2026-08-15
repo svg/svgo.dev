@@ -1,0 +1,26 @@
+diff --git a/lib/theme/Icon/ExternalLink/index.js b/lib/theme/Icon/ExternalLink/index.js
+index 4abda1f59d6daaedcafd4aeca5d5ecccf69f7549..ea6e0d71a6d8fdb3f6f2e9d9bea96b5d2d34fdc4 100644
+--- a/lib/theme/Icon/ExternalLink/index.js
++++ b/lib/theme/Icon/ExternalLink/index.js
+@@ -10,7 +10,7 @@ import styles from './styles.module.css';
+ // References symbol in docusaurus-theme-classic/src/inlineSvgSprites.ts
+ // See why: https://github.com/facebook/docusaurus/issues/5865
+ const svgSprite = '#theme-svg-external-link';
+-export default function IconExternalLink({width = 13.5, height = 13.5}) {
++export default function IconExternalLink({width = '0.84375rem', height = '0.84375rem'}) {
+   return (
+     <svg
+       width={width}
+diff --git a/lib/theme/NavbarItem/NavbarNavLink.js b/lib/theme/NavbarItem/NavbarNavLink.js
+index 54045af4c9158354ed8e467dcb0cf1a4fe7aab59..be4aeee6ea7dfa03946c704c883d11bb2a67df94 100644
+--- a/lib/theme/NavbarItem/NavbarNavLink.js
++++ b/lib/theme/NavbarItem/NavbarNavLink.js
+@@ -36,7 +36,7 @@ export default function NavbarNavLink({
+             {label}
+             {isExternalLink && (
+               <IconExternalLink
+-                {...(isDropdownLink && {width: 12, height: 12})}
++                {...(isDropdownLink && {width: '0.75rem', height: '0.75rem'})}
+               />
+             )}
+           </>
