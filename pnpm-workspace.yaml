@@ -24,3 +24,4 @@ allowBuilds:
 
 patchedDependencies:
   '@docusaurus/theme-classic': patches/@docusaurus__theme-classic.patch
+  '@docusaurus/utils': patches/@docusaurus__utils.patch

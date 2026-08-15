@@ -1,0 +1,49 @@
+diff --git a/lib/markdownUtils.js b/lib/markdownUtils.js
+index a20922038ba474c8693a37f512d3a6d2a4032d0d..61e2a479825ec2ddd8055f5ee87f5296d44e110b 100644
+--- a/lib/markdownUtils.js
++++ b/lib/markdownUtils.js
+@@ -19,6 +19,11 @@ const gray_matter_1 = tslib_1.__importDefault(require("@11ty/gray-matter"));
+ // Some utilities for parsing Markdown content. These things are only used on
+ // server-side when we infer metadata like `title` and `description` from the
+ // content. Most parsing is still done in MDX through the mdx-loader.
++/**
++ * Characters that have markup behavior for the Markdown/MDX renderer to
++ * interpret.
++ */
++const MARKUP_CHARS = ['_', ':', '*', '<', '>', '~', '!', '[', ']'];
+ /**
+  * Hacky temporary escape hatch for Crowdin bad MDX support
+  * See https://docusaurus.io/docs/i18n/crowdin#mdx
+@@ -111,6 +116,12 @@ function createExcerpt(fileString) {
+             continue;
+         }
+         const cleanedLine = fileLine
++            // Unwrap inline code.
++            .replace(/`(?<text>.+?)`/g, (_, text) => {
++              return MARKUP_CHARS.reduce((acc, val) => {
++                return acc.replaceAll(val, `\u{FFFE}${val.codePointAt(0)}\u{FFFF}`);
++              }, text);
++            })
+             // Remove HTML tags.
+             .replace(/<[^>]*>/g, '')
+             // Remove Title headers
+@@ -127,8 +138,6 @@ function createExcerpt(fileString) {
+             .replace(/\[\^.+?\](?:: .*$)?/g, '')
+             // Remove inline links.
+             .replace(/\[(?<alt>.*?)\][[(].*?[\])]/g, '$1')
+-            // Remove inline code.
+-            .replace(/`(?<text>.+?)`/g, '$1')
+             // Remove blockquotes.
+             .replace(/^\s{0,3}>\s?/g, '')
+             // Remove admonition definition.
+@@ -139,7 +148,9 @@ function createExcerpt(fileString) {
+             .replace(/\{#*[\w-]+\}/, '')
+             .trim();
+         if (cleanedLine) {
+-            return cleanedLine;
++            return MARKUP_CHARS.reduce((acc, val) => {
++              return acc.replaceAll(`\u{FFFE}${val.codePointAt(0)}\u{FFFF}`, val);
++            }, cleanedLine);
+         }
+     }
+     return undefined;
