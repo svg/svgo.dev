@@ -21,3 +21,6 @@ catalogs:
 allowBuilds:
   core-js: false
   puppeteer: true
+
+patchedDependencies:
+  '@docusaurus/theme-classic': patches/@docusaurus__theme-classic.patch

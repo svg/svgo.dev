@@ -249,6 +249,9 @@ catalogs:
       specifier: 19.2.7
       version: 19.2.7
 
+patchedDependencies:
+  '@docusaurus/theme-classic': d8543a7b79895354981d07be2a648c4ad02ed64caedb1a23f39acf48b6484842
+
 importers:
 
   .:
@@ -273,7 +276,7 @@ importers:
         version: 3.10.2(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.7))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)
       '@docusaurus/theme-classic':
         specifier: catalog:docusaurus
-        version: 3.10.2(@types/react@19.2.17)(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)
+        version: 3.10.2(patch_hash=d8543a7b79895354981d07be2a648c4ad02ed64caedb1a23f39acf48b6484842)(@types/react@19.2.17)(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)
       '@docusaurus/theme-common':
         specifier: catalog:docusaurus
         version: 3.10.2(@docusaurus/plugin-content-docs@3.10.2(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.7))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)
@@ -7779,7 +7782,7 @@ snapshots:
       '@types/react': 19.2.17
       react: 19.2.7
 
-  '@docusaurus/theme-classic@3.10.2(@types/react@19.2.17)(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)':
+  '@docusaurus/theme-classic@3.10.2(patch_hash=d8543a7b79895354981d07be2a648c4ad02ed64caedb1a23f39acf48b6484842)(@types/react@19.2.17)(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)':
     dependencies:
       '@docusaurus/core': 3.10.2(@mdx-js/react@3.1.1(@types/react@19.2.17)(react@19.2.7))(csso@5.0.5)(debug@4.4.3(supports-color@8.1.1))(react-dom@19.2.7(react@19.2.7))(react@19.2.7)(supports-color@8.1.1)(typescript@6.0.3)
       '@docusaurus/logger': 3.10.2
