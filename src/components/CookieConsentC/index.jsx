@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
 import styles from './index.module.css';
 
 /**
@@ -24,18 +25,37 @@ export default function CookieConsentC({ onAnswer, onDone }) {
 
   return (
     <div className={styles.bannerContainer}>
-      <h2>Cookie Preferences</h2>
+      <h2>
+        <Translate id="svgo.components.CookieConsentC.title">
+          Cookie Preferences
+        </Translate>
+      </h2>
       <p>
-        We use Plausible Analytics to analyze site traffic. If you agree,
-        cookies are also used to deliver and enhance the quality of our content.
-        You can read more about it on our <Link href="/privacy/">Privacy&nbsp;Policy</Link>.
+        <Translate
+          id="svgo.components.CookieConsentC.message"
+          values={{
+            privacyPolicy: (
+              <Link href="/privacy/">
+                <Translate id="svgo.components.CookieConsentC.privacyPolicy">
+                  Privacy&nbsp;Policy
+                </Translate>
+              </Link>
+            )}
+          }
+        >
+          {'We use Plausible Analytics to analyze site traffic. If you agree, cookies are also used to deliver and enhance the quality of our content. You can read more about it on our {privacyPolicy}.'}
+        </Translate>
       </p>
       <div className={styles.buttonContainer}>
         <button className="button" type="button" onClick={() => onAnswerWrapper('accepted')}>
-          Accept
+          <Translate id="svgo.components.CookieConsentC.accept">
+            Accept
+          </Translate>
         </button>
         <button className="button" type="button" onClick={() => onAnswerWrapper('rejected')}>
-          Reject
+          <Translate id="svgo.components.CookieConsentC.reject">
+            Reject
+          </Translate>
         </button>
       </div>
     </div>

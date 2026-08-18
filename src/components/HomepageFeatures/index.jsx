@@ -1,4 +1,5 @@
 import React from 'react';
+import Translate, { translate } from '@docusaurus/Translate';
 import clsx from 'clsx';
 import SvgoHackerman from '../../vectors/svgo_hackerman.svg';
 import SvgoIntegrations from '../../vectors/svgo_integrations.svg';
@@ -7,33 +8,42 @@ import styles from './index.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: translate({
+      id: 'svgo.components.HomepageFeatures.easyToUse',
+      message: 'Easy to Use'
+    }),
     Svg: SvgoHackerman,
     description: (
-      <>
+      <Translate id="svgo.components.HomepageFeatures.easyToUseDescription">
         SVGO can be used through both the command-line interface and JavaScript
         API, with help pages and documentation available for both.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Integrations',
+    title: translate({
+      id: 'svgo.components.HomepageFeatures.integrations',
+      message: 'Integrations'
+    }),
     Svg: SvgoIntegrations,
     description: (
-      <>
+      <Translate id="svgo.components.HomepageFeatures.integrationsDescription">
         Many libraries, frameworks, or tools bundle or have integrations
         available for SVGO already, like Docusaurus, PostCSS, and webpack.
-      </>
+      </Translate>
     ),
   },
   {
-    title: 'Open Source',
+    title: translate({
+      id: 'svgo.components.HomepageFeatures.opensource',
+      message: 'Open Source'
+    }),
     Svg: SvgoOss,
     description: (
-      <>
+      <Translate id="svgo.components.HomepageFeatures.opensourceDescription">
         We welcome contributions! Feel free to to file a bug report, feature
         request, or open pull requests on GitHub.
-      </>
+      </Translate>
     ),
   },
 ];

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import AcceptBubbleHover from './assets/accept-hover.svg';
 import AcceptBubble from './assets/accept.svg';
@@ -95,16 +96,35 @@ export default function CookieConsentB({ onAnswer, onDone }) {
           <div className={styles.title}>
             <svg viewBox="0 0 92 30" role="heading" aria-level={2}>
               <text fontSize="9.7" fill="currentColor">
-                <textPath href="#curve">Want some cookies?</textPath>
-                <textPath href="#curveWide">Want some cookies?</textPath>
+                <textPath href="#curve">
+                  <Translate id="svgo.components.CookieConsentB.title">
+                    Want some cookies?
+                  </Translate>
+                </textPath>
+                <textPath href="#curveWide">
+                  <Translate id="svgo.components.CookieConsentB.title">
+                    Want some cookies?
+                  </Translate>
+                </textPath>
               </text>
             </svg>
           </div>
           <p className={styles.copy}>
             <span className={styles.float}></span>
-            We&apos;d like to use one small cookie to see how people use this site.
-            Just anonymous stats, nothing more! Plausible Analytics keeps
-            running either way, no cookie needed. Curious? Learn more in our <Link href="/privacy/">Privacy&nbsp;Policy</Link>.
+            <Translate
+              id="svgo.components.CookieConsentB.message"
+              values={{
+                privacyPolicy: (
+                  <Link href="/privacy/">
+                    <Translate id="svgo.components.CookieConsentB.privacyPolicy">
+                      Privacy&nbsp;Policy
+                    </Translate>
+                  </Link>
+                )}
+              }
+            >
+              {'We\'d like to use one small cookie to see how people use this site. Just anonymous stats, nothing more! Plausible Analytics keeps running either way, no cookie needed. Curious? Learn more in our {privacyPolicy}.'}
+            </Translate>
           </p>
           <div className={styles.buttonContainer}>
             <button
@@ -118,7 +138,11 @@ export default function CookieConsentB({ onAnswer, onDone }) {
               <div className={clsx(styles.bubble, styles.hover)}>
                 <AcceptBubbleHover />
               </div>
-              <div className={styles.label}>Accept</div>
+              <div className={styles.label}>
+                <Translate id="svgo.components.CookieConsentB.accept">
+                  Accept
+                </Translate>
+              </div>
             </button>
             <button
               className={styles.button}
@@ -131,7 +155,11 @@ export default function CookieConsentB({ onAnswer, onDone }) {
               <div className={clsx(styles.bubble, styles.hover)}>
                 <RejectBubbleHover />
               </div>
-              <div className={styles.label}>Decline</div>
+              <div className={styles.label}>
+                <Translate id="svgo.components.CookieConsentB.decline">
+                  Decline
+                </Translate>
+              </div>
             </button>
           </div>
         </div>

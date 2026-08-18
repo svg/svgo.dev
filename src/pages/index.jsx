@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from '@docusaurus/Head';
 import Link from '@docusaurus/Link';
+import Translate, { translate } from '@docusaurus/Translate';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import CopyIcon from '@theme/Icon/Copy';
 import SuccessIcon from '@theme/Icon/Success';
@@ -22,17 +23,23 @@ function HomepageHeader() {
       <div className={clsx(styles.heroSplit, 'container')}>
         <div className={styles.infoSection}>
           <h1 className={styles.tagline}>
-            SVG Optimizer for Node.js and CLI
+            <Translate id="svgo.pages.index.tagline">
+              SVG Optimizer for Node.js and CLI
+            </Translate>
           </h1>
           <p className={styles.subtitle}>
-            SVGO and its integrations will enable you to optimize SVGs and serve
-            your web applications faster.
+            <Translate id="svgo.pages.index.subtitle">
+              SVGO and its integrations will enable you to optimize SVGs and serve
+              your web applications faster.
+            </Translate>
           </p>
           <div>
             <Link
               className="button button--lg"
               to="/docs/introduction">
-              Read the docs
+              <Translate id="svgo.pages.index.readTheDocs" description='Call to action (button) to take the user to the documentation.'>
+                Read the docs
+              </Translate>
             </Link>
           </div>
           <div className={styles.installInstructions} onClick={onClick}>
@@ -60,7 +67,13 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <meta name="description" content="SVGO is a Node.js library and command-line application for optimizing vector images."/>
+        <meta
+          name="description"
+          content={translate({
+            id: 'svgo.pages.index.description',
+            message: 'SVGO is a Node.js library and command-line application for optimizing vector images.',
+          })}
+        />
         <meta name="og:image" content={`${siteConfig.url}/img/opengraph.jpg`}/>
         <meta name="og:image:type" content="image/jpeg"/>
         <meta name="og:image:width" content="1920"/>

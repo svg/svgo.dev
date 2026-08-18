@@ -1,4 +1,5 @@
 import React from 'react';
+import { translate } from '@docusaurus/Translate';
 import CodeBlock from '@theme/CodeBlock';
 import TabItem from '@theme/TabItem';
 import Tabs from '@theme/Tabs';
@@ -39,11 +40,28 @@ export default function PluginUsage({ pluginId, parameters }) {
 
   return (
     <Tabs>
-      <TabItem value="basic" label="Basic" default>
+      <TabItem
+        value="basic"
+        label={
+          translate({
+            id: 'svgo.components.PluginUsage.basic',
+            message: 'Basic'
+          })
+        }
+        default
+      >
         <BasicPluginUsage pluginId={pluginId}/>
       </TabItem>
       {parameters && (
-        <TabItem value="params" label="Parameters">
+        <TabItem
+          value="params"
+          label={
+            translate({
+              id: 'svgo.components.PluginUsage.parameters',
+              message: 'Parameters'
+            })
+          }
+        >
           <CodeBlock
             language="js"
             title="svgo.config.js">
