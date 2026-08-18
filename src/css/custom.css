@@ -80,6 +80,10 @@ svg[height="0"][aria-hidden="true"] {
 }
 
 /* Search overrides */
+nav .navbar__search {
+  margin-left: 0;
+}
+
 nav .navbar__search-input {
   border-radius: .5rem;
   background-color: var(--svgo-search-bg-color);

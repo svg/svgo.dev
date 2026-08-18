@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -41,22 +42,32 @@ export default function Debriefing({ variant, onAnswer, onDone }) {
     <div className={clsx(styles.bannerContainer, closing && styles.close)} onAnimationEnd={closing ? onDone : undefined}>
       <div className={styles.copy}>
         <p>
-          Hi! I&apos;m the designer for SVGO.dev. That cookie banner is a part
-          of my master&apos;s research.
+          <Translate id="svgo.components.Debriefing.intro">
+            Hi! I&apos;m the designer for SVGO.dev. That cookie banner is a part
+            of my master&apos;s research.
+          </Translate>
         </p>
         <p>
-          Want to help me out by taking a short survey about your experience?
+          <Translate id="svgo.components.Debriefing.callToAction">
+            Want to help me out by taking a short survey about your experience?
+          </Translate>
         </p>
       </div>
       <div className={styles.buttonContainer}>
         <button className="button" type="button" onClick={onYes}>
-          Sure
+          <Translate id="svgo.components.Debriefing.sure">
+            Sure
+          </Translate>
         </button>
         <button className="button" type="button" onClick={onLater}>
-          Maybe later
+          <Translate id="svgo.components.Debriefing.maybeLater">
+            Maybe later
+          </Translate>
         </button>
         <button className="button" type="button" onClick={onNo}>
-          No thanks
+          <Translate id="svgo.components.Debriefing.noThanks">
+            No thanks
+          </Translate>
         </button>
       </div>
     </div>

@@ -1,0 +1,34 @@
+{
+  "link.title.Community": {
+    "message": "Community",
+    "description": "The title of the footer links column with title=Community in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Stack Overflow": {
+    "message": "Stack Overflow",
+    "description": "The label of footer link with label=Stack Overflow linking to https://stackoverflow.com/questions/tagged/svgo"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "The label of footer link with label=Discord linking to https://discord.com/invite/z8jX8NYxrE"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/svg/svgo"
+  },
+  "link.item.label.Open Collective": {
+    "message": "Open Collective",
+    "description": "The label of footer link with label=Open Collective linking to https://opencollective.com/svgo"
+  },
+  "link.item.label.Privacy": {
+    "message": "Privacy",
+    "description": "The label of footer link with label=Privacy linking to /privacy"
+  },
+  "copyright": {
+    "message": "Copyright © 2026 <a href=\"https://github.com/svg/svgo/graphs/contributors\">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class=\"designer-attribution\" href=\"https://vukory.art\" target=\"_blank\">Vukory <svg height=\"1em\" viewBox=\"0 0 378.627 333.846\"><path fill=\"currentColor\" d=\"M86.059 0 67.28 69.362l27.025 28.86-70.296 40.574 20.506 7.41L0 175.596h70.96l-2.327 13.242 67.302.058-12.653 46.196 18.083-3.42 27.746 96.978 20.202 5.196 20.203-5.196 27.745-96.977 18.083 3.419-12.653-46.196 67.302-.058-2.326-13.241h70.96l-44.515-29.391 20.505-7.41-70.296-40.573 27.026-28.861L292.567 0l-56.345 57.422-46.909 21.009-46.909-21.01Z\"/></svg></a>",
+    "description": "The footer copyright"
+  }
+}

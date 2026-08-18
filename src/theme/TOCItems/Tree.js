@@ -1,5 +1,5 @@
 import React from 'react';
-import Translate from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import clsx from 'clsx';
@@ -25,12 +25,33 @@ function insertPluginTocItems(toc, svgoFrontMatter) {
       children: [],
       id: 'parameters',
       level: 3,
-      value: 'Parameters',
+      value: translate({
+        id: 'svgo.theme.DocItem.Content.parameters',
+        message: 'Parameters'
+      })
     });
   }
 
-  toc.push({ children: usageChildren, toc, id: 'usage', level: 2, value: 'Usage' });
-  toc.push({ children: [], toc, id: 'demo', level: 2, value: 'Demo' });
+  toc.push({
+    children: usageChildren,
+    toc,
+    id: 'usage',
+    level: 2,
+    value: translate({
+      id: 'svgo.theme.DocItem.Content.usage',
+      message: 'Usage'
+    })
+  });
+
+  toc.push({ children: [],
+    toc,
+    id: 'demo',
+    level: 2,
+    value: translate({
+      id: 'svgo.theme.DocItem.Content.demo',
+      message: 'Demo'
+    })
+  });
 }
 
 /**
@@ -56,7 +77,12 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
     <>
       {!isChild && (
         <div className={styles.onThisPage}>
-          On this page
+          <Translate
+            id="svgo.theme.TOCItems.onThisPage"
+            description="Shown above the the table of contents."
+          >
+            On this page
+          </Translate>
         </div>
       )}
       <ul className={clsx(styles.noSeparator, isChild ? undefined : className, isChild ? undefined : styles.rootToc)}>
@@ -86,7 +112,9 @@ function TOCItemTree({ toc, className, linkClassName, isChild }) {
               className={linkClassName ?? undefined}
               rel="noreferrer"
             >
-              <Translate>Edit this page on GitHub</Translate>
+              <Translate id="svgo.theme.TOCItems.editThisPage">
+                Edit this page on GitHub
+              </Translate>
               <IconExternalLink height=".8em" />
             </a>
           </div>

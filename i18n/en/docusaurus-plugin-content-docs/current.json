@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.docsSidebar.category.Usage": {
+    "message": "Usage",
+    "description": "The label for category 'Usage' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Plugins": {
+    "message": "Plugins",
+    "description": "The label for category 'Plugins' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Migrations": {
+    "message": "Migrations",
+    "description": "The label for category 'Migrations' in sidebar 'docsSidebar'"
+  }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import Translate from '@docusaurus/Translate';
+import Translate, { translate } from '@docusaurus/Translate';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { ThemeClassNames } from '@docusaurus/theme-common';
 import { usePluginData } from '@docusaurus/useGlobalData';
@@ -48,8 +48,15 @@ export default function DocItemContent({ children }) {
           <header className={styles.header}>
             <Heading as="h1" className={styles.pageTitle}>{syntheticTitle}</Heading>
             {frontMatter.svgo && plugins[frontMatter.svgo.pluginId].isDefault && (
-              <Badge title="This plugin is enabled by default.">
-                Default
+              <Badge
+                title={translate({
+                  id: 'svgo.theme.DocItem.Content.defaultTitle',
+                  message: 'This plugin is enabled by default.'
+                })}
+              >
+                <Translate id="svgo.theme.DocItem.Content.defaultBadge" description="Assigned next to any plugins that are a part of preset-default in SVGO.">
+                  Default
+                </Translate>
               </Badge>
             )}
           </header>
@@ -59,7 +66,15 @@ export default function DocItemContent({ children }) {
           <p className={styles.source}>
             {plugins[frontMatter.svgo.pluginId].since && (
               <>
-                <span><Translate>Since</Translate> v{plugins[frontMatter.svgo.pluginId].since}</span>
+                <span>
+                  <Translate
+                    id="svgo.theme.DocItem.Content.since"
+                    values={{
+                      version: plugins[frontMatter.svgo.pluginId].since
+                    }}
+                  >
+                    {'Since v{version}'}
+                  </Translate></span>
                 <span aria-hidden={true}>·</span>
               </>
             )}
@@ -68,7 +83,9 @@ export default function DocItemContent({ children }) {
               target="_blank"
               rel="noreferrer"
             >
-              <Translate>Source</Translate>
+              <Translate id="svgo.theme.DocItem.Content.source">
+                Source
+              </Translate>
             </a>
           </p>
         )}
@@ -78,17 +95,29 @@ export default function DocItemContent({ children }) {
 
       {frontMatter.svgo?.pluginId && (
         <>
-          <h2 id="usage">Usage</h2>
+          <h2 id="usage">
+            <Translate id="svgo.theme.DocItem.Content.usage">
+              Usage
+            </Translate>
+          </h2>
           <PluginUsage pluginId={frontMatter.svgo.pluginId} parameters={frontMatter.svgo.parameters} />
 
           {frontMatter.svgo?.parameters && (
             <>
-              <h3 id="parameters">Parameters</h3>
+              <h3 id="parameters">
+                <Translate id="svgo.theme.DocItem.Content.parameters">
+                  Parameters
+                </Translate>
+              </h3>
               <PluginParams parameters={frontMatter.svgo.parameters}/>
             </>
           )}
 
-          <h2 id="demo">Demo</h2>
+          <h2 id="demo">
+            <Translate id="svgo.theme.DocItem.Content.demo">
+              Demo
+            </Translate>
+          </h2>
           <PluginDemo pluginId={frontMatter.svgo.pluginId} />
         </>
       )}

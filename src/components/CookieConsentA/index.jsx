@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import Translate from '@docusaurus/Translate';
 import clsx from 'clsx';
 import styles from './index.module.css';
 
@@ -28,18 +29,37 @@ export default function CookieConsentA({ onAnswer, onDone }) {
 
   return (
     <div className={clsx(styles.bannerContainer, closing && styles.close)} onAnimationEnd={closing ? onDone : undefined}>
-      <h2>Cookie Preferences</h2>
+      <h2>
+        <Translate id="svgo.components.CookieConsentA.title">
+          Cookie Preferences
+        </Translate>
+      </h2>
       <p>
-        We use an optional first&#8209;party cookie to collect anonymous usage
-        and performance metrics. Plausible Analytics remains enabled for
-        cookie&#8209;free analytics. You can read more about it in our <Link href="/privacy/">Privacy&nbsp;Policy</Link>.
+        <Translate
+          id="svgo.components.CookieConsentA.message"
+          values={{
+            privacyPolicy: (
+              <Link href="/privacy/">
+                <Translate id="svgo.components.CookieConsentA.privacyPolicy">
+                  Privacy&nbsp;Policy
+                </Translate>
+              </Link>
+            )}
+          }
+        >
+          {'We use an optional first‑party cookie to collect anonymous usage and performance metrics. Plausible Analytics remains enabled for cookie‑free analytics. You can read more about it in our {privacyPolicy}.'}
+        </Translate>
       </p>
       <div className={styles.buttonContainer}>
         <button className="button" type="button" onClick={() => onAnswerWrapper('accepted')}>
-          Accept
+          <Translate id="svgo.components.CookieConsentA.accept">
+            Accept
+          </Translate>
         </button>
         <button className="button" type="button" onClick={() => onAnswerWrapper('rejected')}>
-          Reject
+          <Translate id="svgo.components.CookieConsentA.reject">
+            Reject
+          </Translate>
         </button>
       </div>
     </div>

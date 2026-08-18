@@ -7,6 +7,7 @@ import { unified } from 'unified';
 
 const DOCS_PATH = 'svgo/docs';
 const VUKORY_SVG = '<svg height="1em" viewBox="0 0 378.627 333.846"><path fill="currentColor" d="M86.059 0 67.28 69.362l27.025 28.86-70.296 40.574 20.506 7.41L0 175.596h70.96l-2.327 13.242 67.302.058-12.653 46.196 18.083-3.42 27.746 96.978 20.202 5.196 20.203-5.196 27.745-96.977 18.083 3.419-12.653-46.196 67.302-.058-2.326-13.241h70.96l-44.515-29.391 20.505-7.41-70.296-40.573 27.026-28.861L292.567 0l-56.345 57.422-46.909 21.009-46.909-21.01Z"/></svg>';
+const ENABLED_LOCALES = ['en'];
 
 /**
  * Remove unwanted styles from a Prism themes. This is easier than configuring
@@ -149,7 +150,7 @@ const themeLocalSearchOptions = {
   indexDocs: true,
   indexBlog: false,
   indexPages: false,
-  language: 'en',
+  language: ENABLED_LOCALES,
   hashed: true,
   docsDir: DOCS_PATH,
   ignoreCssSelectors: [
@@ -179,9 +180,20 @@ const config = {
   onBrokenLinks: 'throw',
   i18n: {
     defaultLocale: 'en',
-    locales: [
-      'en'
-    ],
+    locales: ENABLED_LOCALES,
+    path: 'i18n',
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-US',
+        translate: false,
+      },
+      nl: {
+        label: 'Nederlands',
+        htmlLang: 'nl',
+        translate: true,
+      },
+    },
   },
   markdown: {
     hooks: {
@@ -262,8 +274,12 @@ const config = {
           position: 'right',
           html: '<img src="https://img.shields.io/github/stars/svg/svgo?style=social" alt="Star SVGO on GitHub" height="20" width="88"/>',
           className: 'github-shield',
-        }
-      ],
+        },
+        ENABLED_LOCALES.length > 1 && {
+          type: 'localeDropdown',
+          position: 'right',
+        },
+      ].filter(v => v !== false),
     },
     prism: {
       theme: themes.vsLight,
