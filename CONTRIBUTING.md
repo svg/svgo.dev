@@ -58,7 +58,7 @@ Do not modify HTML tags, IDs, classes, or attributes, etc. For example:
 Translate this! <div id="…" class="…" attribute="…">You can translate this too!</div>
 ```
 
-In the example above, both of these should be translated, but the rest must be ignored:
+In the example above, both of the following should be translated, but the rest must remain intact:
 
 - _"Translate this!"_
 - _"You can translate this too!"_
