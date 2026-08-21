@@ -1,0 +1,191 @@
+{
+  "svgo.components.CookieConsentA.accept":{
+    "message":"Accepteren"
+  },
+  "svgo.components.CookieConsentA.message":{
+    "message":"We gebruiken een optionele first-party cookie om anonieme gebruiks- en prestatiegegevens te verzamelen. Plausible Analytics blijft ingeschakeld voor analyse zonder cookies. Meer informatie hierover vind je in ons {privacyPolicy}."
+  },
+  "svgo.components.CookieConsentA.privacyPolicy":{
+    "message":"Privacybeleid"
+  },
+  "svgo.components.CookieConsentA.reject":{
+    "message":"Afwijzen"
+  },
+  "svgo.components.CookieConsentA.title":{
+    "message":"Cookie-instellingen"
+  },
+  "svgo.components.CookieConsentC.message":{
+    "message":"We gebruiken Plausible Analytics om het websiteverkeer te analyseren. Als je hiermee instemt, worden er ook cookies gebruikt om onze inhoud aan te bieden en de kwaliteit ervan te verbeteren. Meer informatie hierover vind je in ons {privacyPolicy}."
+  },
+  "svgo.components.CookieConsentC.title":{
+    "message":"Cookie-instellingen"
+  },
+  "svgo.components.HomepageFeatures.easyToUse":{
+    "message":"Gebruiksvriendelijk"
+  },
+  "svgo.components.HomepageFeatures.easyToUseDescription":{
+    "message":"SVGO kan zowel via de opdrachtregelinterface als via de JavaScript-API worden gebruikt; voor beide zijn helppagina's en documentatie beschikbaar."
+  },
+  "svgo.components.HomepageFeatures.integrations":{
+    "message":"Integraties"
+  },
+  "svgo.components.HomepageFeatures.integrationsDescription":{
+    "message":"Veel bibliotheken, frameworks of tools bieden al bundels of integraties voor SVGO aan, zoals Docusaurus, PostCSS en webpack."
+  },
+  "svgo.components.HomepageFeatures.opensource":{
+    "message":"Open source"
+  },
+  "svgo.components.HomepageFeatures.opensourceDescription":{
+    "message":"Wij verwelkomen bijdragen! Aarzel niet om een bug rapport of een functieverzoek in te dienen, of pull-verzoeken te openen op GitHub."
+  },
+  "svgo.components.PluginUsage.basic":{
+    "message":"Basis"
+  },
+  "svgo.components.PluginUsage.parameters":{
+    "message":"Parameters"
+  },
+  "svgo.components.SvgDemo.malformedWarning":{
+    "message":"SVG kan alleen inline worden weergegeven, niet op zichzelf staand of in een {img}-element."
+  },
+  "svgo.components.SvgDemo.markup":{
+    "message":"Opmaak"
+  },
+  "svgo.components.SvgDemo.render":{
+    "message":"Render"
+  },
+  "svgo.components.SvgDemo.renderAlt":{
+    "message":"Render van de geoptimaliseerde SVG."
+  },
+  "svgo.pages.index.description":{
+    "message":"SVGO is een Node.js-bibliotheek en een opdrachtregel applicatie voor het optimaliseren van vectorafbeeldingen."
+  },
+  "svgo.pages.index.readTheDocs":{
+    "message":"Lees de documentatie"
+  },
+  "svgo.pages.index.subtitle":{
+    "message":"Met SVGO en de bijbehorende integraties kan je SVG-bestanden optimaliseren en jouw webapplicaties sneller weergeven."
+  },
+  "svgo.pages.index.tagline":{
+    "message":"SVG Optimizer voor Node.js en CLI"
+  },
+  "svgo.theme.DocItem.Content.defaultBadge":{
+    "message":"Standaard"
+  },
+  "svgo.theme.DocItem.Content.defaultTitle":{
+    "message":"Deze plug-in is standaard ingeschakeld."
+  },
+  "svgo.theme.DocItem.Content.demo":{
+    "message":"Demo"
+  },
+  "svgo.theme.DocItem.Content.parameters":{
+    "message":"Parameters"
+  },
+  "svgo.theme.DocItem.Content.since":{
+    "message":"Sinds v{version}"
+  },
+  "svgo.theme.DocItem.Content.source":{
+    "message":"Bron"
+  },
+  "svgo.theme.DocItem.Content.usage":{
+    "message":"Gebruik"
+  },
+  "svgo.theme.Navbar.Logo.ariaLabel":{
+    "message":"SVGO-startpagina"
+  },
+  "svgo.theme.TOCItems.editThisPage":{
+    "message":"Deze pagina bewerken op GitHub"
+  },
+  "svgo.theme.TOCItems.onThisPage":{
+    "message":"Op deze pagina"
+  },
+  "theme.BackToTopButton.buttonAriaLabel":{
+    "message":"Scroll terug naar boven"
+  },
+  "theme.ErrorPageContent.title":{
+    "message":"Deze pagina is gecrasht."
+  },
+  "theme.blog.archive.description":{
+    "message":"Archief"
+  },
+  "theme.blog.archive.title":{
+    "message":"Archief"
+  },
+  "theme.blog.paginator.navAriaLabel":{
+    "message":"Bloglijst pagina navigatie"
+  },
+  "theme.blog.paginator.newerEntries":{
+    "message":"Nieuwere berichten"
+  },
+  "theme.blog.paginator.olderEntries":{
+    "message":"Oudere berichten"
+  },
+  "theme.blog.post.paginator.navAriaLabel":{
+    "message":"Blog post pagina navigatie"
+  },
+  "theme.blog.post.paginator.newerPost":{
+    "message":"Nieuwere bericht"
+  },
+  "theme.blog.post.paginator.olderPost":{
+    "message":"Ouder bericht"
+  },
+  "theme.colorToggle.ariaLabel":{
+    "message":"Schakel tussen de donkere en lichte modus (momenteel {mode})"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark":{
+    "message":"donkere modus"
+  },
+  "theme.colorToggle.ariaLabel.mode.light":{
+    "message":"lichte modus"
+  },
+  "theme.colorToggle.ariaLabel.mode.system":{
+    "message":"systeemmodus"
+  },
+  "theme.common.editThisPage":{
+    "message":"Deze pagina bewerken"
+  },
+  "theme.common.headingLinkTitle":{
+    "message":"Directe link naar {heading}"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel":{
+    "message":"Navigatiepad"
+  },
+  "theme.docs.paginator.navAriaLabel":{
+    "message":"Docs pagina's"
+  },
+  "theme.docs.paginator.next":{
+    "message":"Volgende"
+  },
+  "theme.docs.paginator.previous":{
+    "message":"Vorige"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel":{
+    "message":"Zijbalk uitvouwen"
+  },
+  "theme.docs.sidebar.expandButtonTitle":{
+    "message":"Zijbalk uitvouwen"
+  },
+  "theme.docs.tagDocListPageTitle":{
+    "message":"{nDocsTagged} met \"{tagName}\""
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged":{
+    "message":"Eén doc is getagd|{count} docs zijn getagd"
+  },
+  "theme.docs.versionBadge.label":{
+    "message":"Versie: {versionLabel}"
+  },
+  "theme.docs.versions.latestVersionLinkLabel":{
+    "message":"nieuwste versie"
+  },
+  "theme.docs.versions.latestVersionSuggestionLabel":{
+    "message":"Raadpleeg de {latestVersionLink} ({versionLabel}) voor de meest recente documentatie."
+  },
+  "theme.docs.versions.unmaintainedVersionLabel":{
+    "message":"Dit is de documentatie voor {siteTitle} {versionLabel}, dat niet langer actief wordt onderhouden."
+  },
+  "theme.docs.versions.unreleasedVersionLabel":{
+    "message":"Dit is niet-gepubliceerde documentatie voor {siteTitle} {versionLabel} versie."
+  },
+  "theme.tags.tagsPageLink":{
+    "message":"Alle tags bekijken"
+  }
+}

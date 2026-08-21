@@ -1,0 +1,8 @@
+{
+  "svgo.pages.index.subtitle":{
+    "message":"SVGO i njegove integracije omogućit će vam optimizaciju SVG-ova i brže isporučivanje vaših web aplikacija."
+  },
+  "svgo.pages.index.tagline":{
+    "message":"SVG Optimizator za Node.js i CLI"
+  }
+}

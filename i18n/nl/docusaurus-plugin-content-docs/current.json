@@ -1,0 +1,14 @@
+{
+  "sidebar.docsSidebar.category.Migrations":{
+    "message":"Migraties"
+  },
+  "sidebar.docsSidebar.category.Plugins":{
+    "message":"Plug-ins"
+  },
+  "sidebar.docsSidebar.category.Usage":{
+    "message":"Gebruik"
+  },
+  "version.label":{
+    "message":"Volgende"
+  }
+}

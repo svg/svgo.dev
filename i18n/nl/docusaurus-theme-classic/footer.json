@@ -1,0 +1,23 @@
+{
+  "link.item.label.Discord":{
+    "message":"Discord"
+  },
+  "link.item.label.GitHub":{
+    "message":"GitHub"
+  },
+  "link.item.label.Open Collective":{
+    "message":"Open Collective"
+  },
+  "link.item.label.Privacy":{
+    "message":"Privacy"
+  },
+  "link.item.label.Stack Overflow":{
+    "message":"Stack Overflow"
+  },
+  "link.title.Community":{
+    "message":"Gemeenschap"
+  },
+  "link.title.More":{
+    "message":"Meer"
+  }
+}
