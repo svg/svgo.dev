@@ -1,1 +1,8 @@
-{}
+{
+  "item.label.Documentation":{
+    "message":"Documentatie"
+  },
+  "item.label.Playground":{
+    "message":"Speeltuin"
+  }
+}
