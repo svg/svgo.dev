@@ -92,11 +92,10 @@ const pluginSitemapOptions = {
  * IDs that are defined in a sprite sheet that's shared with and may be
  * referenced by SVGs. They must not be prefixed as that would break the
  * references.
+ *
+ * @type {string[]}
  */
-const SPRITESHEET_IDS = [
-  'logo',
-  'halftone',
-];
+const SPRITESHEET_IDS = [];
 
 /** @type {import('@docusaurus/plugin-svgr').Options} */
 const pluginSvgrOptions = {
@@ -322,19 +321,6 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} <a href="https://github.com/svg/svgo/graphs/contributors">SVGO and Contributors</a><br>Source Code under MIT · Content and Assets under CC-BY-4.0<br>Designed and Illustrated by <a class="designer-attribution" href="https://vukory.art" target="_blank">Vukory ${VUKORY_SVG}</a>`
     },
   },
-  scripts: [
-    {
-      src: 'https://plausible.falco.fun/js/pa-1BMyOcqytxH-H7jJ90MNl.js',
-      async: true
-    }
-  ],
-  headTags: [
-    {
-      tagName: 'script',
-      attributes: {},
-      innerHTML: 'window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init()'
-    }
-  ]
 };
 
 export default config;
