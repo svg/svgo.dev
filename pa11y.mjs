@@ -22,8 +22,6 @@ const IGNORED_SELECTORS = [
   'div[class*=playgroundHeader]',
   // Caused by an underlying bug in the Docusaurus theme… I think!
   'div[class^=errorBoundaryFallback]',
-  // False positive.
-  'p[class^=copy]',
 ];
 
 const IGNORED_MESSAGES = [
