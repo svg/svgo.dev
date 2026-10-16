@@ -122,3 +122,7 @@ footer {
 .designer-attribution svg {
   margin-left: 0.25em;
 }
+
+time {
+  text-wrap: nowrap;
+}
