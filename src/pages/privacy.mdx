@@ -10,19 +10,43 @@ export function Author() {
   );
 }
 
-We have **_temporarily_** enabled client-side analytics via [Plausible](https://plausible.io).
+_We_ don't collect any data ourselves, however by using the site you do connect to two third-parties:
 
-Plausible is an Open Source solution that does not use cookies. The server is self-hosted by a maintainer of SVGO—located in the United Kingdom 🇬🇧.
+| Third-party | What they do | Reference |
+|---|---|---|
+| GitHub 🇺🇸 | Delivers this website to your browser with GitHub Pages. | [GitHub Pages data collection practices](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection) |
+| Shields.io | For the "Stars" badge in the navigation. | [Shields.io Privacy Policy](https://shields.io/privacy) |
 
-If you're interested in what we see, please review [our Plausible dashboard](https://plausible.falco.fun/svgo.dev). We are keeping the dashboard public for transparency.
+<details>
+  <summary>
+    History
+  </summary>
 
-If you use an ad blocker such as [uBlock Origin](https://ublockorigin.com), you will be unaffected—we don't hide the fact we use Plausible, and these kinds of extensions will block analytics servers by default. If you are uncomfortable with analytics, we recommend installing uBlock Origin, which will block most client-side analytics across the web.
+  <p>
+    We had client-side analytics on SVGO.dev via a self-hosted [Plausible](https://plausible.io) instance
+    between <time dateTime="2025-10-07">7 October 2025</time> and <time dateTime="2026-10-16">16 October 2026</time>.
+  </p>
 
-<h2>Data Collection</h2>
+  <p>
+    If you're interested in that data, please review [our Plausible dashboard](https://plausible.falco.fun/svgo.dev). We are keeping the dashboard public for transparency.
+  </p>
 
-No personal data is collected, we don't sell or share data, no data is monetized, etc.
+  <p>
+    For more context, see commits:
+  </p>
 
-Data collected includes referral sources, top pages, visit duration, information from the devices (device type, operating system, country and browser) used during the visit. Read more in the [Plausible Analytics data policy](https://plausible.io/data-policy).
+  <ul>
+    <li>
+      <code>[317da0c](https://github.com/svg/svgo.dev/commit/317da0c0dd8c0a798ae1196a6ac7aed261e400e4)</code>: When telemetry was added.
+    </li>
+    <li>
+      <code>[ba0668a](https://github.com/svg/svgo.dev/commit/ba0668ada7e1f0ecef3678cfbeae2b2f81ffcb6a)</code>: The reason we added it.
+    </li>
+    <li>
+      <code>[f588df4](https://github.com/svg/svgo.dev/commit/f588df4e9a7478022da55119ea9d048b9cdf2c1d)</code>: When telemetry was removed.
+    </li>
+  </ul>
+</details>
 
 ---
 
